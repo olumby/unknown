@@ -1,0 +1,6 @@
+respawn = "respawn_east";
+respawndelay = 15;
+respawn = "respawn_west";
+respawndelay = 15;
+respawn = "respawn_guerrila";
+respawndelay = 15;
