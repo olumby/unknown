@@ -1,1 +1,7 @@
+respawn = "BASE";
 respawnDelay = 15;
+disabedAI = 1;
+
+// Third Party Stuff
+
+#include "third\R3F_LOG\desc_include.h"
