@@ -1,1 +1,4 @@
+author = "CmdSft, PR3SIDENT, JRB1X";
+onLoadName = "Project Unknown";
+onLoadIntro = "To be defined...";
 respawnDelay = 15;
