@@ -1,9 +1,8 @@
 respawn = "BASE";
 respawnDelay = 5;
 disabledAI = true;
-author = "CmdSft, PR3SIDENT, JRB1X";
+author = "The Unknown";
 onLoadName = "Project Unknown";
-onLoadIntro = "To be defined...";
 
 class Header {
     gameType = Sandbox;
