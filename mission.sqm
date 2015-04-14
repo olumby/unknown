@@ -696,7 +696,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=26;
+		items=28;
 		class Item0
 		{
 			position[]={5138.0508,10.984193,232.85925};
@@ -958,10 +958,31 @@ class Mission
 			skill=0.60000002;
 			init="this setVectorUp [0,0,0];";
 		};
+		class Item26
+		{
+			position[]={914.07953,30.721975,3892.1865};
+			azimut=130;
+			id=76;
+			side="EMPTY";
+			vehicle="Land_WoodenTable_large_F";
+			skill=0.60000002;
+			text="vehicleTable_001";
+		};
+		class Item27
+		{
+			position[]={914.03162,30.720337,3892.2061};
+			azimut=180;
+			id=77;
+			side="EMPTY";
+			vehicle="Land_Laptop_unfolded_F";
+			skill=0.60000002;
+			text="vehicleStore_001";
+			init="_store = [] execVM ""server\functions\vehicleStore.sqf""";
+		};
 	};
 	class Markers
 	{
-		items=6;
+		items=8;
 		class Item0
 		{
 			position[]={5138.0151,10.925617,225.78143};
@@ -1018,6 +1039,21 @@ class Mission
 			fillName="Grid";
 			a=200;
 			b=200;
+		};
+		class Item6
+		{
+			position[]={908.87695,30.606897,3895.731};
+			name="vehicle_001";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item7
+		{
+			position[]={915.10321,30.795429,3893.6062};
+			name="vehicleStoreLabel_001";
+			text="Vehicle Store";
+			type="mil_box";
+			colorName="ColorCIV";
 		};
 	};
 };
