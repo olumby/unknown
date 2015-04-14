@@ -17,7 +17,8 @@ class Mission
 		"A3_Structures_F_Mil_Shelters",
 		"A3_Structures_F_Bootcamp_VR_Blocks",
 		"A3_Structures_F_EPA_Civ_Camping",
-		"A3_Structures_F_Items_Electronics"
+		"A3_Structures_F_Items_Electronics",
+		"A3_Weapons_F_Ammoboxes"
 	};
 	addOnsAuto[]=
 	{
@@ -29,6 +30,7 @@ class Mission
 		"A3_Structures_F_EPA_Civ_Camping",
 		"A3_Structures_F_Items_Electronics",
 		"A3_Structures_F_Mil_Fortification",
+		"A3_Weapons_F_Ammoboxes",
 		"pra3_kz"
 	};
 	randomSeed=10504584;
@@ -696,7 +698,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			position[]={5138.0508,10.984193,232.85925};
@@ -978,6 +980,15 @@ class Mission
 			skill=0.60000002;
 			text="vehicleStore_001";
 			init="_store = [] execVM ""server\functions\vehicleStore.sqf""";
+		};
+		class Item28
+		{
+			position[]={5134.0791,10.982343,232.90131};
+			id=78;
+			side="EMPTY";
+			vehicle="B_supplyCrate_F";
+			skill=0.60000002;
+			init="[""AmmoboxInit"", [this, true]] call BIS_fnc_arsenal;";
 		};
 	};
 	class Markers
