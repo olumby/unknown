@@ -1,3 +1,7 @@
-// Third Party Stuff
+if (isServer) then
+{
+    diag_log "Server Initializing";
+    [] execVM "server\init.sqf";
+};
 
-execVM "third\R3F_LOG\init.sqf";
+// Third Party Stuff
