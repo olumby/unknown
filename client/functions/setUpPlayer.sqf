@@ -8,3 +8,6 @@ removeVest player;
 removeBackpack player;
 removeGoggles player;
 removeHeadgear player;
+
+player unassignItem "NVGoggles";
+player removeItem "NVGoggles";
