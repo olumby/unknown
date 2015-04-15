@@ -77,7 +77,6 @@ class Mission
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.60000002;
 				};
 				class Item1
