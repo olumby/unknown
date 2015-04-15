@@ -693,7 +693,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1423.0352,37.278305,3602.3357};
+					position[]={2080.4651,37.563965,3058.7151};
 					id=49;
 					side="WEST";
 					vehicle="B_Soldier_F";
@@ -1037,7 +1037,7 @@ class Mission
 		};
 		class Item28
 		{
-			position[]={5134.0791,10.982343,232.90131};
+			position[]={2080.9084,38.065132,3078.0591};
 			id=79;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
@@ -1319,7 +1319,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			position[]={5138.0151,10.925617,225.78143};
@@ -1385,6 +1385,14 @@ class Mission
 			colorName="ColorRed";
 		};
 		class Item7
+		{
+			position[]={2081.3313,38.086617,3081.1492};
+			name="gunStoreLabel_001";
+			text="Gun Store";
+			type="mil_box";
+			colorName="ColorCIV";
+		};
+		class Item8
 		{
 			position[]={1428.7202,36.061134,3596.8135};
 			name="vehicleStoreLabel_001";
