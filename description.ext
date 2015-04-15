@@ -16,4 +16,7 @@ ShowGPS = true;
 ShowCompass = true;
 ShowMap = true;
 
+// Disabled VoIP Channels
+disableChannels[]={0,1,2,6};
+
 // Third Party Stuff
