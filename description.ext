@@ -16,5 +16,20 @@ ShowGPS = true;
 ShowCompass = true;
 ShowMap = true;
 
+// Corpse Management System
+corpseManagerMode = 1;
+corpseLimit = 20;
+corpseRemovalMinTime = 60; //seconds
+corpseRemovalMaxTime = 1200; //seconds
+
+// Wreck Manager System
+wreckManagerMode = 1;
+wreckLimit = 10;
+wreckRemovalMinTime = 60; //seconds
+wreckRemovalMaxTime = 1200; //seconds
+
+// Disabled VoIP Channels
+disableChannels[]={0,1,2,6};
+
 // Third Party Stuff
 #include "external\R3F_LOG\desc_include.h"
