@@ -693,7 +693,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1424.7775,42.99118,3211.7026};
+					position[]={1423.0352,37.278305,3602.3357};
 					id=49;
 					side="WEST";
 					vehicle="B_Soldier_F";
@@ -1016,8 +1016,8 @@ class Mission
 		};
 		class Item26
 		{
-			position[]={914.07953,30.721975,3892.1865};
-			azimut=130;
+			position[]={1437.5741,36.023369,3589.9202};
+			azimut=225;
 			id=77;
 			side="EMPTY";
 			vehicle="Land_WoodenTable_large_F";
@@ -1026,8 +1026,8 @@ class Mission
 		};
 		class Item27
 		{
-			position[]={914.03162,30.720337,3892.2061};
-			azimut=180;
+			position[]={1437.5524,36.024654,3589.9045};
+			azimut=135;
 			id=78;
 			side="EMPTY";
 			vehicle="Land_Laptop_unfolded_F";
@@ -1379,14 +1379,14 @@ class Mission
 		};
 		class Item6
 		{
-			position[]={905.03809,29.479908,3881.6846};
+			position[]={1418.5507,39.190052,3619.9897};
 			name="vehicle_001";
 			type="Empty";
 			colorName="ColorRed";
 		};
 		class Item7
 		{
-			position[]={915.10321,30.795429,3893.6062};
+			position[]={1428.7202,36.061134,3596.8135};
 			name="vehicleStoreLabel_001";
 			text="Vehicle Store";
 			type="mil_box";
