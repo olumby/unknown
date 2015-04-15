@@ -1349,7 +1349,7 @@ class Mission
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorBlue";
-			fillName="Grid";
+			fillName="DiagGrid";
 			a=150;
 			b=150;
 		};
@@ -1361,7 +1361,7 @@ class Mission
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorBlue";
-			fillName="Grid";
+			fillName="DiagGrid";
 			a=100;
 			b=100;
 		};
@@ -1373,7 +1373,7 @@ class Mission
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorBlue";
-			fillName="Grid";
+			fillName="DiagGrid";
 			a=200;
 			b=200;
 		};
