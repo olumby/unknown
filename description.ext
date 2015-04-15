@@ -17,3 +17,4 @@ ShowCompass = true;
 ShowMap = true;
 
 // Third Party Stuff
+#include "external\R3F_LOG\desc_include.h"
