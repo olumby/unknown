@@ -675,7 +675,7 @@ class Mission
 						items=4;
 						class Item0
 						{
-							value="76561198024213107";
+							value="76561198089479994";
 							parentCls="ModuleCurator_F";
 							typeName="Owner";
 						};
