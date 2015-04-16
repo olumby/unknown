@@ -9,3 +9,4 @@ if (!isDedicated) then {
 
 // Third Party Stuff
 execVM "external\R3F_LOG\init.sqf";
+player execVM "scripts\simpleEP.sqf";
