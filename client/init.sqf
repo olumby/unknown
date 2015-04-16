@@ -1,7 +1,9 @@
+waitUntil {!isNull player};
+waitUntil {time > 0.1};
+
 titleText ["Client Loaded", "PLAIN DOWN"];
 
-[] execVM "client\functions\setUpPlayer.sqf";
+call compile preprocessFileLineNumbers "client\functions\compile.sqf";
 
-player addEventHandler ["Respawn", { [] execVM "client\functions\setUpPlayer.sqf" }];
-
-//_handle = CreateDialog "spawnDialogue";
+[] spawn setUpPlayer;
+player addEventHandler ["Respawn", { [] spawn setUpPlayer }];

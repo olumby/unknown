@@ -1,4 +1,4 @@
-class spawnDialogue
+class spawnDialog
 {
     idd = -1;
     movingenable = true;

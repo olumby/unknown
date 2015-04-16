@@ -11,3 +11,5 @@ removeHeadgear player;
 
 player unassignItem "NVGoggles";
 player removeItem "NVGoggles";
+
+[] spawn spawnDialog;
