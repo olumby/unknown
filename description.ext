@@ -31,5 +31,8 @@ wreckRemovalMaxTime = 1200; //seconds
 // Disabled VoIP Channels
 disableChannels[]={0,1,2,6};
 
+#include "defines.hpp"
+#include "dialogs.hpp"
+
 // Third Party Stuff
 #include "external\R3F_LOG\desc_include.h"
