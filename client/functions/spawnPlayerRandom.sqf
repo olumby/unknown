@@ -1,5 +1,5 @@
 /*
- * Desc: Spawn a player randomly from the spawnLocations.
+ * Spawn a player randomly from the spawnLocations.
  */
 
 _spawnLocation = (call spawnLocations) call BIS_fnc_selectRandom;

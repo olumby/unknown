@@ -1,5 +1,5 @@
 /*
- * Desc: Present the player with the spawn screen.
+ * Present the player with the spawn screen.
  */
 
 #include "spawnDialog_defines.hpp"
