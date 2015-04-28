@@ -1,14 +1,33 @@
-_spawnLocation = (call spawnLocations) call BIS_fnc_selectRandom;
+/*
+ * Arguments
+ *     int       spawn type (random,town,halo)
+ *     boolean   gear up (give player a load out)
+ *     array     spawn data (location, name)
+ */
 
-_pos = getMarkerPos (_spawnLocation select 0);
-_dir = random 359;
-_spawnName = _randomLoc select 2;
+_spawnType = _this select 0
+_gearUp = _this select 1
 
-_newPos = [(_pos select 0)-10*sin(_dir),(_pos select 1)-10*cos(_dir)];
+["Unknown", _gearUp] spawn BIS_fnc_infoText;
 
-waitUntil {!isNil "bis_fnc_init" && {bis_fnc_init}};
 
-player setPos _newPos;
+if (_gearUp)
+{
+    call gearPlayerUp;
+}
+
+switch (_spawnType) do
+{
+    case 1: { 
+        //_data call spawnOnLocation;
+    };
+    case 2: {
+        //_data call spawnHalo;
+    };
+    default {
+        call spawnPlayerRandom;
+    };
+};
 
 closeDialog 0;
 9999 cutText ["", "BLACK IN"];
