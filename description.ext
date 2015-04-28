@@ -32,7 +32,8 @@ wreckRemovalMaxTime = 1200; //seconds
 disableChannels[]={0,1,2,6};
 
 #include "defines.hpp"
-#include "dialogs.hpp"
+#include "client\dialogs\helpers.hpp"
+#include "client\dialogs\spawnDialog.hpp"
 
 // Third Party Stuff
 #include "external\R3F_LOG\desc_include.h"

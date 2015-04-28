@@ -139,7 +139,7 @@ class RscPicture
 
 class RscButton
 {
-   access = 0;
+    access = 0;
     type = CT_BUTTON;
     text = "";
     colorText[] = {1,1,1,.9};
@@ -167,6 +167,53 @@ class RscButton
     offsetPressedX = 0.002;
     offsetPressedY = 0.002;
     borderSize = 0;
+};
+
+class RscListBox
+{
+    idc = -1;
+    type = CT_LISTBOX;
+    style = ST_MULTI;
+    w = 0.4;
+    h = 0.4;
+    rowHeight = 0;
+    colorText[] = {1, 1, 1, 1};
+    colorDisabled[] = {1, 1, 1, 0.25};
+    colorScrollbar[] = {1, 0, 0, 0};
+    colorSelect[] = {0, 0, 0, 1};
+    colorSelect2[] = {0, 0, 0, 1};
+    colorSelectBackground[] = {0.95, 0.95, 0.95, 1};
+    colorSelectBackground2[] = {1, 1, 1, 0.5};
+    colorBackground[] = {0, 0, 0, 0.3};
+    soundSelect[] = {"",0.1,1};
+    autoScrollSpeed = -1;
+    autoScrollDelay = 5;
+    autoScrollRewind = 0;
+    arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+    arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+    colorPicture[] = {1, 1, 1, 1};
+    colorPictureSelected[] = {1, 1, 1, 1};
+    colorPictudeDisabled[] = {1, 1, 1, 0.25};
+    tooltipColorText[] = {1, 1, 1, 1};
+    tooltipColorBox[] = {1, 1, 1, 1};
+    tooltipColorShade[] = {0, 0, 0, 0.65};
+    font = "PuristaMedium";
+    sizeEx = 0.035;
+    shadow = 0;
+    colorShadow[] = {0, 0, 0, 0.5};
+    period = 0.8;
+    maxHistoryDelay = 1;
+    colorPictureDisabled[] = {1, 1, 1, 1};
+    class ListScrollBar
+    {
+        color[] = {1, 1, 1, 1};
+        colorActive[] = {1, 1, 1, 1};
+        colorDisabled[] = {1, 1, 1, 0.3};
+        thumb = "#(argb,8,8,3)color(1,1,1,1)";
+        arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+        arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+        border = "#(argb,8,8,3)color(1,1,1,1)";
+    };
 };
 
 class RscFrame

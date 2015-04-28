@@ -1,19 +1,14 @@
-_tp = _this select 0;
-_pos = _this select 3;
+_spawnLocation = (call spawnLocations) call BIS_fnc_selectRandom;
+
+_pos = getMarkerPos (_spawnLocation select 0);
 _dir = random 359;
+_spawnName = _randomLoc select 2;
 
-spawnPosition = [(_pos select 0)-10*sin(_dir),(_pos select 1)-10*cos(_dir)];
+_newPos = [(_pos select 0)-10*sin(_dir),(_pos select 1)-10*cos(_dir)];
 
-player setPos _newPos findEmptyPosition;  
+waitUntil {!isNil "bis_fnc_init" && {bis_fnc_init}};
 
+player setPos _newPos;
+
+closeDialog 0;
 9999 cutText ["", "BLACK IN"];
-
-
-// _tp = _this select 0;
-// _caller = _this select 1;
-// _pos = _this select 3;
-// _dir = random 359;
-
-// _newPos = [(_pos select 0)-10*sin(_dir),(_pos select 1)-10*cos(_dir)];
-
-// _tp = _caller setPos _newPos findEmptyPosition;  

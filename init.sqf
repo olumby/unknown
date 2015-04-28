@@ -1,3 +1,5 @@
+spawnLocations = compile preprocessFileLineNumbers "map\spawns.sqf";
+
 if (isServer) then {
     diag_log "Server Initializing";
     [] execVM "server\init.sqf";

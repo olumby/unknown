@@ -1,5 +1,5 @@
 [
-    ["spawn_001"],
-    ["spawn_002"],
-    ["spawn_003"]
+    ["spawn_001", "Over Here"],
+    ["spawn_002", "Over There"],
+    ["spawn_003", "Somewhere Else"]
 ]
