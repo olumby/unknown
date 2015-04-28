@@ -5,16 +5,13 @@
  *     array     spawn data (location, name)
  */
 
-_spawnType = _this select 0
-_gearUp = _this select 1
+_spawnType = _this select 0;
+_gearUp = _this select 1;
 
-["Unknown", _gearUp] spawn BIS_fnc_infoText;
-
-
-if (_gearUp)
+if (_gearUp) then
 {
     call gearPlayerUp;
-}
+};
 
 switch (_spawnType) do
 {
