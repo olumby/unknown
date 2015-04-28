@@ -2,12 +2,13 @@
  * Desc: Present the player with the spawn screen.
  */
 
+#include "spawnDialog_defines.hpp"
+
 9999 cutText ["", "BLACK", 0.01];
 
 createDialog "SpawnDialog";
 
-((uiNamespace getVariable "UK_SpawnDialog") displayCtrl 1801) buttonSetAction format ["[%1,%2,%3] execVM ""client\functions\spawnPlayer.sqf""", 0, true, []];
+_display = uiNamespace getVariable "UK_SpawnDialog";
+_randomButton = _display displayCtrl random_spawn_button;
 
-
-// _display = uiNamespace getVariable "UK_SpawnDialog";
-// _randomButton = _display displayCtrl 1801;
+_randomButton buttonSetAction format ["[%1,%2,%3] execVM ""client\functions\spawnPlayer.sqf""", 0, true, []];

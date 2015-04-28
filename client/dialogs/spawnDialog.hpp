@@ -1,3 +1,9 @@
+/*
+ * The main spawn screen
+ */
+
+#include "spawnDialog_defines.hpp"
+
 class spawnDialog
 {
     idd = spawn_dialog;
@@ -9,7 +15,7 @@ class spawnDialog
     {
         class spawnScreen: RscFrame
         {
-            idc = 1800;
+            idc = spawn_screen;
             text = "Spawn Selection";
 
             #define screenW (0.6 * 3/4)
@@ -24,7 +30,7 @@ class spawnDialog
         };
         class randomSpawnButton: RscButton
         {
-            idc = 1801;
+            idc = random_spawn_button;
             text = "Random";
             x = 0.3625 * safezoneW + safezoneX;
             y = 0.401 * safezoneH + safezoneY;
@@ -34,7 +40,7 @@ class spawnDialog
 
         class spawnLocationsList: RscListBox
         {
-            idc = 1802;
+            idc = spawn_locations_list;
             text = "Two"; //--- ToDo: Localize;
             x = 0.477083 * safezoneW + safezoneX;
             y = 0.401 * safezoneH + safezoneY;
@@ -43,7 +49,7 @@ class spawnDialog
         };
         class spawnLocationsButton: RscButton
         {
-            idc = 1803;
+            idc = spawn_locations_button;
             text = "Spawn"; //--- ToDo: Localize;
             x = 0.591667 * safezoneW + safezoneX;
             y = 0.401 * safezoneH + safezoneY;
