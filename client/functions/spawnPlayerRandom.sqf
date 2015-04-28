@@ -2,7 +2,8 @@
  * Spawn a player randomly from the spawnLocations.
  */
 
-_spawnLocation = (call spawnLocations) call BIS_fnc_selectRandom;
+_spawnLocations = call spawnLocations;
+_spawnLocation = _spawnLocations select (floor (random (count _spawnLocations)));
 
 _pos = getMarkerPos (_spawnLocation select 0);
 _dir = random 359;
