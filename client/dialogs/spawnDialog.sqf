@@ -1,3 +1,7 @@
+/*
+ * Desc: Present the player with the spawn screen.
+ */
+
 9999 cutText ["", "BLACK", 0.01];
 
 createDialog "SpawnDialog";

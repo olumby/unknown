@@ -1,3 +1,7 @@
+/*
+ * Desc: Runs every time the player spawns.
+ */
+
 player enableFatigue false;
 
 enableSentences false;

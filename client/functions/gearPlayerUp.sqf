@@ -1,3 +1,6 @@
+/*
+ * Desc: Gear a player up with the default starting gear.
+ */
 
 _uniform = "";
 

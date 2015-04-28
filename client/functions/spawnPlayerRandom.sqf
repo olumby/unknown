@@ -1,3 +1,7 @@
+/*
+ * Desc: Spawn a player randomly from the spawnLocations.
+ */
+
 _spawnLocation = (call spawnLocations) call BIS_fnc_selectRandom;
 
 _pos = getMarkerPos (_spawnLocation select 0);

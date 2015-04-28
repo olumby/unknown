@@ -1,5 +1,6 @@
 /*
- * Arguments
+ * Desc: Get a player ready for spawn, then hand off to appropriate function. 
+ * Args:
  *     int       spawn type (random,town,halo)
  *     boolean   gear up (give player a load out)
  *     array     spawn data (location, name)
