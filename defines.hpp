@@ -142,30 +142,34 @@ class RscButton
     access = 0;
     type = CT_BUTTON;
     text = "";
-    colorText[] = {1,1,1,.9};
-    colorDisabled[] = {0.4,0.4,0.4,0};
-    colorBackground[] = {0.75,0.75,0.75,0.8};
-    colorBackgroundDisabled[] = {0,0.0,0};
-    colorBackgroundActive[] = {0.75,0.75,0.75,1};
-    colorFocused[] = {0.75,0.75,0.75,.5};
-    colorShadow[] = {0.023529,0,0.0313725,1};
-    colorBorder[] = {0.023529,0,0.0313725,1};
+    colorText[] = {1,1,1,1};
+    colorText2[] = {1,1,1,1};
+
+    colorFocused[] = { 0, 0, 0, 0 };   // border color for focused state
+    colorDisabled[] = { 1, 1, 1, 0.5 };   // text color for disabled state
+    colorBackground[] = { 1, 1, 1, 0.2 };
+    colorBackground2[] = { 1, 1, 1, 0.2 };
+    colorBackgroundDisabled[] = { 1, 1, 1, 0.1 };   // background color for disabled state
+    colorBackgroundActive[] = { 1, 1, 1, 0.3 };   // background color for active state
+
+    colorShadow[] = {0,0,0,0};
+    colorBorder[] = {0,0,0,0};
     soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
     soundPush[] = {"\ca\ui\data\sound\new1",0,0};
     soundClick[] = {"\ca\ui\data\sound\onclick",0.07,1};
     soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
-    style = 2;
+    style = ST_CENTER;
     x = 0;
     y = 0;
     w = 0.055589;
     h = 0.039216;
     shadow = 2;
-    font = "Bitstream";
+    font = "PuristaMedium";
     sizeEx = 0.03921;
-    offsetX = 0.003;
-    offsetY = 0.003;
-    offsetPressedX = 0.002;
-    offsetPressedY = 0.002;
+    offsetX = 0;
+    offsetY = 0;
+    offsetPressedX = 0;
+    offsetPressedY = 0;
     borderSize = 0;
 };
 
