@@ -28,21 +28,9 @@ class spawnDialog
             x = screenX;
             y = screenY;
         };
-        class randomSpawnButton: RscButton
-        {
-            idc = random_spawn_button;
-            text = "Random";
 
-            #define randomButtonW scaleFix(0.15)
-            #define bottomButtonH (0.055)
-            #define bottomButtonY ((screenY + screenH) - (bottomButtonH + edgeOffsetY))
-            #define randomButtonX ((screenX + screenW) - randomButtonW - edgeOffsetX)
-
-            x = randomButtonX;
-            y = bottomButtonY;
-            w = randomButtonW;
-            h = bottomButtonH;
-        };
+        #define bottomButtonH (0.055)
+        #define bottomButtonY ((screenY + screenH) - (bottomButtonH + edgeOffsetY))
 
         class spawnLocationsList: RscListBox
         {
@@ -69,6 +57,33 @@ class spawnDialog
             x = spawnButtonX;
             y = bottomButtonY;
             w = spawnButtonW;
+            h = bottomButtonH;
+        };
+        class randomSpawnButton: RscButton
+        {
+            idc = random_spawn_button;
+            text = "Random";
+
+            #define randomButtonW scaleFix(0.15)
+            #define randomButtonX (screenX + (edgeOffsetX * 2) + spawnButtonW)
+
+            x = randomButtonX;
+            y = bottomButtonY;
+            w = randomButtonW;
+            h = bottomButtonH;
+        };
+        class abortButton: RscButton
+        {
+            idc = -1;
+            text = "Abort";
+            onButtonClick = "endMission 'LOSER'";
+
+            #define abortButtonW scaleFix(0.15)
+            #define abortButtonX ((screenX + screenW) - abortButtonW - edgeOffsetX)
+
+            x = abortButtonX;
+            y = bottomButtonY;
+            w = abortButtonW;
             h = bottomButtonH;
         };
     };
