@@ -30,3 +30,4 @@ switch (_spawnType) do
 
 closeDialog 0;
 9999 cutText ["", "BLACK IN"];
+spawnDialogOpen = false;
