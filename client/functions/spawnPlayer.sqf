@@ -8,6 +8,7 @@
 
 _spawnType = _this select 0;
 _gearUp = _this select 1;
+_spawnData = _this select 2;
 
 if (_gearUp) then
 {
@@ -17,7 +18,7 @@ if (_gearUp) then
 switch (_spawnType) do
 {
     case 1: { 
-        //_data call spawnOnLocation;
+        _spawnData call spawnPlayerOnLocation;
     };
     case 2: {
         //_data call spawnHalo;
