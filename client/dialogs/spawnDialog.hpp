@@ -18,7 +18,7 @@ class spawnDialog
             idc = spawn_screen;
             text = "Spawn Selection";
 
-            #define screenW (0.6 * 3/4)
+            #define screenW (0.7 * 3/4)
             #define screenH 0.5
             #define screenX CENTER(1, screenW)
             #define screenY CENTER(1, screenH)
@@ -32,29 +32,44 @@ class spawnDialog
         {
             idc = random_spawn_button;
             text = "Random";
-            x = 0.3625 * safezoneW + safezoneX;
-            y = 0.401 * safezoneH + safezoneY;
-            w = 0.0458333 * safezoneW;
-            h = 0.03 * safezoneH;
+
+            #define randomButtonW scaleFix(0.15)
+            #define bottomButtonH (0.055)
+            #define bottomButtonY ((screenY + screenH) - (bottomButtonH + edgeOffsetY))
+            #define randomButtonX ((screenX + screenW) - randomButtonW - edgeOffsetX)
+
+            x = randomButtonX;
+            y = bottomButtonY;
+            w = randomButtonW;
+            h = bottomButtonH;
         };
 
         class spawnLocationsList: RscListBox
         {
             idc = spawn_locations_list;
-            text = "Two"; //--- ToDo: Localize;
-            x = 0.477083 * safezoneW + safezoneX;
-            y = 0.401 * safezoneH + safezoneY;
-            w = 0.0458333 * safezoneW;
-            h = 0.03 * safezoneH;
+
+            #define locationslistW (screenW - (edgeOffsetX * 2))
+            #define locationslistH ((screenH - bottomButtonH) - (edgeOffsetY * 4))
+            #define locationslistY (screenY + (edgeOffsetY * 2))
+            #define locationslistX (screenX + edgeOffsetX)
+
+            x = locationslistX;
+            y = locationslistY;
+            w = locationslistW;
+            h = locationslistH;
         };
         class spawnLocationsButton: RscButton
         {
             idc = spawn_locations_button;
-            text = "Spawn"; //--- ToDo: Localize;
-            x = 0.591667 * safezoneW + safezoneX;
-            y = 0.401 * safezoneH + safezoneY;
-            w = 0.0458333 * safezoneW;
-            h = 0.03 * safezoneH;
+            text = "Spawn";
+
+            #define spawnButtonW scaleFix(0.15)
+            #define spawnButtonX (screenX + edgeOffsetX)
+
+            x = spawnButtonX;
+            y = bottomButtonY;
+            w = spawnButtonW;
+            h = bottomButtonH;
         };
     };
 };
