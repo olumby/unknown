@@ -103,8 +103,8 @@ class RscText
     type = CT_STATIC;
     style = ST_MULTI;
     linespacing = 1;
-    colorBackground[] = {0,0,0,0};
-    colorText[] = {1,1,1,.5};
+    colorBackground[] = {0,0,0,1};
+    colorText[] = {1,1,1,.7};
     text = "";
     shadow = 2;
     font = "Bitstream";
@@ -201,7 +201,7 @@ class RscListBox
     tooltipColorText[] = {1, 1, 1, 1};
     tooltipColorBox[] = {1, 1, 1, 1};
     tooltipColorShade[] = {0, 0, 0, 0.65};
-    font = "PuristaMedium";
+    font = "Purista";
     sizeEx = 0.035;
     shadow = 0;
     colorShadow[] = {0, 0, 0, 0.5};
@@ -220,6 +220,40 @@ class RscListBox
     };
 };
 
+class RscListNBox {
+    style = 16;
+    type = CT_LISTNBOX;
+    shadow = 0;
+    font = "Purista";
+    sizeEx = 0.035;
+    color[] = {0.95,0.95,0.95,1};
+    colorText[] = {1,1,1,1.0};
+    colorDisabled[] = {1,1,1,0.25};
+    colorScrollbar[] = {0.95,0.95,0.95,1};
+    colorSelect[] = {0,0,0,1};
+    colorSelect2[] = {0,0,0,1};
+    colorSelectBackground[] = {0.8,0.8,0.8,1};
+    colorSelectBackground2[] = {1,1,1,0.5};
+    soundSelect[] = {"",0.1,1};
+    soundExpand[] = {"",0.1,1};
+    soundCollapse[] = {"",0.1,1};
+    period = 1.2;
+    maxHistoryDelay = 0.5;
+    autoScrollSpeed = -1;
+    autoScrollDelay = 5;
+    autoScrollRewind = 0;
+    class ListScrollBar
+    {
+        color[] = {1,1,1,0.6};
+        colorActive[] = {1,1,1,1};
+        colorDisabled[] = {1,1,1,0.3};
+        thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+        arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+        arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+        border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+    };
+};
+
 class RscFrame
 {
     type = CT_STATIC;
@@ -233,15 +267,12 @@ class RscFrame
     text = "";
 };
 
-class BOX
+class RscBackground
 { 
     type = CT_STATIC;
     idc = -1;
-    style = ST_CENTER;
-    shadow = 2;
+    style = ST_BACKGROUND;
     colorText[] = {1,1,1,1};
-    font = "Bitstream";
-    sizeEx = 0.02;
-    colorBackground[] = { 0.2,0.2,0.2, 0.9 }; 
+    colorBackground[] = {1,1,1,1}; 
     text = ""; 
 };

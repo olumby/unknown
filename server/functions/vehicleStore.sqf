@@ -2,19 +2,22 @@
  * Set up the vehicle stores.
  */
 
+_store = _this select 0;
 
 if(isServer) then
 {
-    _store = _this select 0;
     _storeDirection = getDir _store;
     _storeTable = createVehicle ["Land_Pallets_stack_F", (getPos _store), [], 0, "CAN_COLLIDE"];
     _storeTable setDir _storeDirection;
     _store attachTo [_storeTable, [0,0.2,0.6]]; 
+
+    _store setVariable ["R3F_LOG_disabled", true];
+    _storeTable setVariable ["R3F_LOG_disabled", true];
 };
 
 if(hasInterface) then
 {
-    _store addAction ["Get Coor", { hint format ["Hello %1 %2 %3!", (_this select 3) select 0, (_this select 3) select 1, (_this select 3) select 2] }, getPos _store];
+    _store addAction ["Open Vehicle Store", "client\dialogs\stores\openVehicleStore.sqf", [vehicleVarName _store], 1.5, false, false, "", "_this distance _target < 3"];
 };
 
 
