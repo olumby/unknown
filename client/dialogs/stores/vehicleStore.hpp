@@ -32,17 +32,6 @@ class VehicleStore
 
     class Controls
     {
-        // class mainScreen: RscFrame
-        // {
-        //     idc = main_screen;
-        //     text = "Vehicle Store";
-
-        //     w = screenW;
-        //     h = screenH;
-        //     x = screenX;
-        //     y = screenY;
-        // };
-
         #define bottomButtonH (0.055)
         #define bottomButtonY ((screenY + screenH) - (bottomButtonH + edgeOffsetY))
 
