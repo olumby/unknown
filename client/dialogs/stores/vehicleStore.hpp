@@ -11,30 +11,37 @@ class VehicleStore
     enableSimulation = true;
     onLoad = "uiNamespace setVariable [""UK_VehicleStoreDialog"", _this select 0]";
 
+    #define screenW (0.9 * 3/4)
+    #define screenH 0.7
+    #define screenX CENTER(1, screenW)
+    #define screenY CENTER(1, screenH)
+
+    class controlsBackground
+    {
+        class mainBackground: RscText
+        {
+            idc = -1;
+            colorBackground[] = {0,0,0,0.75};
+
+            w = screenW;
+            h = screenH;
+            x = screenX;
+            y = screenY;
+        };
+    };
+
     class Controls
     {
-        #define screenW (0.9 * 3/4)
-        #define screenH 0.7
-        #define screenX CENTER(1, screenW)
-        #define screenY CENTER(1, screenH)
+        // class mainScreen: RscFrame
+        // {
+        //     idc = main_screen;
+        //     text = "Vehicle Store";
 
-        class mainBackground: RscBackground
-        {
-            w = screenW;
-            h = screenH;
-            x = screenX;
-            y = screenY;
-        };
-        class mainScreen: RscFrame
-        {
-            idc = main_screen;
-            text = "Vehicle Store";
-
-            w = screenW;
-            h = screenH;
-            x = screenX;
-            y = screenY;
-        };
+        //     w = screenW;
+        //     h = screenH;
+        //     x = screenX;
+        //     y = screenY;
+        // };
 
         #define bottomButtonH (0.055)
         #define bottomButtonY ((screenY + screenH) - (bottomButtonH + edgeOffsetY))

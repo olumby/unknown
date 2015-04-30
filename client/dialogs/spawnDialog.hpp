@@ -11,24 +11,27 @@ class SpawnDialog
     enableSimulation = true;
     onLoad = "uiNamespace setVariable [""UK_SpawnDialog"", _this select 0]";
 
-    class Controls
-    {
-        class spawnScreen: RscFrame
-        {
-            idc = spawn_screen;
-            text = "Spawn Selection";
+    #define screenW (0.7 * 3/4)
+    #define screenH 0.5
+    #define screenX CENTER(1, screenW)
+    #define screenY CENTER(1, screenH)
 
-            #define screenW (0.7 * 3/4)
-            #define screenH 0.5
-            #define screenX CENTER(1, screenW)
-            #define screenY CENTER(1, screenH)
+    class controlsBackground
+    {
+        class mainBackground: RscText
+        {
+            idc = -1;
+            colorBackground[] = {1,1,1,0.1};
 
             w = screenW;
             h = screenH;
             x = screenX;
             y = screenY;
         };
+    };
 
+    class Controls
+    {
         #define bottomButtonH (0.055)
         #define bottomButtonY ((screenY + screenH) - (bottomButtonH + edgeOffsetY))
 
@@ -37,8 +40,8 @@ class SpawnDialog
             idc = spawn_locations_list;
 
             #define locationslistW (screenW - (edgeOffsetX * 2))
-            #define locationslistH ((screenH - bottomButtonH) - (edgeOffsetY * 4))
-            #define locationslistY (screenY + (edgeOffsetY * 2))
+            #define locationslistH ((screenH - bottomButtonH) - (edgeOffsetY * 3))
+            #define locationslistY (screenY + edgeOffsetY)
             #define locationslistX (screenX + edgeOffsetX)
 
             x = locationslistX;

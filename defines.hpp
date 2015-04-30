@@ -107,14 +107,13 @@ class RscText
     colorText[] = {1,1,1,.7};
     text = "";
     shadow = 2;
-    font = "Bitstream";
+    font = "Purista";
     SizeEx = 0.02300;
     fixedWidth = 0;
     x = 0;
     y = 0;
     h = 0;
     w = 0;
-   
 };
 
 class RscPicture
@@ -210,9 +209,9 @@ class RscListBox
     colorPictureDisabled[] = {1, 1, 1, 1};
     class ListScrollBar
     {
-        color[] = {1, 1, 1, 1};
-        colorActive[] = {1, 1, 1, 1};
-        colorDisabled[] = {1, 1, 1, 0.3};
+        color[] = {1,1,1,0.6};
+        colorActive[] = {1,1,1,1};
+        colorDisabled[] = {1,1,1,0.3};
         thumb = "#(argb,8,8,3)color(1,1,1,1)";
         arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
         arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
@@ -269,10 +268,12 @@ class RscFrame
 
 class RscBackground
 { 
-    type = CT_STATIC;
     idc = -1;
-    style = ST_BACKGROUND;
+    type = CT_STATIC;
+    style = ST_CENTER;
+    font = "Purista";
+    sizeEx = 0.03;
+    colorBackground[] = {0,0,0,1};
     colorText[] = {1,1,1,1};
-    colorBackground[] = {1,1,1,1}; 
-    text = ""; 
+    text = "";
 };
