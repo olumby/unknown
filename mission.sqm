@@ -709,7 +709,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=521;
+		items=523;
 		class Item0
 		{
 			position[]={5133.8013,11.281917,212.68372};
@@ -5461,10 +5461,34 @@ class Mission
 			text="vehicleStore_002";
 			init="_store = [this] execVM ""server\functions\vehicleStore.sqf""";
 		};
+		class Item521
+		{
+			position[]={3615.1167,9.9595327,921.28821};
+			azimut=240;
+			offsetY=1.5;
+			id=572;
+			side="EMPTY";
+			vehicle="Land_Laptop_unfolded_F";
+			skill=0.60000002;
+			text="vehicleStore_003";
+			init="_store = [this] execVM ""server\functions\vehicleStore.sqf""";
+		};
+		class Item522
+		{
+			position[]={3732.2468,5.4006395,4341.6631};
+			azimut=355;
+			offsetY=1.5;
+			id=573;
+			side="EMPTY";
+			vehicle="Land_Laptop_unfolded_F";
+			skill=0.60000002;
+			text="vehicleStore_debug";
+			init="_store = [this] execVM ""server\functions\vehicleStore.sqf""";
+		};
 	};
 	class Markers
 	{
-		items=20;
+		items=23;
 		class Item0
 		{
 			position[]={5138.0151,10.925617,225.78143};
@@ -5667,6 +5691,28 @@ class Mission
 			text="Vehicle Store";
 			type="mil_box";
 			colorName="ColorCIV";
+		};
+		class Item20
+		{
+			position[]={3597.0559,10.240438,901.33618};
+			name="vehicle_003";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item21
+		{
+			position[]={3611.2427,9.9847717,916.46112};
+			name="vehicleStoreLabel_003";
+			text="Vehicle Store";
+			type="mil_box";
+			colorName="ColorCIV";
+		};
+		class Item22
+		{
+			position[]={3735.7258,5.354598,4343.7681};
+			name="vehicle_debug";
+			type="Empty";
+			colorName="ColorRed";
 		};
 	};
 };

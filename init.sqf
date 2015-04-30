@@ -1,4 +1,5 @@
 spawnLocations = compile preprocessFileLineNumbers "map\spawns.sqf";
+vehicleStores = compile preprocessFileLineNumbers "map\vehicleStores.sqf";
 
 if (isServer) then {
     diag_log "Server Initializing";
