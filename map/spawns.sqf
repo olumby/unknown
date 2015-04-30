@@ -1,3 +1,4 @@
+spawnLocations = compileFinal str
 [
     ["spawn_001", "Kar Shek"],
     ["spawn_002", "Tal Kar"],
@@ -11,4 +12,4 @@
     ["spawn_010", "Gerdan"],
     ["spawn_011", "Pradesh"],
     ["spawn_012", "Titoli"]
-]
+];
