@@ -38,7 +38,7 @@ class VehicleStore
         class vehicleList: RscListNBox
         {
             idc = vehicle_list;
-            columns[] = {0,0.105,0.5,0.8};
+            columns[] = {0,0.205,0.5,0.8};
             drawSideArrows = false;
             idcLeft = -1;
             idcRight = -1;
