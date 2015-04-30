@@ -4,7 +4,7 @@
 
 #include "spawnDialog_defines.hpp"
 
-class spawnDialog
+class SpawnDialog
 {
     idd = spawn_dialog;
     movingEnable = false;
