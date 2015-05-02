@@ -26,8 +26,9 @@ _buyButton ctrlEnable false;
 
     _row = _vehicleList lnbAddRow["", _price, _name];
     _vehicleList lnbSetPicture[[_row,0], _picture];
-    _vehicleList lnbSetData[[_row,0], _class];
-    _vehicleList lnbSetData[[_row,1], _price]; //Set the displayName to index/column 1
+    _vehicleList lnbSetData[[_row, 0], _class];
+    _vehicleList lnbSetData[[_row, 1], _price];
+    _vehicleList lnbSetData[[_row, 2], _storeName];
 
 } forEach (call vehicleStoreContent);
 
@@ -41,6 +42,7 @@ _vehListSelectionChanged =
 
     _class = _vehicleList lnbData [_selectedVehicle, 0];
     _price = _vehicleList lnbData [_selectedVehicle, 1];
+    _storeName = _vehicleList lnbData [_selectedVehicle, 2];
 
     _marker = format ["%1_spawn", _storeName];
 
