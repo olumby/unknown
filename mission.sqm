@@ -957,7 +957,7 @@ class Mission
 			offsetY=1.5;
 			id=75;
 			side="EMPTY";
-			vehicle="Land_Laptop_unfolded_F";
+			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
 			text="vehicleStore_001";
 			init="_store = [this] execVM ""server\functions\vehicleStore.sqf""";
@@ -5456,7 +5456,7 @@ class Mission
 			offsetY=1.5;
 			id=571;
 			side="EMPTY";
-			vehicle="Land_Laptop_unfolded_F";
+			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
 			text="vehicleStore_002";
 			init="_store = [this] execVM ""server\functions\vehicleStore.sqf""";
@@ -5468,7 +5468,7 @@ class Mission
 			offsetY=1.5;
 			id=572;
 			side="EMPTY";
-			vehicle="Land_Laptop_unfolded_F";
+			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
 			text="vehicleStore_003";
 			init="_store = [this] execVM ""server\functions\vehicleStore.sqf""";
@@ -5480,7 +5480,7 @@ class Mission
 			offsetY=1.5;
 			id=573;
 			side="EMPTY";
-			vehicle="Land_Laptop_unfolded_F";
+			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
 			text="vehicleStore_debug";
 			init="_store = [this] execVM ""server\functions\vehicleStore.sqf""";
