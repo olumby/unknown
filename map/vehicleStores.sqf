@@ -8,29 +8,29 @@ vehicleStores = compileFinal str
 
 vehicleStoreContentCar = compileFinal str
 [
-    ["Hunter", "B_MRAP_01_F"],
-    ["Hunter HMG", "B_MRAP_01_hmg_F"],
-    ["Ifrit", "O_MRAP_02_F"],
-    ["Ifrit HMG", "O_MRAP_02_hmg_F"],
-    ["Strider", "I_MRAP_03_F"],
-    ["Strider HMG", "I_MRAP_03_hmg_F"]
+    ["B_MRAP_01_F", 2000],
+    ["B_MRAP_01_hmg_F", 5000],
+    ["O_MRAP_02_F", 2000],
+    ["O_MRAP_02_hmg_F", 5000],
+    ["I_MRAP_03_F", 3000],
+    ["I_MRAP_03_hmg_F", 6000]
 ];
 
 vehicleStoreContentArmored = compileFinal str
 [
-    ["MSE-3 Marid", "O_APC_Wheeled_02_rcws_F"],
-    ["AMV-7 Marshall", "B_APC_Wheeled_01_cannon_F"],
-    ["AFV-4 Gorgon", "I_APC_Wheeled_03_cannon_F"],
-    ["CRV-6e Bobcat", "B_APC_Tracked_01_CRV_F"],
-    ["IFV-6c Panther", "B_APC_Tracked_01_rcws_F"],
-    ["FV-720 Mora", "I_APC_tracked_03_cannon_F"],
-    ["BTR-K Kamysh", "O_APC_Tracked_02_cannon_F"],
-    ["IFV-6a Cheetah AA", "B_APC_Tracked_01_AA_F"],
-    ["ZSU-39 Tigris AA", "O_APC_Tracked_02_AA_F"],
-    ["M2A1 Slammer", "B_MBT_01_cannon_F"],
-    ["M2A4 Slammer UP", "B_MBT_01_TUSK_F"],
-    ["T-100 Varsuk", "O_MBT_02_cannon_F"],
-    ["MBT-52 Kuma", "I_MBT_03_cannon_F"]
+    ["O_APC_Wheeled_02_rcws_F", 75000],
+    ["B_APC_Wheeled_01_cannon_F", 75000],
+    ["I_APC_Wheeled_03_cannon_F", 75000],
+    ["B_APC_Tracked_01_CRV_F", 75000],
+    ["B_APC_Tracked_01_rcws_F", 75000],
+    ["I_APC_tracked_03_cannon_F", 75000],
+    ["O_APC_Tracked_02_cannon_F", 75000],
+    ["B_APC_Tracked_01_AA_F", 75000],
+    ["O_APC_Tracked_02_AA_F", 75000],
+    ["B_MBT_01_cannon_F", 95000],
+    ["B_MBT_01_TUSK_F", 100000],
+    ["O_MBT_02_cannon_F", 100000],
+    ["I_MBT_03_cannon_F", 100000]
 ];
 
 vehicleStoreContent = compileFinal str (call vehicleStoreContentCar + call vehicleStoreContentArmored);

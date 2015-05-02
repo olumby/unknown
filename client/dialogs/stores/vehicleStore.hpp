@@ -11,7 +11,7 @@ class VehicleStore
     enableSimulation = true;
     onLoad = "uiNamespace setVariable [""UK_VehicleStoreDialog"", _this select 0]";
 
-    #define screenW (0.9 * 3/4)
+    #define screenW (1 * 3/4)
     #define screenH 0.7
     #define screenX CENTER(1, screenW)
     #define screenY CENTER(1, screenH)
@@ -38,11 +38,11 @@ class VehicleStore
         class vehicleList: RscListNBox
         {
             idc = vehicle_list;
-            columns[] = {0,0.205,0.5,0.8};
+            columns[] = {0, 0.11, 0.22};
             drawSideArrows = false;
             idcLeft = -1;
             idcRight = -1;
-            rowHeight = 0.050;
+            rowHeight = 0.035;
 
             #define locationslistW (screenW - (edgeOffsetX * 2))
             #define locationslistH ((screenH - bottomButtonH) - (edgeOffsetY * 4))

@@ -16,7 +16,13 @@ _display = uiNamespace getVariable "UK_VehicleStoreDialog";
 _vehicleList = _display displayCtrl vehicle_list;
 
 {
-    _vehicleList lnbAddRow[_x select 0, _x select 1];
+    _class = _x select 0;
+    _picture = getText (configFile >> "cfgVehicles" >> _class >> "picture");
+    _name = getText (configFile >> "cfgVehicles" >> _class >> "displayName");
+
+    _row = _vehicleList lnbAddRow["", _name, _x select 1];
+    _vehicleList lnbSetPicture[[_row,0], _picture];
+
 } forEach (call vehicleStoreContent);
 
 //_veh = createVehicle ["I_MRAP_03_hmg_F", ((getPos player) findEmptyPosition [1, 150, "I_MRAP_03_hmg_F"]), [], 0, "CAN_COLLIDE"];
