@@ -68,32 +68,20 @@ class VehicleStore
             w = buyButtonW;
             h = normalButtonH;
         };
-        // class randomSpawnButton: RscButton
-        // {
-        //     idc = random_spawn_button;
-        //     text = "Random";
+        class vehicleFilter: RscCombo
+        {
+            idc = vehicle_list_filter;
+            colorBackground[] = {0,0,0,0.7};
 
-        //     #define randomButtonW scaleFix(0.15)
-        //     #define randomButtonX (screenX + (edgeOffsetX * 2) + spawnButtonW)
+            #define vehicleFilterW 0.34
+            #define vehicleFilterH 0.035
+            #define vehicleFilterY (screenY + screenH + edgeOffsetY) 
+            #define vehicleFilterX screenX
 
-        //     x = randomButtonX;
-        //     y = bottomButtonY;
-        //     w = randomButtonW;
-        //     h = bottomButtonH;
-        // };
-        // class abortButton: RscButton
-        // {
-        //     idc = -1;
-        //     text = "Abort";
-        //     onButtonClick = "endMission 'LOSER'";
-
-        //     #define abortButtonW scaleFix(0.15)
-        //     #define abortButtonX ((screenX + screenW) - abortButtonW - edgeOffsetX)
-
-        //     x = abortButtonX;
-        //     y = bottomButtonY;
-        //     w = abortButtonW;
-        //     h = bottomButtonH;
-        // };
+            x = vehicleFilterX;
+            y = vehicleFilterY;
+            w = vehicleFilterW;
+            h = vehicleFilterH;
+        };
     };
 };

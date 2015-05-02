@@ -153,10 +153,10 @@ class RscButton
 
     colorShadow[] = {0,0,0,0};
     colorBorder[] = {0,0,0,0};
-    soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
-    soundPush[] = {"\ca\ui\data\sound\new1",0,0};
-    soundClick[] = {"\ca\ui\data\sound\onclick",0.07,1};
-    soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
+    soundEnter[] = {"",0.1,1};
+    soundPush[] = {"",0.1,1};
+    soundClick[] = {"",0.1,1};
+    soundEscape[] = {"",0.1,1};
     style = ST_CENTER;
     x = 0;
     y = 0;
@@ -189,10 +189,10 @@ class RscButtonDark
 
     colorShadow[] = {0,0,0,0};
     colorBorder[] = {0,0,0,0};
-    soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
-    soundPush[] = {"\ca\ui\data\sound\new1",0,0};
-    soundClick[] = {"\ca\ui\data\sound\onclick",0.07,1};
-    soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
+    soundEnter[] = {"",0.1,1};
+    soundPush[] = {"",0.1,1};
+    soundClick[] = {"",0.1,1};
+    soundEscape[] = {"",0.1,1};
     style = ST_CENTER;
     x = 0;
     y = 0;
@@ -279,6 +279,42 @@ class RscListNBox {
     autoScrollRewind = 0;
     class ListScrollBar
     {
+        color[] = {1,1,1,0.6};
+        colorActive[] = {1,1,1,1};
+        colorDisabled[] = {1,1,1,0.3};
+        thumb = "#(argb,8,8,3)color(1,1,1,1)";
+        arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+        arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+        border = "#(argb,8,8,3)color(1,1,1,1)";
+    };
+};
+
+class RscCombo {
+    style = ST_CENTER;
+    type = CT_COMBO;
+    x = 0;
+    y = 0;
+    w = 0.12;
+    h = 0.035;
+    shadow = 0;
+    colorSelect[] = {0, 0, 0, 1};
+    colorText[] = {0.95, 0.95, 0.95, 1};
+    maxHistoryDelay = 1;
+    colorBackground[] = {0.4,0.4,0.4,0.4};
+    colorSelectBackground[] = {1, 1, 1, 0.7};
+    colow_Rscrollbar[] = {1, 0, 0, 1};
+    soundCollapse[] = {"",0.1,1};
+    soundExpand[] = {"",0.1,1};
+    soundSelect[] = {"",0.1,1};
+    arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+    arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+    wholeHeight = 0.45;
+    color[] = {1, 1, 1, 1};
+    colorActive[] = {1, 0, 0, 1};
+    colorDisabled[] = {1, 1, 1, 0.25};
+    font = "Purista";
+    sizeEx = 0.035;
+    class ComboScrollBar {
         color[] = {1,1,1,0.6};
         colorActive[] = {1,1,1,1};
         colorDisabled[] = {1,1,1,0.3};
