@@ -5549,7 +5549,7 @@ class Mission
 		class Item6
 		{
 			position[]={1418.5507,39.190052,3619.9897};
-			name="vehicle_001";
+			name="vehicleStore_001_spawn";
 			type="Empty";
 			colorName="ColorRed";
 		};
@@ -5564,7 +5564,7 @@ class Mission
 		class Item8
 		{
 			position[]={1428.7202,36.061134,3596.8135};
-			name="vehicleStoreLabel_001";
+			name="vehicleStore_001_label";
 			text="Vehicle Store";
 			type="mil_box";
 			colorName="ColorCIV";
@@ -5680,14 +5680,14 @@ class Mission
 		class Item18
 		{
 			position[]={4100.2671,9.4266396,3556.4541};
-			name="vehicle_002";
+			name="vehicleStore_002_spawn";
 			type="Empty";
 			colorName="ColorRed";
 		};
 		class Item19
 		{
 			position[]={4085.8442,9.1060905,3553.5508};
-			name="vehicleStoreLabel_002";
+			name="vehicleStore_002_label";
 			text="Vehicle Store";
 			type="mil_box";
 			colorName="ColorCIV";
@@ -5695,14 +5695,14 @@ class Mission
 		class Item20
 		{
 			position[]={3597.0559,10.240438,901.33618};
-			name="vehicle_003";
+			name="vehicleStore_003_spawn";
 			type="Empty";
 			colorName="ColorRed";
 		};
 		class Item21
 		{
 			position[]={3611.2427,9.9847717,916.46112};
-			name="vehicleStoreLabel_003";
+			name="vehicleStore_003_label";
 			text="Vehicle Store";
 			type="mil_box";
 			colorName="ColorCIV";
@@ -5710,7 +5710,7 @@ class Mission
 		class Item22
 		{
 			position[]={3735.7258,5.354598,4343.7681};
-			name="vehicle_debug";
+			name="vehicleStore_debug_spawn";
 			type="Empty";
 			colorName="ColorRed";
 		};

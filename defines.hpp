@@ -172,6 +172,42 @@ class RscButton
     borderSize = 0;
 };
 
+class RscButtonDark
+{
+    access = 0;
+    type = CT_BUTTON;
+    text = "";
+    colorText[] = {1,1,1,1};
+    colorText2[] = {1,1,1,1};
+
+    colorFocused[] = { 0, 0, 0, 0 };   // border color for focused state
+    colorDisabled[] = { 1, 1, 1, 0.5 };   // text color for disabled state
+    colorBackground[] = { 0, 0, 0, 0.7 };
+    colorBackground2[] = { 0, 0, 0, 0.7 };
+    colorBackgroundDisabled[] = { 0, 0, 0, 0.4 };   // background color for disabled state
+    colorBackgroundActive[] = { 0, 0, 0, 0.75 };   // background color for active state
+
+    colorShadow[] = {0,0,0,0};
+    colorBorder[] = {0,0,0,0};
+    soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
+    soundPush[] = {"\ca\ui\data\sound\new1",0,0};
+    soundClick[] = {"\ca\ui\data\sound\onclick",0.07,1};
+    soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
+    style = ST_CENTER;
+    x = 0;
+    y = 0;
+    w = 0.055589;
+    h = 0.039216;
+    shadow = 2;
+    font = "PuristaMedium";
+    sizeEx = 0.03921;
+    offsetX = 0;
+    offsetY = 0;
+    offsetPressedX = 0;
+    offsetPressedY = 0;
+    borderSize = 0;
+};
+
 class RscListBox
 {
     idc = -1;

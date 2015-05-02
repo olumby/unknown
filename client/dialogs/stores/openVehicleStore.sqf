@@ -14,15 +14,40 @@ vehicleStoreDialogOpen = true;
 _display = uiNamespace getVariable "UK_VehicleStoreDialog";
 
 _vehicleList = _display displayCtrl vehicle_list;
+_buyButton = _display displayCtrl buy_vehicle_button;
+
+_buyButton ctrlEnable false;
 
 {
     _class = _x select 0;
     _picture = getText (configFile >> "cfgVehicles" >> _class >> "picture");
     _name = getText (configFile >> "cfgVehicles" >> _class >> "displayName");
+    _price = str (_x select 1);
 
-    _row = _vehicleList lnbAddRow["", _name, _x select 1];
+    _row = _vehicleList lnbAddRow["", _price, _name];
     _vehicleList lnbSetPicture[[_row,0], _picture];
+    _vehicleList lnbSetData[[_row,0], _class];
+    _vehicleList lnbSetData[[_row,1], _price]; //Set the displayName to index/column 1
 
 } forEach (call vehicleStoreContent);
 
-//_veh = createVehicle ["I_MRAP_03_hmg_F", ((getPos player) findEmptyPosition [1, 150, "I_MRAP_03_hmg_F"]), [], 0, "CAN_COLLIDE"];
+_vehListSelectionChanged =
+{
+    _display = uiNamespace getVariable "UK_VehicleStoreDialog";
+    _vehicleList = _display displayCtrl vehicle_list;
+    _buyButton = _display displayCtrl buy_vehicle_button;
+
+    _selectedVehicle = lnbCurSelRow _vehicleList;
+
+    _class = _vehicleList lnbData [_selectedVehicle, 0];
+    _price = _vehicleList lnbData [_selectedVehicle, 1];
+
+    _marker = format ["%1_spawn", _storeName];
+
+    _buttonAction = format ["closeDialog 0; _veh = createVehicle [""%1"", (%2 findEmptyPosition [1, 150, ""%1""]), [], 0, ""CAN_COLLIDE""];", _class, (getMarkerPos _marker)];
+
+    _buyButton buttonSetAction _buttonAction;
+    _buyButton ctrlEnable true;
+};
+
+_vehicleList ctrlAddEventHandler ["LBSelChanged", _vehListSelectionChanged];

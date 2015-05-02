@@ -11,8 +11,8 @@ class VehicleStore
     enableSimulation = true;
     onLoad = "uiNamespace setVariable [""UK_VehicleStoreDialog"", _this select 0]";
 
-    #define screenW (1 * 3/4)
-    #define screenH 0.7
+    #define screenW (1.1 * 3/4)
+    #define screenH 0.6
     #define screenX CENTER(1, screenW)
     #define screenY CENTER(1, screenH)
 
@@ -32,21 +32,21 @@ class VehicleStore
 
     class Controls
     {
-        #define bottomButtonH (0.055)
-        #define bottomButtonY ((screenY + screenH) - (bottomButtonH + edgeOffsetY))
+        #define normalButtonH (0.050)
+        #define normalButtonY (screenY + screenH + edgeOffsetY)
 
         class vehicleList: RscListNBox
         {
             idc = vehicle_list;
-            columns[] = {0, 0.11, 0.22};
+            columns[] = {0, 0.13, 0.29};
             drawSideArrows = false;
             idcLeft = -1;
             idcRight = -1;
             rowHeight = 0.035;
 
-            #define locationslistW (screenW - (edgeOffsetX * 2))
-            #define locationslistH ((screenH - bottomButtonH) - (edgeOffsetY * 4))
-            #define locationslistY (screenY + (edgeOffsetY * 2))
+            #define locationslistW ((screenW * 0.65) - (edgeOffsetY * 2))
+            #define locationslistH (screenH - (edgeOffsetY * 2))
+            #define locationslistY (screenY + edgeOffsetY)
             #define locationslistX (screenX + edgeOffsetX)
 
             x = locationslistX;
@@ -54,19 +54,20 @@ class VehicleStore
             w = locationslistW;
             h = locationslistH;
         };
-        // class spawnLocationsButton: RscButton
-        // {
-        //     idc = spawn_locations_button;
-        //     text = "Spawn";
+        class buyVehicleButton: RscButtonDark
+        {
+            idc = buy_vehicle_button;
+            text = "Buy Vehicle";
 
-        //     #define spawnButtonW scaleFix(0.15)
-        //     #define spawnButtonX (screenX + edgeOffsetX)
+            #define buyButtonW scaleFix(0.21)
+            #define buyButtonX ((screenX + screenW) - buyButtonW)
 
-        //     x = spawnButtonX;
-        //     y = bottomButtonY;
-        //     w = spawnButtonW;
-        //     h = bottomButtonH;
-        // };
+
+            x = buyButtonX;
+            y = normalButtonY;
+            w = buyButtonW;
+            h = normalButtonH;
+        };
         // class randomSpawnButton: RscButton
         // {
         //     idc = random_spawn_button;
