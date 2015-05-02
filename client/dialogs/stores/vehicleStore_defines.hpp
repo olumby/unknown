@@ -5,5 +5,8 @@
 #define vehicle_store 24233
 #define main_screen 24234
 #define vehicle_list 24235
+ #define vehicle_list_filter 24240
 #define buy_vehicle_button 24236
-#define spawn_locations_button 1803
+#define vehicle_picture 24237
+#define color_selection_text 24238
+#define color_selection 24239
