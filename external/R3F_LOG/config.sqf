@@ -78,7 +78,7 @@ R3F_LOG_CFG_disabled_by_default = false;
  * 
  * Voir aussi la variable de configiration R3F_LOG_CFG_unlock_objects_timer.
  */
-R3F_LOG_CFG_lock_objects_mode = "side";
+R3F_LOG_CFG_lock_objects_mode = "none";
 
 /**
  * COUNTDOWN TO UNLOCK AN OBJECT
@@ -254,19 +254,13 @@ R3F_LOG_CFG_can_be_towed = R3F_LOG_CFG_can_be_towed +
  * List of class names of helicopters which can lift objects.
  * Liste des noms de classes des hélicoptères pouvant héliporter des objets.
  */
-R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
-[
-	// e.g. : "MyLifterVehicleClassName1", "MyLifterVehicleClassName2"
-];
+R3F_LOG_CFG_can_lift = [];
 
 /**
  * List of class names of objects which can be lifted.
  * Liste des noms de classes des objets héliportables.
  */
-R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
-[
-	// e.g. : "MyLiftableObjectClassName1", "MyLiftableObjectClassName2"
-];
+R3F_LOG_CFG_can_be_lifted = [];
 
 
 /****** LOAD IN VEHICLE / CHARGER DANS LE VEHICULE ******/
