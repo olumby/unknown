@@ -22,7 +22,7 @@ _buyButton ctrlEnable false;
 {
     _row = _vehicleListFilter lbAdd _x;
     _vehicleListFilter lbSetData [_row, _x];
-} foreach ["All","Car","Utility","Armored","Air","Autonomous","Support"];
+} foreach ["All","Car","Utility","Armored","Air","Autonomous"];
 
 _vehicleListFilter lbSetCurSel 0;
 
@@ -33,16 +33,21 @@ _vehListFltrSelectionChanged =
     _vehicleListFilter = _display displayCtrl vehicle_list_filter;
 
     _filterIndex = lbCurSel _vehicleListFilter;
-    _filter = _vehicleList lbData _filterIndex;
+    _filter = _vehicleListFilter lbData _filterIndex;
 
-    _array = switch(_filter) do
+    systemChat _filter;
+
+    _vehicleArray = switch(_filter) do
     {
-        case "All": { call vehicleStoreContent };
         case "Car": { call vehicleStoreContentCar };
         case "Utility": { call vehicleStoreContentUtility };
         case "Armored": { call vehicleStoreContentArmored };
-        default { [] };
+        case "Air": { call vehicleStoreContentAir };
+        case "Autonomous": { call vehicleStoreContentAutonomous };
+        default { call vehicleStoreContent };
     };
+
+    systemChat "Add Vehicles Now";
 
     lbClear _vehicleList;
 
@@ -57,7 +62,7 @@ _vehListFltrSelectionChanged =
         _vehicleList lnbSetData[[_row, 0], _class];
         _vehicleList lnbSetData[[_row, 1], _price];
         _vehicleList lnbSetData[[_row, 2], _storeName];
-    } forEach (_array);
+    } forEach (_vehicleArray);
 
 };
 
