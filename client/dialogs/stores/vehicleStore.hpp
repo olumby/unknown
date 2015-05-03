@@ -32,7 +32,7 @@ class VehicleStore
 
     class Controls
     {
-        #define normalButtonH (0.050)
+        #define normalButtonH 0.039216
         #define normalButtonY (screenY + screenH + edgeOffsetY)
 
         class vehicleList: RscListNBox
@@ -57,7 +57,7 @@ class VehicleStore
         class buyVehicleButton: RscButtonDark
         {
             idc = buy_vehicle_button;
-            text = "Buy Vehicle";
+            text = "BUY VEHICLE";
 
             #define buyButtonW scaleFix(0.21)
             #define buyButtonX ((screenX + screenW) - buyButtonW)
