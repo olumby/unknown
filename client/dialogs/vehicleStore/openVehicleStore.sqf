@@ -24,17 +24,7 @@ _buyButton ctrlEnable false;
     _vehicleListFilter lbSetData [_row, _x];
 } foreach ["All","Car","Utility","Armored","Air","Autonomous"];
 
-{
-    _class = _x select 0;
-    _picture = getText (configFile >> "cfgVehicles" >> _class >> "picture");
-    _name = getText (configFile >> "cfgVehicles" >> _class >> "displayName");
-    _price = str (_x select 1);
-
-    _row = _vehicleList lnbAddRow["", _price, _name];
-    _vehicleList lnbSetPicture[[_row,0], _picture];
-    _vehicleList lnbSetData[[_row, 0], _class];
-    _vehicleList lnbSetData[[_row, 1], _price];
-    _vehicleList lnbSetData[[_row, 2], _storeName];
-} forEach (call vehicleStoreContent);
+_row = _vehicleList lnbAddRow["", "", ""];
+_vehicleList lnbSetData[[_row, 2], _storeName];
 
 _vehicleListFilter lbSetCurSel 0;

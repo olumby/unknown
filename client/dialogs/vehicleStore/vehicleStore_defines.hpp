@@ -8,5 +8,5 @@
 #define vehicle_list_filter 24240
 #define buy_vehicle_button 24236
 #define vehicle_picture 24237
-#define color_selection_text 24238
-#define color_selection 24239
+#define var_selection_text 24238
+#define var_selection 24239

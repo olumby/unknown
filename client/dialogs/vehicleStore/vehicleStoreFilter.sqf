@@ -27,7 +27,7 @@ lbClear _vehicleList;
     _name = getText (configFile >> "cfgVehicles" >> _class >> "displayName");
     _price = str (_x select 1);
 
-    _row = _vehicleList lnbAddRow["", _price, _name];
+    _row = _vehicleList lnbAddRow["", "", _name];
     _vehicleList lnbSetPicture[[_row,0], _picture];
     _vehicleList lnbSetData[[_row, 0], _class];
     _vehicleList lnbSetData[[_row, 1], _price];

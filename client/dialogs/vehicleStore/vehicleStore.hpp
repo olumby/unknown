@@ -38,14 +38,14 @@ class VehicleStore
         class vehicleList: RscListNBox
         {
             idc = vehicle_list;
-            columns[] = {0, 0.13, 0.29};
+            columns[] = {0, 0, 0.12};
             drawSideArrows = false;
             idcLeft = -1;
             idcRight = -1;
             rowHeight = 0.035;
             onLBSelChanged  = "_this call vehicleStoreSelection";
 
-            #define locationslistW ((screenW * 0.65) - (edgeOffsetY * 2))
+            #define locationslistW ((screenW * 0.6) - (edgeOffsetX * 2))
             #define locationslistH (screenH - (edgeOffsetY * 2))
             #define locationslistY (screenY + edgeOffsetY)
             #define locationslistX (screenX + edgeOffsetX)
@@ -84,6 +84,23 @@ class VehicleStore
             y = vehicleFilterY;
             w = vehicleFilterW;
             h = vehicleFilterH;
+        };
+
+        class vehiclePicture: RscPicture
+        {
+            idc = vehicle_picture;
+
+            colorBackground[] = {1,1,1,1};
+
+            #define vehiclePictureW ((screenW * 0.4) - edgeOffsetX)
+            #define vehiclePictureH (screenH - (edgeOffsetY * 2))
+            #define vehiclePictureY (screenY + edgeOffsetY)
+            #define vehiclePictureX (screenX + edgeOffsetX + locationslistW)
+
+            x = vehiclePictureW;
+            y = vehiclePictureH;
+            w = vehiclePictureY;
+            h = vehiclePictureX;
         };
     };
 };
