@@ -43,6 +43,7 @@ class VehicleStore
             idcLeft = -1;
             idcRight = -1;
             rowHeight = 0.035;
+            onLBSelChanged  = "_this call vehicleStoreSelection";
 
             #define locationslistW ((screenW * 0.65) - (edgeOffsetY * 2))
             #define locationslistH (screenH - (edgeOffsetY * 2))
@@ -72,6 +73,7 @@ class VehicleStore
         {
             idc = vehicle_list_filter;
             colorBackground[] = {0,0,0,0.7};
+            onLBSelChanged  = "_this call vehicleStoreFilter";
 
             #define vehicleFilterW 0.34
             #define vehicleFilterH 0.035

@@ -9,3 +9,7 @@ gearPlayerUp = compile preprocessFileLineNumbers "client\functions\gearPlayerUp.
 
 // Vehicles
 spawnVehicle = compile preprocessFileLineNumbers "client\functions\vehicleSpawn.sqf";
+
+// Vehicle Store
+vehicleStoreFilter = compile preprocessFileLineNumbers "client\dialogs\vehicleStore\vehicleStoreFilter.sqf";
+vehicleStoreSelection = compile preprocessFileLineNumbers "client\dialogs\vehicleStore\vehicleStoreSelection.sqf";
