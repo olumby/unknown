@@ -17,7 +17,7 @@ if(isServer) then
 
 if(hasInterface) then
 {
-    _store addAction ["Open Vehicle Store", "client\dialogs\stores\openVehicleStore.sqf", [vehicleVarName _store], 1.5, false, false, "", "_this distance _target < 3"];
+    _store addAction ["Open Vehicle Store", "client\dialogs\vehicleStore\openVehicleStore.sqf", [vehicleVarName _store], 1.5, false, false, "", "_this distance _target < 3"];
 
     _store setVariable ["R3F_LOG_disabled", true];
     if (!isNull attachedTo _store) then {

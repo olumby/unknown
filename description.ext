@@ -34,7 +34,7 @@ disableChannels[]={0,1,2,6};
 #include "defines.hpp"
 #include "client\dialogs\helpers.hpp"
 #include "client\dialogs\spawnDialog.hpp"
-#include "client\dialogs\stores\vehicleStore.hpp"
+#include "client\dialogs\vehicleStore\vehicleStore.hpp"
 
 // Third Party Stuff
 #include "external\R3F_LOG\desc_include.h"
