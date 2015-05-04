@@ -35,8 +35,6 @@ _vehListFltrSelectionChanged =
     _filterIndex = lbCurSel _vehicleListFilter;
     _filter = _vehicleListFilter lbData _filterIndex;
 
-    systemChat _filter;
-
     _vehicleArray = switch(_filter) do
     {
         case "Car": { call vehicleStoreContentCar };
@@ -46,8 +44,6 @@ _vehListFltrSelectionChanged =
         case "Autonomous": { call vehicleStoreContentAutonomous };
         default { call vehicleStoreContent };
     };
-
-    systemChat "Add Vehicles Now";
 
     lbClear _vehicleList;
 
