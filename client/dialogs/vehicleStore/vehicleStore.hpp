@@ -85,22 +85,5 @@ class VehicleStore
             w = vehicleFilterW;
             h = vehicleFilterH;
         };
-
-        class vehiclePicture: RscPicture
-        {
-            idc = vehicle_picture;
-
-            colorBackground[] = {1,1,1,1};
-
-            #define vehiclePictureW ((screenW * 0.4) - edgeOffsetX)
-            #define vehiclePictureH (screenH - (edgeOffsetY * 2))
-            #define vehiclePictureY (screenY + edgeOffsetY)
-            #define vehiclePictureX (screenX + edgeOffsetX + locationslistW)
-
-            x = vehiclePictureW;
-            y = vehiclePictureH;
-            w = vehiclePictureY;
-            h = vehiclePictureX;
-        };
     };
 };
