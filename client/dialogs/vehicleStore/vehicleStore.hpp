@@ -12,7 +12,7 @@ class VehicleStore
     onLoad = "uiNamespace setVariable [""UK_VehicleStoreDialog"", _this select 0]";
 
     #define screenW (1.1 * 3/4)
-    #define screenH 0.6
+    #define screenH 0.5
     #define screenX CENTER(1, screenW)
     #define screenY CENTER(1, screenH)
 
@@ -84,6 +84,23 @@ class VehicleStore
             y = vehicleFilterY;
             w = vehicleFilterW;
             h = vehicleFilterH;
+        };
+        class vehicleVar: RscCombo
+        {
+            idc = var_selection;
+            colorBackground[] = {0,0,0,0.7};
+            text = "Variation";
+            //onLBSelChanged  = "_this call vehicleStoreFilter";
+
+            #define vehicleVarW ((screenW * 0.4) - edgeOffsetX)
+            #define vehicleVarH 0.035
+            #define vehicleVarY (screenY + edgeOffsetY) 
+            #define vehicleVarX (screenX + locationslistW + (edgeOffsetX * 2))
+
+            x = vehicleVarX;
+            y = vehicleVarY;
+            w = vehicleVarW;
+            h = vehicleVarH;
         };
     };
 };
