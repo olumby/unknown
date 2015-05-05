@@ -19,7 +19,5 @@ _marker = format ["%1_spawn", _storeName];
 
 _buttonAction = format ["closeDialog 0; _veh = createVehicle [""%1"", (%2 findEmptyPosition [1, 150, ""%1""]), [], 0, ""CAN_COLLIDE""];", _class, (getMarkerPos _marker)];
 
-systemChat _storeName;
-
 _buyButton buttonSetAction _buttonAction;
 _buyButton ctrlEnable true;
