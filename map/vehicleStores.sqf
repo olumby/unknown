@@ -8,6 +8,25 @@ vehicleStores = compileFinal str
 
 vehicleStoreContentCar = compileFinal str
 [
+    ["B_Quadbike_01_F", 500], // Quadbike
+
+    ["C_Hatchback_01_F", 600], // Hatchback
+    ["C_Hatchback_01_sport_F", 1000], // Hatchback Sport
+
+    ["C_SUV_01_F", 1500], // SUV
+
+    ["C_Offroad_01_F", 2000], // Offroad
+    ["B_G_Offroad_01_F", 2300], // Offroad Camo
+    ["C_Offroad_01_repair_F", 6000], // Offroad Repair
+    ["B_G_Offroad_01_armed_F", 10000], // Offroad HMG
+
+    ["C_Van_01_transport_F", 600], // Truck
+    ["B_G_Van_01_transport_F", 800], // Truck (Camo)
+    ["C_Van_01_box_F", 800], // Truck Box
+    
+    ["C_Van_01_fuel_F", 6000], // Fuel Truck
+    ["B_G_Van_01_fuel_F", 7000], // Fuel Truck (Camo)
+
     ["B_MRAP_01_F", 2000], // Hunter
     //["B_MRAP_01_gmg_F", 5000], // Hunter GMG
     ["B_MRAP_01_hmg_F", 5000], // Hunter HMG
