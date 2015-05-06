@@ -1,3 +1,7 @@
+/*
+ * Contains the information about spawns.
+ */
+
 spawnLocations = compileFinal str
 [
     ["spawn_001", "Kar Shek"],

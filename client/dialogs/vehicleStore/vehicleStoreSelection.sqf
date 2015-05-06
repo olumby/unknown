@@ -1,3 +1,7 @@
+/*
+ * Called when a vehicle is selected from the list.
+ */
+
 #include "vehicleStore_defines.hpp"
 
 _display = uiNamespace getVariable "UK_VehicleStoreDialog";

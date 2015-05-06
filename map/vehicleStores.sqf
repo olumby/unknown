@@ -1,3 +1,7 @@
+/*
+ * Contains the information about vehicle stores.
+ */
+
 vehicleStores = compileFinal str
 [
     ["vehicleStore_debug", "vehicle_debug"],
@@ -5,6 +9,8 @@ vehicleStores = compileFinal str
     ["vehicleStore_002", "vehicle_002"],
     ["vehicleStore_003", "vehicle_003"]
 ];
+
+
 
 vehicleStoreContentCar = compileFinal str
 [

@@ -1,3 +1,7 @@
+/*
+ * Called when the vehicle type filter changes.
+ */
+
 #include "vehicleStore_defines.hpp"
 
 _display = uiNamespace getVariable "UK_VehicleStoreDialog";

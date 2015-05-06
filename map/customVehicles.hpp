@@ -1,3 +1,7 @@
+/*
+ * Custom vehicles used by missions and stores.
+ */
+
 class CfgVehicleTemplates
 {
 
