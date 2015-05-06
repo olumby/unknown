@@ -23,7 +23,7 @@ class CfgVehicleTemplates
 
     class UK_Offroad_Service
     {
-        displayName = "Offroad Police";
+        displayName = "Offroad Service";
         author = "CmdSft";
         textures[] =
         {

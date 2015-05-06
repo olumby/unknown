@@ -11,7 +11,7 @@ vehicleStores = compileFinal str
 ];
 
 
-
+// Class, Price, Variations (optional) (see map/customVehicles.hpp)
 vehicleStoreContentCar = compileFinal str
 [
     ["B_Quadbike_01_F", 500], // Quadbike
@@ -21,7 +21,7 @@ vehicleStoreContentCar = compileFinal str
 
     ["C_SUV_01_F", 1500], // SUV
 
-    ["C_Offroad_01_F", 2000], // Offroad
+    ["C_Offroad_01_F", 2000, ["UK_Offroad_Police", "UK_Offroad_Service"]], // Offroad
     ["B_G_Offroad_01_F", 2300], // Offroad Camo
     ["C_Offroad_01_repair_F", 6000], // Offroad Repair
     ["B_G_Offroad_01_armed_F", 10000], // Offroad HMG
