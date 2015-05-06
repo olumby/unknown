@@ -11,6 +11,11 @@ _price = _vehicleList lnbData [_selectedVehicle, 1];
 _storeName = _vehicleList lnbData [_selectedVehicle, 2];
 
 _picture = getText (configFile >> "cfgVehicles" >> _class >> "picture");
+_selections = getArray (configFile >> "cfgVehicles" >> _class >> "hiddenSelections");
+_selectionsTex = getArray (configFile >> "cfgVehicles" >> _class >> "hiddenSelectionsTextures");
+
+// systemChat _selections;
+// systemChat _selectionsTex;
 
 _marker = format ["%1_spawn", _storeName];
 

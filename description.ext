@@ -31,6 +31,7 @@ wreckRemovalMaxTime = 1200; //seconds
 // Disabled VoIP Channels
 disableChannels[]={0,1,2,6};
 
+#include "map\customVehicles.hpp"
 #include "defines.hpp"
 #include "client\dialogs\helpers.hpp"
 #include "client\dialogs\spawnDialog.hpp"
