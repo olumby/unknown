@@ -4,7 +4,7 @@
  *     string    store name
  */
 
-_storeName = _this select 3 select 0;
+uiNamespace setVariable ["storeName", _this select 3 select 0];
 
 #include "vehicleStore_defines.hpp"
 
@@ -16,7 +16,9 @@ _display = uiNamespace getVariable "UK_VehicleStoreDialog";
 _vehicleList = _display displayCtrl vehicle_list;
 _vehicleListFilter = _display displayCtrl vehicle_list_filter;
 _buyButton = _display displayCtrl buy_vehicle_button;
+_varSelection = _display displayCtrl var_selection;
 
+_varSelection ctrlShow false;
 _buyButton ctrlEnable false;
 
 {
@@ -25,6 +27,5 @@ _buyButton ctrlEnable false;
 } foreach ["All","Car","Utility","Armored","Air","Autonomous"];
 
 _row = _vehicleList lnbAddRow["", "", ""];
-_vehicleList lnbSetData[[_row, 2], _storeName];
 
 _vehicleListFilter lbSetCurSel 0;

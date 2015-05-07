@@ -7,19 +7,15 @@
 _display = uiNamespace getVariable "UK_VehicleStoreDialog";
 _vehicleList = _display displayCtrl vehicle_list;
 _buyButton = _display displayCtrl buy_vehicle_button;
+_varSelection = _display displayCtrl var_selection;
 
 _selectedVehicle = lnbCurSelRow _vehicleList;
 
 _class = _vehicleList lnbData [_selectedVehicle, 0];
 _price = _vehicleList lnbData [_selectedVehicle, 1];
-_storeName = _vehicleList lnbData [_selectedVehicle, 2];
+_storeName = uiNamespace getVariable "storeName";
 
-_picture = getText (configFile >> "cfgVehicles" >> _class >> "picture");
-_selections = getArray (configFile >> "cfgVehicles" >> _class >> "hiddenSelections");
-_selectionsTex = getArray (configFile >> "cfgVehicles" >> _class >> "hiddenSelectionsTextures");
-
-// systemChat _selections;
-// systemChat _selectionsTex;
+_varSelection ctrlShow true;
 
 _marker = format ["%1_spawn", _storeName];
 

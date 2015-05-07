@@ -21,8 +21,6 @@ _vehicleArray = switch(_filter) do
     default { call vehicleStoreContent };
 };
 
-_storeName = _vehicleList lnbData [0, 2];
-
 lbClear _vehicleList;
 
 {
@@ -35,5 +33,5 @@ lbClear _vehicleList;
     _vehicleList lnbSetPicture[[_row,0], _picture];
     _vehicleList lnbSetData[[_row, 0], _class];
     _vehicleList lnbSetData[[_row, 1], _price];
-    _vehicleList lnbSetData[[_row, 2], _storeName];
+
 } forEach (_vehicleArray);
