@@ -24,7 +24,7 @@ _buyButton ctrlEnable false;
 {
     _row = _vehicleListFilter lbAdd _x;
     _vehicleListFilter lbSetData [_row, _x];
-} foreach ["All","Car","Utility","Armored","Air","Autonomous"];
+} foreach (call vehicleStoreFilters);
 
 _row = _vehicleList lnbAddRow["", "", ""];
 

@@ -10,6 +10,7 @@ vehicleStores = compileFinal str
     ["vehicleStore_003", "vehicle_003"]
 ];
 
+vehicleStoreFilters = compileFinal str ["All","Car","Utility","Armored","Air","Autonomous"];
 
 // Class, Price, Variations (optional) (see map/customVehicles.hpp)
 vehicleStoreContentCar = compileFinal str
