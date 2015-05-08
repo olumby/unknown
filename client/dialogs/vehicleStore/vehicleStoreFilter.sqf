@@ -21,6 +21,8 @@ _vehicleArray = switch(_filter) do
     default { call vehicleStoreContent };
 };
 
+uiNamespace setVariable ["storeVehicles", _vehicleArray];
+
 lbClear _vehicleList;
 
 {
