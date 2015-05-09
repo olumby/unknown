@@ -43,7 +43,7 @@ class VehicleStore
             idcLeft = -1;
             idcRight = -1;
             rowHeight = 0.035;
-            onLBSelChanged  = "_this call vehicleStoreSelection";
+            onLBSelChanged = "_this call vehicleStoreSelection";
 
             #define locationslistW ((screenW * 0.6) - (edgeOffsetX * 2))
             #define locationslistH (screenH - (edgeOffsetY * 2))
@@ -73,7 +73,7 @@ class VehicleStore
         {
             idc = vehicle_list_filter;
             colorBackground[] = {0,0,0,0.7};
-            onLBSelChanged  = "_this call vehicleStoreFilter";
+            onLBSelChanged = "_this call vehicleStoreFilter";
 
             #define vehicleFilterW 0.34
             #define vehicleFilterH 0.035
@@ -89,8 +89,7 @@ class VehicleStore
         {
             idc = var_selection;
             colorBackground[] = {0,0,0,0.7};
-            text = "Variation";
-            //onLBSelChanged  = "_this call vehicleStoreFilter";
+            onLBSelChanged = "_this call vehicleStoreVariation";
 
             #define vehicleVarW ((screenW * 0.4) - edgeOffsetX)
             #define vehicleVarH 0.035

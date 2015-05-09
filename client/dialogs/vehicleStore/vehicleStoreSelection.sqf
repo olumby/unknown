@@ -29,18 +29,5 @@ if (count _vehicleAdvanced > 2) then
     } forEach _variations;
 };
 
-_varSelection lbSetCurSel 0;
-
-
-_class = _vehicleList lnbData [_selectedVehicle, 0];
-_price = _vehicleList lnbData [_selectedVehicle, 1];
-_storeName = uiNamespace getVariable "storeName";
-
 _varSelection ctrlShow true;
-
-_marker = format ["%1_spawn", _storeName];
-
-_buttonAction = format ["closeDialog 0; _veh = createVehicle [""%1"", (%2 findEmptyPosition [1, 150, ""%1""]), [], 0, ""CAN_COLLIDE""];", _class, (getMarkerPos _marker)];
-
-_buyButton buttonSetAction _buttonAction;
-_buyButton ctrlEnable true;
+_varSelection lbSetCurSel 0;
