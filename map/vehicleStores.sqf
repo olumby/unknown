@@ -39,9 +39,9 @@ vehicleStoreContentCar = compileFinal str
     ["O_MRAP_02_F", 2000], //  Ifrit
     //["O_MRAP_02_gmg_F", 5000], // Ifrit GMG
     ["O_MRAP_02_hmg_F", 5000], // Ifrit HMG
-    ["I_MRAP_03_F", 3000], // Strider
-    //["I_MRAP_03_gmg_F", 6000], // Strider GMG
-    ["I_MRAP_03_hmg_F", 6000] // Strider HMG
+    ["I_MRAP_03_F", 3000, ["UK_Strider_Nato"]], // Strider
+    //["I_MRAP_03_gmg_F", 6000, ["UK_Strider_Nato"]], // Strider GMG
+    ["I_MRAP_03_hmg_F", 6000, ["UK_Strider_Nato"]] // Strider HMG
 ];
 
 vehicleStoreContentUtility = compileFinal str

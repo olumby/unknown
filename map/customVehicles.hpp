@@ -4,7 +4,19 @@
 
 class CfgVehicleTemplates
 {
+    // Strider
+    class UK_Strider_Nato
+    {
+        displayName = "Strider NATO";
+        author = "CmdSft";
+        textures[] =
+        {
+            "\A3\soft_f_beta\MRAP_03\Data\mrap_03_ext_co.paa",
+            "\a3\data_f\vehicles\turret_co.paa"
+        };
+    };
 
+    // Offroads
     class UK_Offroad_Police
     {
         displayName = "Offroad Police";
