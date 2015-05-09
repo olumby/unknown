@@ -9,8 +9,9 @@ class CfgVehicleTemplates
     {
         displayName = "Offroad Police";
         author = "CmdSft";
-        textureList[] = {
-            "white", 1
+        textures[] =
+        {
+            "a3\soft_f\offroad_01\data\offroad_01_ext_base02_co.paa"
         };
         animationList[] =
         {
