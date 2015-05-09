@@ -22,8 +22,7 @@ vehicleStoreContentCar = compileFinal str
 
     ["C_SUV_01_F", 1500], // SUV
 
-    ["C_Offroad_01_F", 2000, ["UK_Offroad_Police", "UK_Offroad_Service"]], // Offroad
-    ["B_G_Offroad_01_F", 2300], // Offroad Camo
+    ["C_Offroad_01_F", 2000, ["UK_Offroad_Police", "UK_Offroad_Service", "UK_Offroad_Guer_01", "UK_Offroad_Guer_02", "UK_Offroad_Guer_03", "UK_Offroad_Guer_04", "UK_Offroad_Guer_05", "UK_Offroad_Guer_05", "UK_Offroad_Guer_07", "UK_Offroad_Guer_08", "UK_Offroad_Guer_09", "UK_Offroad_Guer_10", "UK_Offroad_Guer_11", "UK_Offroad_Guer_12"]], // Offroad
     ["C_Offroad_01_repair_F", 6000], // Offroad Repair
     ["B_G_Offroad_01_armed_F", 10000], // Offroad HMG
 
