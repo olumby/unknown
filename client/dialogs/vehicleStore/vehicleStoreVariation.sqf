@@ -30,7 +30,5 @@ if (_selectedVariationClass == "novar") then
     _buttonAction = format ["[""%1"",%2,[%3,%4,%5],true,""%6""] spawn buyVehicle;", _vehicleAdvanced select 0, _vehicleAdvanced select 1, _storeSpawn select 0, _storeSpawn select 1, _storeSpawn select 2, _selectedVariationClass];
 };
 
-systemChat _buttonAction;
-
 _buyButton buttonSetAction _buttonAction;
 _buyButton ctrlEnable true;
