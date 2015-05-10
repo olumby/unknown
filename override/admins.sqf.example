@@ -1,0 +1,10 @@
+/*
+ * Add admins to the game.
+ */
+
+// GUID, Name
+serverAdmins = compileFinal str
+[
+    ["12345678987654321", "Player One"],
+    ["23456789876543212", "Player Two"]
+];
