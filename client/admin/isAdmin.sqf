@@ -1,15 +1,16 @@
 /*
- * Check if the current player is an admin, if so give admin menu.
+ * Check if the provided player is an admin.
+ * Args:
+ *     object     the player to check.
  */
 
 _player = _this select 0;
 
+_return = false;
+
 if (getPlayerUID _player in call serverAdmins) then
 {
-    [] execVM "client\admin\openAdminMenu.sqf";
-    hint "Hi Admin";
-}
-else
-{
-    hint "You are no admin.";
+    _return = true;
 };
+
+_return;

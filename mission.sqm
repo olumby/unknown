@@ -5589,7 +5589,7 @@ class Mission
 			interruptable=1;
 			type="SWITCH";
 			age="UNKNOWN";
-			expActiv="[player] call isAdmin;";
+			expActiv="[player] call openAdminMenu;";
 			class Effects
 			{
 			};
