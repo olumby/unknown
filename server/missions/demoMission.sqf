@@ -16,12 +16,12 @@ if (isServer) then {
     _wp setWaypointType "MOVE";
     _wp setWaypointSpeed "LIMITED";
 
-    waitUntil{ !canMove _veh OR {alive _x} count crew _veh == 0};
-    sleep 10;
-    {deleteVehicle _x} forEach crew _veh; 
-    deletevehicle _veh; 
+    // waitUntil{ !canMove _veh OR {alive _x} count crew _veh == 0};
+    // sleep 10;
+    // {deleteVehicle _x} forEach crew _veh; 
+    // deletevehicle _veh; 
 
-    {deleteVehicle _x} forEach units _veh;
+    // {deleteVehicle _x} forEach units _veh;
 
-    deleteGroup _grp;
+    // deleteGroup _grp;
 };
