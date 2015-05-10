@@ -29,3 +29,6 @@ if (_hasVar) then
 {
     _veh = createVehicle [_class, (_pos findEmptyPosition [1, 150, _class]), [], 0, "NONE"];
 };
+
+closeDialog 0;
+vehicleStoreDialogOpen = false;
