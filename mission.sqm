@@ -5578,6 +5578,23 @@ class Mission
 			colorName="ColorRed";
 		};
 	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={5138.1079,11.547814,159.32947};
+			activationBy="ALPHA";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expActiv="call isAdmin;";
+			class Effects
+			{
+			};
+		};
+	};
 };
 class Intro
 {
