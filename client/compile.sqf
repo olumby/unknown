@@ -15,3 +15,6 @@ vehicleStoreFilter = compile preprocessFileLineNumbers "client\dialogs\vehicleSt
 vehicleStoreSelection = compile preprocessFileLineNumbers "client\dialogs\vehicleStore\vehicleStoreSelection.sqf";
 vehicleStoreVariation = compile preprocessFileLineNumbers "client\dialogs\vehicleStore\vehicleStoreVariation.sqf";
 buyVehicle = compile preprocessFileLineNumbers "client\dialogs\vehicleStore\buyVehicle.sqf";
+
+// Admin
+isAdmin = compile preprocessFileLineNumbers "client\admin\isAdmin.sqf";
