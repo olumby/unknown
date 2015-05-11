@@ -6,6 +6,11 @@ if ([player] call isAdmin) then
 {
     if (vehicle player != player) then
     {
+
+        _display = uiNamespace getVariable "UK_AdminDialog";
+
+        _button = _display displayCtrl 29234;
+
         if (vehicle player getVariable ["VehGodModeEnabled", false]) then
         {
             // disable god mode
@@ -13,6 +18,7 @@ if ([player] call isAdmin) then
             vehicle player setDamage 0;
             vehicle player setVariable ["VehGodModeEnabled", false];
 
+            _button ctrlSetText "Enable Vehicle God";
             hint "Vehicle God Mod Disabled";
         }
         else
@@ -22,6 +28,7 @@ if ([player] call isAdmin) then
             vehicle player setDamage 0;
             vehicle player setVariable ["VehGodModeEnabled", true];
 
+            _button ctrlSetText "Disable Vehicle God";
             hint "Vehicle God Mod Enabled";
         };
     }

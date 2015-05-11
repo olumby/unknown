@@ -4,6 +4,10 @@
 
 if ([player] call isAdmin) then
 {
+    _display = uiNamespace getVariable "UK_AdminDialog";
+
+    _button = _display displayCtrl 29235;
+
     if (player getVariable ["GodModeEnabled", false]) then
     {
         // disable god mode
@@ -11,6 +15,7 @@ if ([player] call isAdmin) then
         player setDamage 0;
         player setVariable ["GodModeEnabled", false];
 
+        _button ctrlSetText "Enable Player God";
         hint "God Mod Disabled";
     }
     else
@@ -20,6 +25,7 @@ if ([player] call isAdmin) then
         player setDamage 0;
         player setVariable ["GodModeEnabled", true];
 
+        _button ctrlSetText "Disable Player God";
         hint "God Mod Enabled";
     };
 }

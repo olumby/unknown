@@ -1,5 +1,5 @@
 /*
- * The main spawn screen
+ * The admin menu
  */
 
 #include "adminMenu_defines.hpp"
