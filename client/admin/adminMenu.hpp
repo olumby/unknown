@@ -2,11 +2,11 @@
  * The main spawn screen
  */
 
-//#include "adminDialog_defines.hpp"
+#include "adminMenu_defines.hpp"
 
 class AdminDialog
 {
-    idd = -1;
+    idd = admin_menu;
     movingEnable = true;
     enableSimulation = true;
     onLoad = "uiNamespace setVariable [""UK_AdminDialog"", _this select 0]";
@@ -28,7 +28,97 @@ class AdminDialog
             x = screenX;
             y = screenY;
         };
+        class titleBackground : RscText
+        {
+            idc = -1;
+            colorBackground[] = {0,0,0,0.75};
+
+            #define titleBackgroundW screenW
+            #define titleBackgroundH 0.04
+            #define titleBackgroundY (screenY - (edgeOffsetY / 2) - titleBackgroundH)
+            #define titleBackgroundX screenX
+
+            x = titleBackgroundX;
+            y = titleBackgroundY;
+            w = titleBackgroundW;
+            h = titleBackgroundH;
+
+        };
+        class titleBorder : RscText
+        {
+            idc = -1;
+            colorBackground[] = {0.96,0.25,0.13,0.75};
+
+            #define titleBorderW titleBackgroundW
+            #define titleBorderH (edgeOffsetX / 4)
+            #define titleBorderY (titleBackgroundY + titleBackgroundH)
+            #define titleBorderX screenX
+
+            x = titleBorderX;
+            y = titleBorderY;
+            w = titleBorderW;
+            h = titleBorderH;
+
+        };
+        class Title : RscTitle
+        {
+            colorBackground[] = {0, 0, 0, 0};
+            idc = -1;
+            text = "Admin Menu";
+
+            #define titleW (titleBackgroundW - edgeOffsetX)
+            #define titleH 0.04
+            #define titleY titleBackgroundY
+            #define titleX (titleBackgroundX + (edgeOffsetX / 2))
+
+            x = titleX;
+            y = titleY;
+            w = titleW;
+            h = titleH;
+        };
     };
 
+    class Controls
+    {
+        #define footerElementH 0.039
+        #define footerElementY (screenY + screenH + (edgeOffsetY / 2))
+
+        class godButton: RscButtonDark
+        {
+            idc = god_button;
+            text = "Enable Player God";
+            style = ST_RIGHT;
+            onButtonClick = "[] execVM 'client\admin\triggerGodMode.sqf'";
+
+            #define godButtonW scaleFix(0.3)
+            #define godButtonH footerElementH
+            #define godButtonY (screenY + edgeOffsetY)
+            #define godButtonX ((screenX + screenW) - (godButtonW + edgeOffsetX))
+
+            x = godButtonX;
+            y = godButtonY;
+            w = godButtonW;
+            h = godButtonH;
+        };
+
+        class vehGodButton: RscButtonDark
+        {
+            idc = veh_god_button;
+            text = "Enable Vehicle God";
+            style = ST_RIGHT;
+            onButtonClick = "[] execVM 'client\admin\triggerVehGodMode.sqf'";
+
+            #define vehGodButtonW scaleFix(0.3)
+            #define vehGodButtonH footerElementH
+            #define vehGodButtonY (godButtonY + godButtonH + (edgeOffsetY / 2))
+            #define vehGodButtonX ((screenX + screenW) - (vehGodButtonW + edgeOffsetX))
+
+            x = vehGodButtonX;
+            y = vehGodButtonY;
+            w = vehGodButtonW;
+            h = vehGodButtonH;
+        };
+
+    };
 
 };
