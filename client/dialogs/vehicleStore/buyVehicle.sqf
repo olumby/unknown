@@ -15,6 +15,9 @@ _hasVar = _this select 3;
 
 // we need to charge customers up here.
 
+closeDialog 0;
+vehicleStoreDialogOpen = false;
+
 if (_hasVar) then
 {
     _var = _this select 4;
@@ -29,6 +32,3 @@ if (_hasVar) then
 {
     _veh = createVehicle [_class, (_pos findEmptyPosition [1, 150, _class]), [], 0, "NONE"];
 };
-
-closeDialog 0;
-vehicleStoreDialogOpen = false;
