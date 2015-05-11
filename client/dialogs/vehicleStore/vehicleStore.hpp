@@ -80,8 +80,8 @@ class VehicleStore
 
     class Controls
     {
-        #define normalButtonH 0.039
-        #define normalButtonY (screenY + screenH + (edgeOffsetY / 2))
+        #define footerElementH 0.039
+        #define footerElementY (screenY + screenH + (edgeOffsetY / 2))
 
         class vehicleList: RscListNBox
         {
@@ -113,9 +113,9 @@ class VehicleStore
 
 
             x = buyButtonX;
-            y = normalButtonY;
+            y = footerElementY;
             w = buyButtonW;
-            h = normalButtonH;
+            h = footerElementH;
         };
         class vehicleFilter: RscCombo
         {
@@ -125,7 +125,7 @@ class VehicleStore
 
             #define vehicleFilterW 0.34
             #define vehicleFilterH 0.035
-            #define vehicleFilterY (screenY + screenH + edgeOffsetY) 
+            #define vehicleFilterY footerElementY
             #define vehicleFilterX screenX
 
             x = vehicleFilterX;
