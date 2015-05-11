@@ -28,12 +28,60 @@ class VehicleStore
             x = screenX;
             y = screenY;
         };
+        class titleBackground : RscText
+        {
+            idc = -1;
+            colorBackground[] = {0,0,0,0.75};
+
+            #define titleBackgroundW screenW
+            #define titleBackgroundH 0.04
+            #define titleBackgroundY (screenY - (edgeOffsetY / 2) - titleBackgroundH)
+            #define titleBackgroundX screenX
+
+            x = titleBackgroundX;
+            y = titleBackgroundY;
+            w = titleBackgroundW;
+            h = titleBackgroundH;
+
+        };
+        class titleBorder : RscText
+        {
+            idc = -1;
+            colorBackground[] = {0.96,0.25,0.13,0.75};
+
+            #define titleBorderW titleBackgroundW
+            #define titleBorderH (edgeOffsetX / 4)
+            #define titleBorderY (titleBackgroundY + titleBackgroundH)
+            #define titleBorderX screenX
+
+            x = titleBorderX;
+            y = titleBorderY;
+            w = titleBorderW;
+            h = titleBorderH;
+
+        };
+        class Title : RscTitle
+        {
+            colorBackground[] = {0, 0, 0, 0};
+            idc = -1;
+            text = "Vehicle Store";
+
+            #define titleW (titleBackgroundW - edgeOffsetX)
+            #define titleH 0.04
+            #define titleY titleBackgroundY
+            #define titleX (titleBackgroundX + (edgeOffsetX / 2))
+
+            x = titleX;
+            y = titleY;
+            w = titleW;
+            h = titleH;
+        };
     };
 
     class Controls
     {
-        #define normalButtonH 0.039216
-        #define normalButtonY (screenY + screenH + edgeOffsetY)
+        #define normalButtonH 0.039
+        #define normalButtonY (screenY + screenH + (edgeOffsetY / 2))
 
         class vehicleList: RscListNBox
         {

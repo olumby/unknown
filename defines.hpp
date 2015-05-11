@@ -108,12 +108,19 @@ class RscText
     text = "";
     shadow = 2;
     font = "Purista";
-    SizeEx = 0.02300;
+    sizeEx = 0.02300;
     fixedWidth = 0;
     x = 0;
     y = 0;
     h = 0;
     w = 0;
+};
+
+class RscTitle : RscText {
+    style = 0;
+    font = "PuristaMedium";
+    sizeEx = 0.036;
+    colorText[] = {0.95, 0.95, 0.95, 1};
 };
 
 class RscPicture
@@ -144,48 +151,12 @@ class RscButton
     colorText[] = {1,1,1,1};
     colorText2[] = {1,1,1,1};
 
-    colorFocused[] = { 0, 0, 0, 0 };   // border color for focused state
-    colorDisabled[] = { 1, 1, 1, 0.5 };   // text color for disabled state
-    colorBackground[] = { 1, 1, 1, 0.2 };
-    colorBackground2[] = { 1, 1, 1, 0.2 };
-    colorBackgroundDisabled[] = { 1, 1, 1, 0.1 };   // background color for disabled state
-    colorBackgroundActive[] = { 1, 1, 1, 0.3 };   // background color for active state
-
-    colorShadow[] = {0,0,0,0};
-    colorBorder[] = {0,0,0,0};
-    soundEnter[] = {"",0.1,1};
-    soundPush[] = {"",0.1,1};
-    soundClick[] = {"",0.1,1};
-    soundEscape[] = {"",0.1,1};
-    style = ST_CENTER;
-    x = 0;
-    y = 0;
-    w = 0.055589;
-    h = 0.039216;
-    shadow = 2;
-    font = "PuristaMedium";
-    sizeEx = 0.03921;
-    offsetX = 0;
-    offsetY = 0;
-    offsetPressedX = 0;
-    offsetPressedY = 0;
-    borderSize = 0;
-};
-
-class RscButtonDark
-{
-    access = 0;
-    type = CT_BUTTON;
-    text = "";
-    colorText[] = {1,1,1,1};
-    colorText2[] = {1,1,1,1};
-
-    colorFocused[] = { 0, 0, 0, 0 };   // border color for focused state
-    colorDisabled[] = { 1, 1, 1, 0.5 };   // text color for disabled state
-    colorBackground[] = { 0, 0, 0, 0.7 };
-    colorBackground2[] = { 0, 0, 0, 0.7 };
-    colorBackgroundDisabled[] = { 0, 0, 0, 0.4 };   // background color for disabled state
-    colorBackgroundActive[] = { 0, 0, 0, 0.75 };   // background color for active state
+    colorFocused[] = { 0, 0, 0, 0 };
+    colorDisabled[] = { 1, 1, 1, 0.3 };
+    colorBackground[] = { 1, 1, 1, 0.1 };
+    colorBackground2[] = { 1, 1, 1, 0.1 };
+    colorBackgroundDisabled[] = { 1, 1, 1, 0.05 };
+    colorBackgroundActive[] = { 1, 1, 1, 0.2 };
 
     colorShadow[] = {0,0,0,0};
     colorBorder[] = {0,0,0,0};
@@ -196,16 +167,26 @@ class RscButtonDark
     style = ST_LEFT;
     x = 0;
     y = 0;
-    w = 0.095589;
+    w = 0.055589;
     h = 0.039216;
     shadow = 2;
-    font = "Purista";
+    font = "PuristaMedium";
     sizeEx = 0.035;
     offsetX = 0;
     offsetY = 0;
     offsetPressedX = 0;
     offsetPressedY = 0;
     borderSize = 0;
+};
+
+class RscButtonDark : RscButton
+{
+    colorFocused[] = { 0, 0, 0, 0 };
+    colorDisabled[] = { 1, 1, 1, 0.5 };
+    colorBackground[] = { 0, 0, 0, 0.7 };
+    colorBackground2[] = { 0, 0, 0, 0.7 };
+    colorBackgroundDisabled[] = { 0, 0, 0, 0.4 };
+    colorBackgroundActive[] = { 0, 0, 0, 0.75 };
 };
 
 class RscListBox
