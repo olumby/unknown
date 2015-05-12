@@ -100,7 +100,6 @@ class AdminDialog
             w = godButtonW;
             h = godButtonH;
         };
-
         class vehGodButton: RscButtonDark
         {
             idc = veh_god_button;
@@ -117,6 +116,23 @@ class AdminDialog
             y = vehGodButtonY;
             w = vehGodButtonW;
             h = vehGodButtonH;
+        };
+        class mapTeleportButton: RscButtonDark
+        {
+            idc = map_teleport;
+            text = "Map Teleport";
+            style = ST_RIGHT;
+            onButtonClick = "[] execVM 'client\admin\triggerMapTeleport.sqf'";
+
+            #define mapTeleportButtonW scaleFix(0.3)
+            #define mapTeleportButtonH footerElementH
+            #define mapTeleportButtonY (vehGodButtonY + vehGodButtonH + (edgeOffsetY / 2))
+            #define mapTeleportButtonX ((screenX + screenW) - (mapTeleportButtonW + edgeOffsetX))
+
+            x = mapTeleportButtonX;
+            y = mapTeleportButtonY;
+            w = mapTeleportButtonW;
+            h = mapTeleportButtonH;
         };
 
     };
