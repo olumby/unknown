@@ -19,7 +19,7 @@ if(hasInterface) then
 {
     _store addAction ["Open Gun Store", "client\dialogs\vehicleStore\openVehicleStore.sqf", [vehicleVarName _store], 1.5, false, false, "", "_this distance _target < 3"];
 
-    _storeBox = createVehicleLocal ["", (getPos _store)];
+    _storeBox = "Box_NATO_WpsSpecial_F" createVehicleLocal (getPos _store);
     _storeBox attachTo[_store, [0,0.9,-0.9]];
 
     _store setVariable ["R3F_LOG_disabled", true];
