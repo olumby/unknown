@@ -4,9 +4,9 @@
 
 vehicleStores = compileFinal str
 [
-    ["vehicleStore_001", "vehicle_001"],
-    ["vehicleStore_002", "vehicle_002"],
-    ["vehicleStore_003", "vehicle_003"]
+    "vehicleStore_001",
+    "vehicleStore_002",
+    "vehicleStore_003"
 ];
 
 vehicleStoreFilters = compileFinal str ["All","Car","Utility","Armored","Air","Autonomous"];
