@@ -4,8 +4,6 @@
 
 #include "spawnDialog_defines.hpp"
 
-9999 cutText ["", "BLACK", 0.01];
-
 createDialog "SpawnDialog";
 spawnDialogOpen = true;
 

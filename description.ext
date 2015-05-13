@@ -1,5 +1,7 @@
 respawn = "BASE";
 respawnDelay = 5;
+respawnOnStart = 1;
+respawnDialog = 0;
 disabledAI = true;
 author = "The Unknown";
 onLoadName = "Project Unknown";
