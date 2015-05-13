@@ -31,5 +31,7 @@ if(hasInterface) then
     _storeBox setVariable ["R3F_LOG_disabled", true];
     if (!isNull attachedTo _store) then {
         (attachedTo _store) setVariable ["R3F_LOG_disabled", true];
+        (attachedTo _store) enableSimulation false;
+        (attachedTo _store) allowDamage false;
     };
 };
