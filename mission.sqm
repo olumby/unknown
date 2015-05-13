@@ -78,9 +78,8 @@ class Mission
 					special="NONE";
 					id=0;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.60000002;
 				};
 			};
@@ -97,7 +96,7 @@ class Mission
 					special="NONE";
 					id=1;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -115,7 +114,7 @@ class Mission
 					special="NONE";
 					id=2;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -133,7 +132,7 @@ class Mission
 					special="NONE";
 					id=3;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -151,7 +150,7 @@ class Mission
 					special="NONE";
 					id=4;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -169,7 +168,7 @@ class Mission
 					special="NONE";
 					id=5;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -187,7 +186,7 @@ class Mission
 					special="NONE";
 					id=6;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -205,7 +204,7 @@ class Mission
 					special="NONE";
 					id=7;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -223,7 +222,7 @@ class Mission
 					special="NONE";
 					id=8;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -241,7 +240,7 @@ class Mission
 					special="NONE";
 					id=9;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -259,7 +258,7 @@ class Mission
 					special="NONE";
 					id=10;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -277,7 +276,7 @@ class Mission
 					special="NONE";
 					id=11;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -295,7 +294,7 @@ class Mission
 					special="NONE";
 					id=12;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -313,7 +312,7 @@ class Mission
 					special="NONE";
 					id=13;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -331,7 +330,7 @@ class Mission
 					special="NONE";
 					id=14;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -349,7 +348,7 @@ class Mission
 					special="NONE";
 					id=15;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="b_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -367,7 +366,7 @@ class Mission
 					special="NONE";
 					id=16;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -385,7 +384,7 @@ class Mission
 					special="NONE";
 					id=17;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -403,7 +402,7 @@ class Mission
 					special="NONE";
 					id=18;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -421,7 +420,7 @@ class Mission
 					special="NONE";
 					id=19;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -439,7 +438,7 @@ class Mission
 					special="NONE";
 					id=20;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -457,7 +456,7 @@ class Mission
 					special="NONE";
 					id=21;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -475,7 +474,7 @@ class Mission
 					special="NONE";
 					id=22;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -493,7 +492,7 @@ class Mission
 					special="NONE";
 					id=23;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -511,7 +510,7 @@ class Mission
 					special="NONE";
 					id=24;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -529,7 +528,7 @@ class Mission
 					special="NONE";
 					id=25;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -547,7 +546,7 @@ class Mission
 					special="NONE";
 					id=26;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -565,7 +564,7 @@ class Mission
 					special="NONE";
 					id=27;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -583,7 +582,7 @@ class Mission
 					special="NONE";
 					id=28;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -601,7 +600,7 @@ class Mission
 					special="NONE";
 					id=29;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -619,7 +618,7 @@ class Mission
 					special="NONE";
 					id=30;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -637,7 +636,7 @@ class Mission
 					special="NONE";
 					id=31;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="o_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -655,7 +654,7 @@ class Mission
 					special="NONE";
 					id=32;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -673,7 +672,7 @@ class Mission
 					special="NONE";
 					id=33;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -691,7 +690,7 @@ class Mission
 					special="NONE";
 					id=34;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -709,7 +708,7 @@ class Mission
 					special="NONE";
 					id=35;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -727,7 +726,7 @@ class Mission
 					special="NONE";
 					id=36;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -745,7 +744,7 @@ class Mission
 					special="NONE";
 					id=37;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -763,7 +762,7 @@ class Mission
 					special="NONE";
 					id=38;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -781,7 +780,7 @@ class Mission
 					special="NONE";
 					id=39;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -799,7 +798,7 @@ class Mission
 					special="NONE";
 					id=40;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -817,7 +816,7 @@ class Mission
 					special="NONE";
 					id=41;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -835,7 +834,7 @@ class Mission
 					special="NONE";
 					id=42;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -853,7 +852,7 @@ class Mission
 					special="NONE";
 					id=43;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -871,7 +870,7 @@ class Mission
 					special="NONE";
 					id=44;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -889,7 +888,7 @@ class Mission
 					special="NONE";
 					id=45;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -907,7 +906,7 @@ class Mission
 					special="NONE";
 					id=46;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -925,7 +924,7 @@ class Mission
 					special="NONE";
 					id=47;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="i_soldier_universal_f";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
