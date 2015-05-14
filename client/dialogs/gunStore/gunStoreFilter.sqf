@@ -28,9 +28,23 @@ lbClear _mainList;
 
 {
     _class = _x select 0;
-    _picture = getText (configFile >> "cfgWeapons" >> _class >> "picture");
-    _name = getText (configFile >> "cfgWeapons" >> _class >> "displayName");
     _price = str (_x select 1);
+    _name = "";
+    _picture = "";
+
+    switch (true) do
+    {
+        case ( isClass (configFile >> "CfgWeapons" >> _class) ):
+        { 
+            _name = getText(configFile >> "CfgWeapons" >> _class >> "displayName");
+            _picture = getText(configFile >> "CfgWeapons" >> _class >> "picture");
+        };
+        case ( isClass (configFile >> "CfgMagazines" >> _class) ): 
+        { 
+            _name = getText(configFile >> "CfgMagazines" >> _class >> "displayName");
+            _picture = getText(configFile >> "CfgMagazines" >> _class >> "picture");
+        };
+    };
 
     _row = _mainList lnbAddRow["", "", _name];
     _mainList lnbSetPicture[[_row,0], _picture];
