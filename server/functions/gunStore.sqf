@@ -17,7 +17,7 @@ if(isServer) then
 
 if(hasInterface) then
 {
-    _store addAction ["Open Gun Store", "client\dialogs\vehicleStore\openVehicleStore.sqf", [vehicleVarName _store], 1.5, false, false, "", "_this distance _target < 3"];
+    _store addAction ["Open Gun Store", "client\dialogs\gunStore\openGunStore.sqf", [vehicleVarName _store], 1.5, false, false, "", "_this distance _target < 3"];
 
     _storeBox = "Box_NATO_WpsSpecial_F" createVehicleLocal (getPos _store);
     clearBackpackCargo _storeBox;
