@@ -1,5 +1,6 @@
 [] execVM "map\spawns.sqf";
 [] execVM "map\vehicleStores.sqf";
+[] execVM "map\gunStores.sqf";
 
 if (isServer) then {
     diag_log "Server Initializing";
