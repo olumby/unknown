@@ -93,15 +93,15 @@ class VehicleStore
             rowHeight = 0.035;
             onLBSelChanged = "_this call vehicleStoreSelection";
 
-            #define locationslistW ((screenW * 0.6) - (edgeOffsetX * 2))
-            #define locationslistH (screenH - (edgeOffsetY * 2))
-            #define locationslistY (screenY + edgeOffsetY)
-            #define locationslistX (screenX + edgeOffsetX)
+            #define vehicleListW ((screenW * 0.6) - (edgeOffsetX * 2))
+            #define vehicleListH (screenH - (edgeOffsetY * 2))
+            #define vehicleListY (screenY + edgeOffsetY)
+            #define vehicleListX (screenX + edgeOffsetX)
 
-            x = locationslistX;
-            y = locationslistY;
-            w = locationslistW;
-            h = locationslistH;
+            x = vehicleListX;
+            y = vehicleListY;
+            w = vehicleListW;
+            h = vehicleListH;
         };
         class buyVehicleButton: RscButtonDark
         {
@@ -157,7 +157,7 @@ class VehicleStore
             #define vehicleVarW ((screenW * 0.4) - edgeOffsetX)
             #define vehicleVarH 0.035
             #define vehicleVarY (screenY + edgeOffsetY) 
-            #define vehicleVarX (screenX + locationslistW + (edgeOffsetX * 2))
+            #define vehicleVarX (screenX + vehicleListW + (edgeOffsetX * 2))
 
             x = vehicleVarX;
             y = vehicleVarY;
@@ -173,7 +173,7 @@ class VehicleStore
             #define totalPriceTitleW (((screenW * 0.4) - edgeOffsetX) * 0.45)
             #define totalPriceTitleH 0.04
             #define totalPriceTitleY (screenY + screenH - edgeOffsetY - totalPriceTitleH)
-            #define totalPriceTitleX (screenX + locationslistW + (edgeOffsetX * 2))
+            #define totalPriceTitleX (screenX + vehicleListW + (edgeOffsetX * 2))
 
             x = totalPriceTitleX;
             y = totalPriceTitleY;
@@ -189,7 +189,7 @@ class VehicleStore
             #define discountTitleW (((screenW * 0.4) - edgeOffsetX) * 0.45)
             #define discountTitleH 0.04
             #define discountTitleY (screenY + screenH - (edgeOffsetY * 1.5) - totalPriceTitleH - discountTitleH)
-            #define discountTitleX (screenX + locationslistW + (edgeOffsetX * 2))
+            #define discountTitleX (screenX + vehicleListW + (edgeOffsetX * 2))
 
             x = discountTitleX;
             y = discountTitleY;
@@ -205,7 +205,7 @@ class VehicleStore
             #define priceTitleW (((screenW * 0.4) - edgeOffsetX) * 0.45)
             #define priceTitleH 0.04
             #define priceTitleY (screenY + screenH - (edgeOffsetY * 2) - totalPriceTitleH - discountTitleH - priceTitleH)
-            #define priceTitleX (screenX + locationslistW + (edgeOffsetX * 2))
+            #define priceTitleX (screenX + vehicleListW + (edgeOffsetX * 2))
 
             x = priceTitleX;
             y = priceTitleY;
@@ -224,7 +224,7 @@ class VehicleStore
             #define totalPriceValueW (((screenW * 0.4) - (edgeOffsetX *2)) * 0.55)
             #define totalPriceValueH 0.04
             #define totalPriceValueY (screenY + screenH - edgeOffsetY - totalPriceValueH)
-            #define totalPriceValueX (screenX + locationslistW + (edgeOffsetX * 3) + totalPriceTitleW)
+            #define totalPriceValueX (screenX + vehicleListW + (edgeOffsetX * 3) + totalPriceTitleW)
 
             x = totalPriceValueX;
             y = totalPriceValueY;
@@ -242,7 +242,7 @@ class VehicleStore
             #define discountValueW (((screenW * 0.4) - (edgeOffsetX *2)) * 0.55)
             #define discountValueH 0.04
             #define discountValueY (screenY + screenH - (edgeOffsetY * 1.5) - totalPriceValueH - discountValueH)
-            #define discountValueX (screenX + locationslistW + (edgeOffsetX * 3) + discountTitleW)
+            #define discountValueX (screenX + vehicleListW + (edgeOffsetX * 3) + discountTitleW)
 
             x = discountValueX;
             y = discountValueY;
@@ -259,7 +259,7 @@ class VehicleStore
             #define priceValueW (((screenW * 0.4) - (edgeOffsetX *2)) * 0.55)
             #define priceValueH 0.04
             #define priceValueY (screenY + screenH - (edgeOffsetY * 2) - totalPriceValueH - discountValueH - priceValueH)
-            #define priceValueX (screenX + locationslistW + (edgeOffsetX * 3) + priceTitleW)
+            #define priceValueX (screenX + vehicleListW + (edgeOffsetX * 3) + priceTitleW)
 
             x = priceValueX;
             y = priceValueY;
