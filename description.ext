@@ -14,10 +14,6 @@ class Header {
 
 enableDebugConsole = 1;
 
-ShowGPS = true;
-ShowCompass = true;
-ShowMap = true;
-
 // Corpse Management System
 corpseManagerMode = 1;
 corpseLimit = 20;
