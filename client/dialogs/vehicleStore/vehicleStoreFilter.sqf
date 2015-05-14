@@ -37,3 +37,5 @@ lbClear _vehicleList;
     _vehicleList lnbSetData[[_row, 1], _price];
 
 } forEach (_vehicleArray);
+
+_vehicleList lnbSetCurSelRow 0;

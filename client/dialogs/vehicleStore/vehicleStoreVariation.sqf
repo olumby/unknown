@@ -8,12 +8,19 @@ _display = uiNamespace getVariable "UK_VehicleStoreDialog";
 _vehicleList = _display displayCtrl vehicle_list;
 _buyButton = _display displayCtrl buy_vehicle_button;
 _varSelection = _display displayCtrl var_selection;
+_priceValue = _display displayCtrl price_value;
+_totalPriceValue = _display displayCtrl total_price_value;
+_discountValue = _display displayCtrl discount_value;
 
 _selectedVehicle = lnbCurSelRow _vehicleList;
 _vehicleAdvanced = (uiNamespace getVariable "storeVehicles") select _selectedVehicle;
 
 _selectedVariation = lbCurSel _varSelection;
 _selectedVariationClass = _varSelection lbData _selectedVariation;
+
+_priceValue ctrlSetText str (_vehicleAdvanced select 1);
+_discountValue ctrlSetText "0";
+_totalPriceValue ctrlSetText str (_vehicleAdvanced select 1);
 
 _buttonAction = "";
 
