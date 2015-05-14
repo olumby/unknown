@@ -11,6 +11,16 @@ gunStores = compileFinal str
 
 gunStoreFilters = compileFinal str ["Rifles","Machine Guns","Sniper Rifles","Launchers","Handguns","Misc."];
 
+gunStoreBannedAccessories = compileFinal str [
+    // muzzle
+
+    // optics
+    
+    // pointer
+    
+    // under barrel
+];
+
 gunStoreContentRifles = compileFinal str 
 [
     ["arifle_SDAR_F", 250], // SDAR

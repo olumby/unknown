@@ -46,10 +46,8 @@ lbClear _mainList;
         };
     };
 
-    _row = _mainList lnbAddRow["", "", _name];
+    _row = _mainList lnbAddRow["", _name];
     _mainList lnbSetPicture[[_row,0], _picture];
-    _mainList lnbSetData[[_row, 0], _class];
-    _mainList lnbSetData[[_row, 1], _price];
 } forEach (_weaponArray);
 
 _mainList lnbSetCurSelRow 0;

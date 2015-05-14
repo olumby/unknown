@@ -97,18 +97,20 @@ class GunStore
         };
 
         #define allListW (((screenW - edgeOffsetX) / 2) - edgeOffsetX)
+        #define allListH ((screenH / 2) - (edgeOffsetY * 2))
 
         class mainList: RscListNBox
         {
             idc = main_list;
-            columns[] = {0.05, 0, 0.17};
+            columns[] = {0.05, 0.17};
             drawSideArrows = true;
             idcLeft = 12345667;
             idcRight = 123456678;
             rowHeight = 0.035;
+            onLBSelChanged = "_this call gunStoreSelection";
 
             #define mainListW allListW
-            #define mainListH ((screenH / 2) - (edgeOffsetY * 2))
+            #define mainListH allListH
             #define mainListY (screenY + edgeOffsetY)
             #define mainListX (screenX + edgeOffsetX)
 
@@ -116,6 +118,44 @@ class GunStore
             y = mainListY;
             w = mainListW;
             h = mainListH;
+        };
+        class accList: RscListNBox
+        {
+            idc = acc_list;
+            columns[] = {0.05, 0.09};
+            drawSideArrows = true;
+            idcLeft = 12345667;
+            idcRight = 123456678;
+            rowHeight = 0.035;
+
+            #define accListW allListW
+            #define accListH allListH
+            #define accListY (screenY + (edgeOffsetY * 2) + mainListH)
+            #define accListX (screenX + edgeOffsetX)
+
+            x = accListX;
+            y = accListY;
+            w = accListW;
+            h = accListH;
+        };
+        class magList: RscListNBox
+        {
+            idc = mag_list;
+            columns[] = {0.05, 0.085};
+            drawSideArrows = true;
+            idcLeft = 12345667;
+            idcRight = 123456678;
+            rowHeight = 0.035;
+
+            #define magListW allListW
+            #define magListH allListH
+            #define magListY (screenY + edgeOffsetY)
+            #define magListX (screenX + (edgeOffsetX * 2) + mainListW)
+
+            x = magListX;
+            y = magListY;
+            w = magListW;
+            h = magListH;
         };
         class buyButton: RscButtonDark
         {
