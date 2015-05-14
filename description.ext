@@ -36,7 +36,7 @@ disableChannels[]={0,1,2,6};
 #include "map\customVehicles.hpp"
 #include "defines.hpp"
 #include "client\dialogs\helpers.hpp"
-#include "client\dialogs\spawnDialog.hpp"
+#include "client\dialogs\spawnDialog\spawnDialog.hpp"
 #include "client\dialogs\vehicleStore\vehicleStore.hpp"
 #include "client\admin\adminMenu.hpp"
 

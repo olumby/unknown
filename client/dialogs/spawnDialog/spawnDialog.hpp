@@ -86,6 +86,7 @@ class SpawnDialog
         class spawnLocationsList: RscListBox
         {
             idc = spawn_locations_list;
+            onLBSelChanged = "_this call spawnDialogSelection";
 
             #define locationslistW (screenW - (edgeOffsetX * 2))
             #define locationslistH (screenH - (edgeOffsetY * 2))
