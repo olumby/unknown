@@ -1,5 +1,8 @@
 waitUntil { !isNull player; time > 0.1 };
 
+enableRadio false;
+enableSentences false;
+
 // Enable Groups
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
