@@ -17,7 +17,7 @@ vehicleStoreVariation = compile preprocessFileLineNumbers "client\dialogs\vehicl
 buyVehicle = compile preprocessFileLineNumbers "client\dialogs\vehicleStore\buyVehicle.sqf";
 
 // Gun Store
-
+gunStoreFilter = compile preprocessFileLineNumbers "client\dialogs\gunStore\gunStoreFilter.sqf";
 
 // Admin
 isAdmin = compile preprocessFileLineNumbers "client\functions\isAdmin.sqf";

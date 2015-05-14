@@ -11,7 +11,7 @@ class GunStore
     enableSimulation = true;
     onLoad = "uiNamespace setVariable [""UK_GunStoreDialog"", _this select 0]";
 
-    #define screenW (1.1 * 3/4)
+    #define screenW (1.3 * 3/4)
     #define screenH 0.5
     #define screenX CENTER(1, screenW)
     #define screenY CENTER(1, screenH)
@@ -83,24 +83,39 @@ class GunStore
         #define footerElementH 0.039
         #define footerElementY (screenY + screenH + (edgeOffsetY / 2))
 
-        class gunList: RscListNBox
+        class leftButton: RscButtonDark
         {
-            idc = gun_list;
-            columns[] = {0, 0, 0.12};
-            drawSideArrows = false;
-            idcLeft = -1;
-            idcRight = -1;
+            idc = 12345667;
+            colorText[] = {0.96,0.25,0.13,0.75};
+            text = "-";
+        };
+        class rightButton: RscButtonDark
+        {
+            idc = 123456678;
+            colorText[] = {0.96,0.25,0.13,0.75};
+            text = "+";
+        };
+
+        #define allListW (((screenW - edgeOffsetX) / 2) - edgeOffsetX)
+
+        class mainList: RscListNBox
+        {
+            idc = main_list;
+            columns[] = {0.05, 0, 0.17};
+            drawSideArrows = true;
+            idcLeft = 12345667;
+            idcRight = 123456678;
             rowHeight = 0.035;
 
-            #define gunListW ((screenW * 0.6) - (edgeOffsetX * 2))
-            #define gunListH (screenH - (edgeOffsetY * 2))
-            #define gunListY (screenY + edgeOffsetY)
-            #define gunListX (screenX + edgeOffsetX)
+            #define mainListW allListW
+            #define mainListH ((screenH / 2) - (edgeOffsetY * 2))
+            #define mainListY (screenY + edgeOffsetY)
+            #define mainListX (screenX + edgeOffsetX)
 
-            x = gunListX;
-            y = gunListY;
-            w = gunListW;
-            h = gunListH;
+            x = mainListX;
+            y = mainListY;
+            w = mainListW;
+            h = mainListH;
         };
         class buyButton: RscButtonDark
         {
@@ -109,7 +124,6 @@ class GunStore
 
             #define buyButtonW scaleFix(0.21)
             #define buyButtonX ((screenX + screenW) - buyButtonW)
-
 
             x = buyButtonX;
             y = footerElementY;
@@ -120,7 +134,7 @@ class GunStore
         {
             idc = weapon_filter;
             colorBackground[] = {0,0,0,0.7};
-            onLBSelChanged = "_this call vehicleStoreFilter";
+            onLBSelChanged = "_this call gunStoreFilter";
 
             #define weaponFilterW 0.34
             #define weaponFilterH 0.035
