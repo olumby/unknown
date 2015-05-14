@@ -110,11 +110,11 @@ gunStoreContentMisc = compileFinal str
     ["SmokeShellOrange", 100], // Smoke (Orange)
     ["SmokeShellBlue", 100], // Smoke (Blue)
     ["DemoCharge_Remote_Mag", 100], // Explosive Charge
-    ["IEDUrbanSmall_Remote_Mag", 100] // IED Small (Urban)
-    ["IEDLandSmall_Remote_Mag", 100] // IED Small (Dug-in)
+    ["IEDUrbanSmall_Remote_Mag", 100], // IED Small (Urban)
+    ["IEDLandSmall_Remote_Mag", 100], // IED Small (Dug-in)
     ["SatchelCharge_Remote_Mag", 100], // Explosive Satchel
-    ["IEDUrbanBig_Remote_Mag", 100] // IED Large (Urban)
-    ["IEDLandBig_Remote_Mag", 100] // IED Large (Dug-in)
+    ["IEDUrbanBig_Remote_Mag", 100], // IED Large (Urban)
+    ["IEDLandBig_Remote_Mag", 100], // IED Large (Dug-in)
     ["ATMine_Range_Mag", 100], // AT Mine
     ["ClaymoreDirectionalMine_Remote_Mag", 100], // Claymore Charge
     ["APERSMine_Range_Mag", 100], // APERS Mine
