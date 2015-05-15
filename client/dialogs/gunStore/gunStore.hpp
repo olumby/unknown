@@ -122,7 +122,7 @@ class GunStore
         class accList: RscListNBox
         {
             idc = acc_list;
-            columns[] = {0.05, 0.09};
+            columns[] = {0.05, 0.11};
             drawSideArrows = true;
             idcLeft = 12345667;
             idcRight = 123456678;
@@ -141,7 +141,7 @@ class GunStore
         class magList: RscListNBox
         {
             idc = mag_list;
-            columns[] = {0.05, 0.085};
+            columns[] = {0.05, 0.1};
             drawSideArrows = true;
             idcLeft = 12345667;
             idcRight = 123456678;
