@@ -199,3 +199,54 @@ gunStoreMagazinePricing = compileFinal str
     ["11Rnd_45ACP_Mag", 100], // .45 ACP 11Rnd Mag
     ["6Rnd_45ACP_Cylinder", 100] // .45 ACP 6Rnd Cylinder
 ];
+
+gunStoreAccessoryPricing = compileFinal str
+[
+    ["acc_flashlight", 120], // Flashlight
+    ["acc_pointer_IR", 120], // IR Laser Pointer
+    ["muzzle_snds_M", 120], // Sound Suppressor (5.56 mm)
+    ["muzzle_snds_H", 120], // Sound Suppressor (6.5 mm)
+    ["muzzle_snds_93mmg", 120], // Sound Suppressor (9.3mm, Black)
+    ["muzzle_snds_93mmg_tan", 120], // Sound Suppressor (9.3mm, Tan)
+    ["muzzle_snds_338_black", 120], // Sound Suppressor (.338, Black)
+    ["muzzle_snds_338_green", 120], // Sound Suppressor (.338, Green)
+    ["muzzle_snds_338_sand", 120], // Sound Suppressor (.338, Sand)
+    ["muzzle_snds_H_SW", 120], // Sound Suppressor LMG (6.5 mm)
+    ["muzzle_snds_H_MG", 120], // Sound Suppressor LMG (6.5 mm)
+    ["muzzle_snds_B", 120], // Sound Suppressor (7.62 mm)
+    ["muzzle_snds_L", 120], // Sound Suppressor (9 mm)
+    ["muzzle_snds_acp", 120], // Sound Suppressor (.45 ACP)
+    ["bipod_01_F_snd", 120], // Bipod (Sand) [NATO]
+    ["bipod_01_F_blk", 120], // Bipod (Black) [NATO]
+    ["bipod_01_F_mtp", 120], // Bipod (MTP) [NATO]
+    ["bipod_02_F_blk", 120], // Bipod (Black) [CSAT]
+    ["bipod_02_F_tan", 120], // Bipod (Tan) [CSAT]
+    ["bipod_02_F_hex", 120], // Bipod (Hex) [CSAT]
+    ["bipod_03_F_blk", 120], // Bipod (Black) [AAF]
+    ["bipod_03_F_oli", 120], // Bipod (Olive) [AAF]
+    ["optic_Nightstalker", 120], // Nightstalker
+    ["optic_tws", 120], // TWS
+    ["optic_tws_mg", 120], // TWS MG
+    ["optic_NVS", 120], // NVS
+    ["optic_DMS", 120], // DMS
+    ["optic_LRPS", 120], // LRPS
+    ["optic_AMS", 120], // AMS (Black)
+    ["optic_AMS_snd", 120], // AMS (Sand)
+    ["optic_AMS_khk", 120], // AMS (Khaki)
+    ["optic_KHS_blk", 120], // Kahlia (Black)
+    ["optic_KHS_tan", 120], // Kahlia (Tan)
+    ["optic_KHS_hex", 120], // Kahlia (Hex)
+    ["optic_KHS_old", 120], // Kahlia (Old)
+    ["optic_SOS", 120], // MOS
+    ["optic_MRCO", 120], // MRCO
+    ["optic_Arco", 120], // ARCO
+    ["optic_Aco", 120], // ACO (Red)
+    ["optic_ACO_grn", 120], // ACO (Green)
+    ["optic_Aco_smg", 120], // ACO SMG (Red)
+    ["optic_ACO_grn_smg", 120], // ACO SMG (Green)
+    ["optic_Hamr", 120], // RCO
+    ["optic_Holosight", 120], // MK17 Holosight
+    ["optic_Holosight_smg", 120], // Mk17 Holosight SMG
+    ["optic_MRD", 120], // MRD
+    ["optic_Yorris", 120] // Yorris J2
+];
