@@ -21,10 +21,10 @@ _magList = [];
 
 _magConfig = (configfile >> "CfgMagazines");
 
-magazineList = [];
+debug_magazineList = [];
 {
     _name = getText (_magConfig >> _x >> "displayName");
     _price = 100;
 
-    magazineList pushBack [_x, _price, _name];
+    debug_magazineList pushBack [_x, _price, _name];
 } forEach _magList;
