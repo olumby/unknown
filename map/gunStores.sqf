@@ -133,3 +133,69 @@ gunStoreContentMisc = compileFinal str
     ["SLAMDirectionalMine_Wire_Mag", 100], // M6 SLAM Mine
     ["APERSBoundingMine_Range_Mag", 100] // APERS Bounding Mine
 ];
+
+gunStoreMagazinePricing = compileFinal str
+[
+    ["20Rnd_556x45_UW_mag", 100], // 5.56mm 20Rnd Dual Purpose Mag
+    ["30Rnd_556x45_Stanag", 100], // 5.56mm 30rnd STANAG Mag
+    ["30Rnd_556x45_Stanag_Tracer_Red", 100], // 5.56mm 30rnd Tracer (Red) Mag
+    ["30Rnd_556x45_Stanag_Tracer_Green", 100], // 5.56mm 30rnd Tracer (Green) Mag
+    ["30Rnd_556x45_Stanag_Tracer_Yellow", 100], // 5.56mm 30rnd Tracer (Yellow) Mag
+    ["1Rnd_HE_Grenade_shell", 100], // 40mm HE Grenade Round
+    ["UGL_FlareWhite_F", 100], // Flare Round (White)
+    ["UGL_FlareGreen_F", 100], // Flare Round (Green)
+    ["UGL_FlareRed_F", 100], // Flare Round (Red)
+    ["UGL_FlareYellow_F", 100], // Flare Round (Yellow)
+    ["UGL_FlareCIR_F", 100], // Flare Round (IR)
+    ["1Rnd_Smoke_Grenade_shell", 100], // Smoke Round (White)
+    ["1Rnd_SmokeRed_Grenade_shell", 100], // Smoke Round (Red)
+    ["1Rnd_SmokeGreen_Grenade_shell", 100], // Smoke Round (Green)
+    ["1Rnd_SmokeYellow_Grenade_shell", 100], // Smoke Round (Yellow)
+    ["1Rnd_SmokePurple_Grenade_shell", 100], // Smoke Round (Purple)
+    ["1Rnd_SmokeBlue_Grenade_shell", 100], // Smoke Round (Blue)
+    ["1Rnd_SmokeOrange_Grenade_shell", 100], // Smoke Round (Orange)
+    ["30Rnd_65x39_caseless_green", 100], // 6.5mm 30Rnd Caseless Mag
+    ["30Rnd_65x39_caseless_green_mag_Tracer", 100], // 6.5mm 30Rnd Tracer (Green) Mag
+    ["30Rnd_65x39_caseless_mag", 100], // 6.5mm 30Rnd STANAG Mag
+    ["30Rnd_65x39_caseless_mag_Tracer", 100], // 6.5mm 30Rnd Tracer (Red) Mag
+    ["3Rnd_HE_Grenade_shell", 100], // 40mm 3Rnd HE Grenade
+    ["3Rnd_UGL_FlareWhite_F", 100], // 3Rnd 3GL Flares (White)
+    ["3Rnd_UGL_FlareGreen_F", 100], // 3Rnd 3GL Flares (Green)
+    ["3Rnd_UGL_FlareRed_F", 100], // 3Rnd 3GL Flares (Red)
+    ["3Rnd_UGL_FlareYellow_F", 100], // 3Rnd 3GL Flares (Yellow)
+    ["3Rnd_UGL_FlareCIR_F", 100], // 3Rnd 3GL Flares (IR)
+    ["3Rnd_Smoke_Grenade_shell", 100], // 3Rnd 3GL Smoke Rounds (White)
+    ["3Rnd_SmokeRed_Grenade_shell", 100], // 3Rnd 3GL Smoke Rounds (Red)
+    ["3Rnd_SmokeGreen_Grenade_shell", 100], // 3Rnd 3GL Smoke Rounds (Green)
+    ["3Rnd_SmokeYellow_Grenade_shell", 100], // 3Rnd 3GL Smoke Rounds (Yellow)
+    ["3Rnd_SmokePurple_Grenade_shell", 100], // 3Rnd 3GL Smoke Rounds (Purple)
+    ["3Rnd_SmokeBlue_Grenade_shell", 100], // 3Rnd 3GL Smoke Rounds (Blue)
+    ["3Rnd_SmokeOrange_Grenade_shell", 100], // 3Rnd 3GL Smoke Rounds (Orange)
+    ["150Rnd_93x64_Mag", 100], // 9.3mm 150Rnd Belt
+    ["130Rnd_338_Mag", 100], // .338 NM 130Rnd Belt
+    ["100Rnd_65x39_caseless_mag_Tracer", 100], // 6.5mm 100Rnd Tracer (Red) Belt Case
+    ["100Rnd_65x39_caseless_mag", 100], // 6.5mm 100Rnd Belt Case
+    ["200Rnd_65x39_cased_Box", 100], // 6.5mm 200Rnd Belt
+    ["200Rnd_65x39_cased_Box_Tracer", 100], // 6.5mm 200Rnd Belt Tracer (Yellow)
+    ["150Rnd_762x54_Box", 100], // 7.62mm 150Rnd Box
+    ["150Rnd_762x54_Box_Tracer", 100], // 7.62mm 150Rnd Tracer (Green) Box
+    ["10Rnd_127x54_Mag", 100], // 12.7mm 10Rnd Mag
+    ["10Rnd_762x54_Mag", 100], // 7.62mm 10Rnd Mag
+    ["20Rnd_762x51_Mag", 100], // 7.62mm 20Rnd Mag
+    ["10Rnd_338_Mag", 100], // .338 LM 10Rnd Mag
+    ["10Rnd_93x64_DMR_05_Mag", 100], // 9.3mm 10Rnd Mag
+    ["7Rnd_408_Mag", 100], // .408 7Rnd LRR Mag
+    ["5Rnd_127x108_Mag", 100], // 12.7mm 5Rnd Mag
+    ["5Rnd_127x108_APDS_Mag", 100], // 12.7mm 5Rnd APDS Mag
+    ["NLAW_F", 100], // PCML Missile
+    ["RPG32_F", 100], // RPG-42 Rocket
+    ["RPG32_HE_F", 100], // RPG-42 HE Rocket
+    ["Titan_AT", 100], // Titan AT Missile
+    ["Titan_AP", 100], // Titan AP Missile
+    ["Titan_AA", 100], // Titan AA Missile
+    ["16Rnd_9x21_Mag", 100], // 9mm 16Rnd Mag
+    ["30Rnd_9x21_Mag", 100], // 9mm 30Rnd Mag
+    ["9Rnd_45ACP_Mag", 100], // .45 ACP 9Rnd Mag
+    ["11Rnd_45ACP_Mag", 100], // .45 ACP 11Rnd Mag
+    ["6Rnd_45ACP_Cylinder", 100] // .45 ACP 6Rnd Cylinder
+];
