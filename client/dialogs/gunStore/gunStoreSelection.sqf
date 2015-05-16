@@ -28,7 +28,7 @@ _weaponMuzzles = getArray(configfile >> "cfgWeapons" >> _gunAdvanced select 0 >>
     _name = getText(configFile >> "CfgMagazines" >> _x >> "displayName");
     _picture = getText(configFile >> "CfgMagazines" >> _x >> "picture");
 
-    _row = _magList lnbAddRow["", _name];
+    _row = _magList lnbAddRow["", _name, "0"];
     _magList lnbSetPicture[[_row,0], _picture];
 } forEach (_weaponMagazines);
 
@@ -42,6 +42,6 @@ _opticArray = getArray (configfile >> "CfgWeapons" >> _gunAdvanced select 0 >> "
     _name = getText(configFile >> "CfgWeapons" >> _x >> "displayName");
     _picture = getText(configFile >> "CfgWeapons" >> _x >> "picture");
 
-    _row = _accList lnbAddRow["", _name];
+    _row = _accList lnbAddRow["", _name, "0"];
     _accList lnbSetPicture[[_row,0], _picture];
 } forEach (_pointerArray + _muzzleArray + _barrelArray + _opticArray);

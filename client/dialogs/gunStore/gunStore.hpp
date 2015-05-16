@@ -11,8 +11,8 @@ class GunStore
     enableSimulation = true;
     onLoad = "uiNamespace setVariable [""UK_GunStoreDialog"", _this select 0]";
 
-    #define screenW (1.3 * 3/4)
-    #define screenH 0.5
+    #define screenW (1.4 * 3/4)
+    #define screenH 0.6
     #define screenX CENTER(1, screenW)
     #define screenY CENTER(1, screenH)
 
@@ -83,17 +83,41 @@ class GunStore
         #define footerElementH 0.039
         #define footerElementY (screenY + screenH + (edgeOffsetY / 2))
 
-        class leftButton: RscButtonDark
+        class mainUpButton: RscButtonDark
         {
-            idc = 12345667;
-            colorText[] = {0.96,0.25,0.13,0.75};
-            text = "-";
-        };
-        class rightButton: RscButtonDark
-        {
-            idc = 123456678;
-            colorText[] = {0.96,0.25,0.13,0.75};
+            idc = main_up;
             text = "+";
+            onButtonClick = "[""main"", 1] call gunStoreChangeQty";
+        };
+        class mainDownButton: RscButtonDark
+        {
+            idc = main_down;
+            text = "-";
+            onButtonClick = "[""main"", -1] call gunStoreChangeQty";
+        };
+        class accUpButton: RscButtonDark
+        {
+            idc = acc_up;
+            text = "+";
+            onButtonClick = "[""acc"", 1] call gunStoreChangeQty";
+        };
+        class accDownButton: RscButtonDark
+        {
+            idc = acc_down;
+            text = "-";
+            onButtonClick = "[""acc"", -1] call gunStoreChangeQty";
+        };
+        class magUpButton: RscButtonDark
+        {
+            idc = mag_up;
+            text = "+";
+            onButtonClick = "[""mag"", 1] call gunStoreChangeQty";
+        };
+        class magDownButton: RscButtonDark
+        {
+            idc = mag_down;
+            text = "-";
+            onButtonClick = "[""mag"", -1] call gunStoreChangeQty";
         };
 
         #define allListW (((screenW - edgeOffsetX) / 2) - edgeOffsetX)
@@ -102,10 +126,10 @@ class GunStore
         class mainList: RscListNBox
         {
             idc = main_list;
-            columns[] = {0.05, 0.17};
+            columns[] = {0.05, 0.16, 0.80};
             drawSideArrows = true;
-            idcLeft = 12345667;
-            idcRight = 123456678;
+            idcLeft = main_down;
+            idcRight = main_up;
             rowHeight = 0.035;
             onLBSelChanged = "_this call gunStoreSelection";
 
@@ -122,10 +146,10 @@ class GunStore
         class accList: RscListNBox
         {
             idc = acc_list;
-            columns[] = {0.05, 0.11};
+            columns[] = {0.05, 0.11, 0.80};
             drawSideArrows = true;
-            idcLeft = 12345667;
-            idcRight = 123456678;
+            idcLeft = acc_down;
+            idcRight = acc_up;
             rowHeight = 0.035;
 
             #define accListW allListW
@@ -141,10 +165,10 @@ class GunStore
         class magList: RscListNBox
         {
             idc = mag_list;
-            columns[] = {0.05, 0.1};
+            columns[] = {0.05, 0.1, 0.80};
             drawSideArrows = true;
-            idcLeft = 12345667;
-            idcRight = 123456678;
+            idcLeft = mag_down;
+            idcRight = mag_up;
             rowHeight = 0.035;
 
             #define magListW allListW

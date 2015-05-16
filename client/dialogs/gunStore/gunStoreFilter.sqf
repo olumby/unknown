@@ -35,18 +35,18 @@ lbClear _mainList;
     switch (true) do
     {
         case ( isClass (configFile >> "CfgWeapons" >> _class) ):
-        { 
+        {
             _name = getText(configFile >> "CfgWeapons" >> _class >> "displayName");
             _picture = getText(configFile >> "CfgWeapons" >> _class >> "picture");
         };
-        case ( isClass (configFile >> "CfgMagazines" >> _class) ): 
-        { 
+        case ( isClass (configFile >> "CfgMagazines" >> _class) ):
+        {
             _name = getText(configFile >> "CfgMagazines" >> _class >> "displayName");
             _picture = getText(configFile >> "CfgMagazines" >> _class >> "picture");
         };
     };
 
-    _row = _mainList lnbAddRow["", _name];
+    _row = _mainList lnbAddRow["", _name, "0"];
     _mainList lnbSetPicture[[_row,0], _picture];
 } forEach (_weaponArray);
 

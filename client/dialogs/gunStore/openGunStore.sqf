@@ -5,6 +5,7 @@
  */
 
 uiNamespace setVariable ["storeName", _this select 3 select 0];
+uiNamespace setVariable ["gunStoreCartItems", []];
 
 #include "gunStore_defines.hpp"
 
