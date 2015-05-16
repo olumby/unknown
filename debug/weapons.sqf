@@ -28,10 +28,10 @@ debug_magazineList = [];
 } forEach _magList;
 
 // Accessories
-pointerList = [];
-muzzleList = [];
-barrelList = [];
-opticList = [];
+debug_pointerList = [];
+debug_muzzleList = [];
+debug_barrelList = [];
+debug_opticList = [];
 {
     _weaponClass = _x select 0;
 
@@ -46,9 +46,9 @@ opticList = [];
         _price = 120;
 
         _pointer = [configName _config, _price, _name];
-        if (! (_pointer in pointerList) ) then
+        if (! (_pointer in debug_pointerList) ) then
         {
-            pointerList pushBack _pointer;
+            debug_pointerList pushBack _pointer;
         }
     } forEach (_pointerArray);
 
@@ -58,9 +58,9 @@ opticList = [];
         _price = 120;
 
         _muzzle = [configName _config, _price, _name];
-        if (! (_muzzle in muzzleList) ) then
+        if (! (_muzzle in debug_muzzleList) ) then
         {
-            muzzleList pushBack _muzzle;
+            debug_muzzleList pushBack _muzzle;
         }
     } forEach (_muzzleArray);
 
@@ -70,9 +70,9 @@ opticList = [];
         _price = 120;
 
         _barrel = [configName _config, _price, _name];
-        if (! (_barrel in barrelList) ) then
+        if (! (_barrel in debug_barrelList) ) then
         {
-            barrelList pushBack _barrel;
+            debug_barrelList pushBack _barrel;
         }
     } forEach (_barrelArray);
 
@@ -82,11 +82,11 @@ opticList = [];
         _price = 120;
 
         _optic = [configName _config, _price, _name];
-        if (! (_optic in opticList) ) then
+        if (! (_optic in debug_opticList) ) then
         {
-            opticList pushBack _optic;
+            debug_opticList pushBack _optic;
         }
     } forEach (_opticArray);
 } forEach (call gunStoreContentRifles + call gunStoreContentMachine + call gunStoreContentSniperRifles + call gunStoreContentLaunchers + call gunStoreContentHandguns);
 
-allAccessories = pointerList + muzzleList + barrelList + opticList;
+debug_allAccessories = debug_pointerList + debug_muzzleList + debug_barrelList + debug_opticList;
