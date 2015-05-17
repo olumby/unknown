@@ -47,7 +47,6 @@ if(_qtyChange > 0) then
     _cartItems pushBack [_itemClass, _itemPrice];
 
     _list lnbSetText [[_selectedItem, 2], (str _newQty)];
-    _list lnbSetColor [[_selectedItem ,2], [0.96,0.25,0.13,0.75] ];
 }
 else
 {
@@ -64,10 +63,6 @@ else
         } forEach _cartItems;
 
         _list lnbSetText [[_selectedItem, 2], (str _newQty)];
-        if (_newQty == 0) then
-        {
-            _list lnbSetColor [[_selectedItem ,2], [0.95,0.95,0.95,1] ];
-        };
     };
 };
 
