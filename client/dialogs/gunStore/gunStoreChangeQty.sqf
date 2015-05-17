@@ -39,6 +39,7 @@ _selectedItem = lnbCurSelRow _list;
 _itemClass = _list lnbData [_selectedItem, 0];
 _itemPrice = parseNumber (_list lnbData [_selectedItem, 1]);
 
+// increase or decrease the item quantity
 if(_qtyChange > 0) then
 {
     _qty = parseNumber (_list lnbText [_selectedItem, 2]);
@@ -67,3 +68,20 @@ else
 };
 
 uiNamespace setVariable [_cartType, _cartItems];
+
+// update the display prices
+_subTotal = 0;
+{
+    _subTotal = _subTotal + (_x select 1);
+} forEach ((uiNamespace getVariable ["gunStoreCartWeapons", []]) + (uiNamespace getVariable ["gunStoreCartAccessories", []]) + (uiNamespace getVariable ["gunStoreCartMagazines", []]));
+
+// calculate the discount here
+_total = _subTotal;
+
+// set price texts
+_priceValue = _display displayCtrl price_value;
+_totalPriceValue = _display displayCtrl total_price_value;
+_discountValue = _display displayCtrl discount_value;
+
+_priceValue ctrlSetText (str _subTotal);
+_totalPriceValue ctrlSetText (str _total);
