@@ -156,7 +156,7 @@ class VehicleStore
 
             #define vehicleVarW ((screenW * 0.4) - edgeOffsetX)
             #define vehicleVarH 0.035
-            #define vehicleVarY (screenY + edgeOffsetY) 
+            #define vehicleVarY (screenY + edgeOffsetY)
             #define vehicleVarX (screenX + vehicleListW + (edgeOffsetX * 2))
 
             x = vehicleVarX;
@@ -168,7 +168,7 @@ class VehicleStore
         {
             colorBackground[] = {0, 0, 0, 0};
             idc = -1;
-            text = "Total Price:";
+            text = "Total:";
 
             #define totalPriceTitleW (((screenW * 0.4) - edgeOffsetX) * 0.45)
             #define totalPriceTitleH 0.04
@@ -200,7 +200,7 @@ class VehicleStore
         {
             colorBackground[] = {0, 0, 0, 0};
             idc = -1;
-            text = "Price:";
+            text = "Subtotal:";
 
             #define priceTitleW (((screenW * 0.4) - edgeOffsetX) * 0.45)
             #define priceTitleH 0.04
@@ -217,6 +217,7 @@ class VehicleStore
         class totalPriceValue : RscTitle
         {
             colorBackground[] = {0, 0, 0, 0};
+            colorText[] = {0.96,0.25,0.13,0.75};
             idc = total_price_value;
             style = ST_RIGHT;
             text = "";
@@ -234,7 +235,6 @@ class VehicleStore
         class discountValue : RscTitle
         {
             colorBackground[] = {0, 0, 0, 0};
-            colorText[] = {0.96,0.25,0.13,0.75};
             style = ST_RIGHT;
             idc = discount_value;
             text = "";

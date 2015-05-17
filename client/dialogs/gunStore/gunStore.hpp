@@ -216,7 +216,7 @@ class GunStore
         {
             colorBackground[] = {0, 0, 0, 0};
             idc = -1;
-            text = "Total Price:";
+            text = "Total:";
 
             #define totalPriceTitleW (allListW * 0.40)
             #define totalPriceTitleH 0.04
@@ -248,7 +248,7 @@ class GunStore
         {
             colorBackground[] = {0, 0, 0, 0};
             idc = -1;
-            text = "Price:";
+            text = "Subtotal:";
 
             #define priceTitleW (allListW * 0.40)
             #define priceTitleH 0.04
@@ -281,6 +281,7 @@ class GunStore
         class totalPriceValue : RscTitle
         {
             colorBackground[] = {0, 0, 0, 0};
+            colorText[] = {0.96,0.25,0.13,0.75};
             idc = total_price_value;
             style = ST_RIGHT;
             text = "0";
@@ -298,7 +299,6 @@ class GunStore
         class discountValue : RscTitle
         {
             colorBackground[] = {0, 0, 0, 0};
-            colorText[] = {0.96,0.25,0.13,0.75};
             style = ST_RIGHT;
             idc = discount_value;
             text = "0";
