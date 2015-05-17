@@ -22,8 +22,6 @@ _weaponArray = switch(_filter) do
     default { call gunStoreContentRifles };
 };
 
-uiNamespace setVariable ["storeWeapons", _weaponArray];
-
 lbClear _mainList;
 
 {
@@ -46,8 +44,11 @@ lbClear _mainList;
         };
     };
 
-    _row = _mainList lnbAddRow["", _name, "0"];
-    _mainList lnbSetPicture[[_row,0], _picture];
-} forEach (_weaponArray);
+    _row = _mainList lnbAddRow ["", _name, "0"];
+    _mainList lnbSetPicture [[_row,0], _picture];
+    _mainList lnbSetData [[_row, 0], _class];
+    _mainList lnbSetData [[_row, 1], _price];
+    _mainList lnbSetData [[_row, 2], _name];
+} forEach _weaponArray;
 
 _mainList lnbSetCurSelRow 0;

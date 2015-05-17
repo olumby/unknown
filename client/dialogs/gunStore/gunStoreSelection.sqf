@@ -11,16 +11,16 @@ _accList = _display displayCtrl acc_list;
 _magList = _display displayCtrl mag_list;
 
 _selectedGun = lnbCurSelRow _mainList;
-_gunAdvanced = (uiNamespace getVariable "storeWeapons") select _selectedGun;
+_weaponClass = _mainList lnbData [_selectedGun, 0];
 
 lbClear _accList;
 lbClear _magList;
 
 // Mag List
-_weaponMagazines = getArray(configfile >> "cfgWeapons" >> _gunAdvanced select 0 >> "magazines");
-_weaponMuzzles = getArray(configfile >> "cfgWeapons" >> _gunAdvanced select 0 >> "muzzles") - ["this"];
+_weaponMagazines = getArray(configfile >> "cfgWeapons" >> _weaponClass >> "magazines");
+_weaponMuzzles = getArray(configfile >> "cfgWeapons" >> _weaponClass >> "muzzles") - ["this"];
 {
-    _mags = getArray(configfile >> "cfgWeapons" >> _gunAdvanced select 0 >> _x >> "magazines");
+    _mags = getArray(configfile >> "cfgWeapons" >> _weaponClass >> _x >> "magazines");
     _weaponMagazines = _weaponMagazines + _mags;
 } forEach _weaponMuzzles;
 
@@ -33,10 +33,10 @@ _weaponMuzzles = getArray(configfile >> "cfgWeapons" >> _gunAdvanced select 0 >>
 } forEach (_weaponMagazines);
 
 // Acc List
-_pointerArray = getArray (configfile >> "CfgWeapons" >> _gunAdvanced select 0 >> "WeaponSlotsInfo" >> "PointerSlot" >> "compatibleItems");
-_muzzleArray = getArray (configfile >> "CfgWeapons" >> _gunAdvanced select 0 >> "WeaponSlotsInfo" >> "MuzzleSlot" >> "compatibleItems");
-_barrelArray = getArray (configfile >> "CfgWeapons" >> _gunAdvanced select 0 >> "WeaponSlotsInfo" >> "UnderBarrelSlot" >> "compatibleItems");
-_opticArray = getArray (configfile >> "CfgWeapons" >> _gunAdvanced select 0 >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems");
+_pointerArray = getArray (configfile >> "CfgWeapons" >> _weaponClass >> "WeaponSlotsInfo" >> "PointerSlot" >> "compatibleItems");
+_muzzleArray = getArray (configfile >> "CfgWeapons" >> _weaponClass >> "WeaponSlotsInfo" >> "MuzzleSlot" >> "compatibleItems");
+_barrelArray = getArray (configfile >> "CfgWeapons" >> _weaponClass >> "WeaponSlotsInfo" >> "UnderBarrelSlot" >> "compatibleItems");
+_opticArray = getArray (configfile >> "CfgWeapons" >> _weaponClass >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems");
 
 {
     _name = getText(configFile >> "CfgWeapons" >> _x >> "displayName");

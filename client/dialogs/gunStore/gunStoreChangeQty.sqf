@@ -18,10 +18,9 @@ switch (_this select 0) do
     {
         _list = _display displayCtrl main_list;
         _selectedGun = lnbCurSelRow _list;
-        _gunAdvanced = (uiNamespace getVariable "storeWeapons") select _selectedGun;
 
-        _weaponClass = _gunAdvanced select 0;
-        _weaponPrice = _gunAdvanced select 1;
+        _weaponClass = _list lnbData [_selectedGun, 0];
+        _weaponPrice = parseNumber (_list lnbData [_selectedGun, 1]);
 
         if(_qtyChange > 0) then
         {
