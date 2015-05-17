@@ -131,7 +131,7 @@ class GunStore
             idcLeft = main_down;
             idcRight = main_up;
             rowHeight = 0.035;
-            onLBSelChanged = "_this call gunStoreSelection";
+            onLBSelChanged = "_this call gunStoreMainSelection; [""main""] call gunStoreSelection;";
 
             #define mainListW allListW
             #define mainListH allListH
@@ -151,6 +151,7 @@ class GunStore
             idcLeft = acc_down;
             idcRight = acc_up;
             rowHeight = 0.035;
+            onLBSelChanged = "[""acc""] call gunStoreSelection;";
 
             #define accListW allListW
             #define accListH allListH
@@ -170,6 +171,7 @@ class GunStore
             idcLeft = mag_down;
             idcRight = mag_up;
             rowHeight = 0.035;
+            onLBSelChanged = "[""mag""] call gunStoreSelection;";
 
             #define magListW allListW
             #define magListH allListH
@@ -258,6 +260,22 @@ class GunStore
             w = priceTitleW;
             h = priceTitleH;
         };
+        class selectedItemTitle : RscTitle
+        {
+            colorBackground[] = {0, 0, 0, 0};
+            idc = -1;
+            text = "Selected Item:";
+
+            #define selectedItemTitleW (allListW * 0.40)
+            #define selectedItemTitleH 0.04
+            #define selectedItemTitleY (screenY + screenH - (edgeOffsetY * 2.5) - totalPriceTitleH - discountTitleH - priceTitleH - selectedItemTitleH)
+            #define selectedItemTitleX (screenX + (allListW * 1.3) + (edgeOffsetX * 2))
+
+            x = selectedItemTitleX;
+            y = selectedItemTitleY;
+            w = selectedItemTitleW;
+            h = selectedItemTitleH;
+        };
 
         // Actual Prices
         class totalPriceValue : RscTitle
@@ -311,6 +329,23 @@ class GunStore
             y = priceValueY;
             w = priceValueW;
             h = priceValueH;
+        };
+        class selectedItemValue : RscTitle
+        {
+            colorBackground[] = {0, 0, 0, 0};
+            style = ST_RIGHT;
+            idc = selected_value;
+            text = "0";
+
+            #define selectedItemW (allListW * 0.30)
+            #define selectedItemH 0.04
+            #define selectedItemY (screenY + screenH - (edgeOffsetY * 2.5) - totalPriceValueH - discountValueH - priceValueH - selectedItemH)
+            #define selectedItemX ((screenX + screenW) - (priceValueW + edgeOffsetX))
+
+            x = selectedItemX;
+            y = selectedItemY;
+            w = selectedItemW;
+            h = selectedItemH;
         };
         class closeButton: RscButtonDark
         {

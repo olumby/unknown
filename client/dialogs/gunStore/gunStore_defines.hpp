@@ -16,3 +16,4 @@
 #define price_value 252459
 #define total_price_value 235243
 #define discount_value 254334
+#define selected_value 2513534
