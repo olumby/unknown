@@ -25,30 +25,33 @@ switch (_this select 0) do
 
         if(_qtyChange > 0) then
         {
-            _cartItems pushBack [_weaponClass, _weaponPrice];
-
             _qty = parseNumber (_list lnbText [_selectedGun, 2]);
             _newQty = (_qty + 1);
+
+            _cartItems pushBack [_weaponClass, _weaponPrice];
 
             _list lnbSetText [[_selectedGun, 2], (str _newQty)];
             _list lnbSetColor [[_selectedGun ,2], [0.96,0.25,0.13,0.75] ];
         }
         else
         {
-            {
-                if (_x isEqualTo [_weaponClass, _weaponPrice]) exitWith
-                {
-                    _cartItems deleteAt _forEachIndex;
-                };
-            } forEach _cartItems;
-
             _qty = parseNumber (_list lnbText [_selectedGun, 2]);
             _newQty = (_qty - 1);
 
-            _list lnbSetText [[_selectedGun, 2], (str _newQty)];
-            if (_newQty == 0) then
+            if (_newQty >= 0) then
             {
-                _list lnbSetColor [[_selectedGun ,2], [0.95,0.95,0.95,1] ];
+                {
+                    if (_x isEqualTo [_weaponClass, _weaponPrice]) exitWith
+                    {
+                        _cartItems deleteAt _forEachIndex;
+                    };
+                } forEach _cartItems;
+
+                _list lnbSetText [[_selectedGun, 2], (str _newQty)];
+                if (_newQty == 0) then
+                {
+                    _list lnbSetColor [[_selectedGun ,2], [0.95,0.95,0.95,1] ];
+                };
             };
         };
     };
