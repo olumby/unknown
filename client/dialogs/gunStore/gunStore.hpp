@@ -210,6 +210,108 @@ class GunStore
             w = weaponFilterW;
             h = weaponFilterH;
         };
+        class totalPriceTitle : RscTitle
+        {
+            colorBackground[] = {0, 0, 0, 0};
+            idc = -1;
+            text = "Total Price:";
+
+            #define totalPriceTitleW (allListW * 0.40)
+            #define totalPriceTitleH 0.04
+            #define totalPriceTitleY (screenY + screenH - edgeOffsetY - totalPriceTitleH)
+            #define totalPriceTitleX (screenX + (allListW * 1.3) + (edgeOffsetX * 2))
+
+            x = totalPriceTitleX;
+            y = totalPriceTitleY;
+            w = totalPriceTitleW;
+            h = totalPriceTitleH;
+        };
+        class discountTitle : RscTitle
+        {
+            colorBackground[] = {0, 0, 0, 0};
+            idc = -1;
+            text = "Discount:";
+
+            #define discountTitleW (allListW * 0.40)
+            #define discountTitleH 0.04
+            #define discountTitleY (screenY + screenH - (edgeOffsetY * 1.5) - totalPriceTitleH - discountTitleH)
+            #define discountTitleX (screenX + (allListW * 1.3) + (edgeOffsetX * 2))
+
+            x = discountTitleX;
+            y = discountTitleY;
+            w = discountTitleW;
+            h = discountTitleH;
+        };
+        class priceTitle : RscTitle
+        {
+            colorBackground[] = {0, 0, 0, 0};
+            idc = -1;
+            text = "Price:";
+
+            #define priceTitleW (allListW * 0.40)
+            #define priceTitleH 0.04
+            #define priceTitleY (screenY + screenH - (edgeOffsetY * 2) - totalPriceTitleH - discountTitleH - priceTitleH)
+            #define priceTitleX (screenX + (allListW * 1.3) + (edgeOffsetX * 2))
+
+            x = priceTitleX;
+            y = priceTitleY;
+            w = priceTitleW;
+            h = priceTitleH;
+        };
+
+        // Actual Prices
+        class totalPriceValue : RscTitle
+        {
+            colorBackground[] = {0, 0, 0, 0};
+            idc = total_price_value;
+            style = ST_RIGHT;
+            text = "0";
+
+            #define totalPriceValueW (allListW * 0.30)
+            #define totalPriceValueH 0.04
+            #define totalPriceValueY (screenY + screenH - edgeOffsetY - totalPriceValueH)
+            #define totalPriceValueX ((screenX + screenW) - (totalPriceValueW + edgeOffsetX))
+
+            x = totalPriceValueX;
+            y = totalPriceValueY;
+            w = totalPriceValueW;
+            h = totalPriceValueH;
+        };
+        class discountValue : RscTitle
+        {
+            colorBackground[] = {0, 0, 0, 0};
+            colorText[] = {0.96,0.25,0.13,0.75};
+            style = ST_RIGHT;
+            idc = discount_value;
+            text = "0";
+
+            #define discountValueW (allListW * 0.30)
+            #define discountValueH 0.04
+            #define discountValueY (screenY + screenH - (edgeOffsetY * 1.5) - totalPriceValueH - discountValueH)
+            #define discountValueX ((screenX + screenW) - (discountValueW + edgeOffsetX))
+
+            x = discountValueX;
+            y = discountValueY;
+            w = discountValueW;
+            h = discountValueH;
+        };
+        class priceValue : RscTitle
+        {
+            colorBackground[] = {0, 0, 0, 0};
+            style = ST_RIGHT;
+            idc = price_value;
+            text = "0";
+
+            #define priceValueW (allListW * 0.30)
+            #define priceValueH 0.04
+            #define priceValueY (screenY + screenH - (edgeOffsetY * 2) - totalPriceValueH - discountValueH - priceValueH)
+            #define priceValueX ((screenX + screenW) - (priceValueW + edgeOffsetX))
+
+            x = priceValueX;
+            y = priceValueY;
+            w = priceValueW;
+            h = priceValueH;
+        };
         class closeButton: RscButtonDark
         {
             idc = -1;

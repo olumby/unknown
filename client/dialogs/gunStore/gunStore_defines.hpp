@@ -13,3 +13,6 @@
 #define mag_down 513233
 #define acc_up 432333
 #define acc_down 321233
+#define price_value 252459
+#define total_price_value 235243
+#define discount_value 254334
