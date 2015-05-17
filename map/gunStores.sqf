@@ -200,6 +200,13 @@ gunStoreMagazinePricing = compileFinal str
     ["6Rnd_45ACP_Cylinder", 100] // .45 ACP 6Rnd Cylinder
 ];
 
+_gunStoreMagazineIndex = [];
+{
+    _class = _x select 0;
+    _gunStoreMagazineIndex pushBack _class;
+} foreach (call gunStoreMagazinePricing);
+gunStoreMagazineIndex = compileFinal (str _gunStoreMagazineIndex);
+
 gunStoreAccessoryPricing = compileFinal str
 [
     ["acc_flashlight", 120], // Flashlight
@@ -250,3 +257,10 @@ gunStoreAccessoryPricing = compileFinal str
     ["optic_MRD", 120], // MRD
     ["optic_Yorris", 120] // Yorris J2
 ];
+
+_gunStoreAccessoryIndex = [];
+{
+    _class = _x select 0;
+    _gunStoreAccessoryIndex pushBack _class;
+} foreach (call gunStoreAccessoryPricing);
+gunStoreAccessoryIndex = compileFinal (str _gunStoreAccessoryIndex);

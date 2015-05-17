@@ -26,7 +26,7 @@ lbClear _mainList;
 
 {
     _class = _x select 0;
-    _price = str (_x select 1);
+    _price = _x select 1;
     _name = "";
     _picture = "";
 
@@ -44,10 +44,23 @@ lbClear _mainList;
         };
     };
 
-    _row = _mainList lnbAddRow ["", _name, "0"];
+    _weaponCart = uiNamespace getVariable ["gunStoreCartWeapons", []];
+
+    _weaponQty = 0;
+    if ([_class, _price] in _weaponCart) then
+    {
+        {
+            if (_x select 0 == _class) then
+            {
+                _weaponQty = _weaponQty + 1;
+            };
+        } forEach _weaponCart;
+    };
+
+    _row = _mainList lnbAddRow ["", _name, (str _weaponQty)];
     _mainList lnbSetPicture [[_row,0], _picture];
     _mainList lnbSetData [[_row, 0], _class];
-    _mainList lnbSetData [[_row, 1], _price];
+    _mainList lnbSetData [[_row, 1], (str _price)];
     _mainList lnbSetData [[_row, 2], _name];
 } forEach _weaponArray;
 
