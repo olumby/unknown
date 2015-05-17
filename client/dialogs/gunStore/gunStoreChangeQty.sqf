@@ -66,6 +66,4 @@ else
     };
 };
 
-systemChat (str _cartItems);
-
 uiNamespace setVariable [_cartType, _cartItems];
