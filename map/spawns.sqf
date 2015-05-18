@@ -4,16 +4,18 @@
 
 spawnLocations = compileFinal str
 [
-    ["spawn_001", "Kar Shek"],
-    ["spawn_002", "Tal Kar"],
-    ["spawn_003", "Chahar Dara"],
-    ["spawn_004", "Tappah Ka"],
-    ["spawn_005", "Shak Ka"],
-    ["spawn_006", "Tal Gozar"],
-    ["spawn_007", "Kamar"],
-    ["spawn_008", "Anbar Tappeh"],
-    ["spawn_009", "Darrah"],
-    ["spawn_010", "Gerdan"],
-    ["spawn_011", "Pradesh"],
-    ["spawn_012", "Titoli"]
+    ["spawn_001", "Oreokastro"],
+    ["spawn_002", "Galati"],
+    ["spawn_003", "Frini"],
+    ["spawn_004", "Syrta"],
+    ["spawn_005", "Gravia"],
+    ["spawn_006", "Negades"],
+    ["spawn_007", "Lakka"],
+    ["spawn_008", "Panochori"],
+    ["spawn_009", "Therisa"],
+    ["spawn_010", "Sofia"],
+    ["spawn_011", "Paros"],
+    ["spawn_012", "Charkia"],
+    ["spawn_013", "Dorida"],
+    ["spawn_013", "Selakano"]
 ];

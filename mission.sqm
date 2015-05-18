@@ -1563,7 +1563,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=26;
+		items=28;
 		class Item0
 		{
 			position[]={4.6642408,0.0020525698,-2.7006226};
@@ -1587,39 +1587,39 @@ class Mission
 		};
 		class Item3
 		{
-			position[]={910.98309,-0.073483139,18010.822};
+			position[]={4567.9941,302.12769,21457.582};
 			name="spawn_001";
-			text="Kar Shek";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorBlue";
-			fillName="DiagGrid";
-			a=150;
-			b=150;
+			colorName="ColorBlack";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
 		};
 		class Item4
 		{
-			position[]={964.64624,-0.022339836,17574.232};
+			position[]={10314.21,124.99425,19054.256};
 			name="spawn_002";
-			text="Tal Kar";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorBlue";
-			fillName="DiagGrid";
-			a=150;
-			b=150;
+			colorName="ColorBlack";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
 		};
 		class Item5
 		{
-			position[]={974.15674,-0.22042638,17009.736};
+			position[]={14616.28,45.575813,20761.877};
 			name="spawn_003";
-			text="Chahar Dara";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorBlue";
-			fillName="DiagGrid";
-			a=150;
-			b=150;
+			colorName="ColorBlack";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
 		};
 		class Item6
 		{
@@ -1638,112 +1638,111 @@ class Mission
 		};
 		class Item8
 		{
-			position[]={1048.8516,-0.048494071,16545.994};
+			position[]={8662.4141,179.75999,18294.262};
 			name="spawn_004";
-			text="Tappah Ka";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorBlue";
-			fillName="DiagGrid";
-			a=150;
-			b=150;
-		};
-		class Item9
-		{
-			position[]={1039.3799,-0.29591137,15938.654};
-			name="spawn_005";
-			text="Shak Ka";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorBlue";
-			fillName="DiagGrid";
-			a=150;
-			b=150;
-		};
-		class Item10
-		{
-			position[]={1019.4685,0.060458153,15436.018};
-			name="spawn_006";
-			text="Tal Gozar";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorBlue";
-			fillName="DiagGrid";
-			a=150;
-			b=150;
-		};
-		class Item11
-		{
-			position[]={1031.041,-0.12888782,15089.871};
-			name="spawn_007";
-			text="Kamar";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorBlue";
-			fillName="DiagGrid";
-			a=150;
-			b=150;
-		};
-		class Item12
-		{
-			position[]={1108.031,-0.087168247,14645.527};
-			name="spawn_008";
-			text="Anbar Tappeh";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorBlue";
-			fillName="DiagGrid";
-			a=150;
-			b=150;
-		};
-		class Item13
-		{
-			position[]={1124.3923,-0.20055547,14175.554};
-			name="spawn_009";
-			text="Darrah";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorBlack";
 			fillName="Border";
-			a=150;
-			b=150;
+			a=200;
+			b=200;
+			drawBorder=1;
+		};
+		class Item9
+		{
+			position[]={14518.982,22.785109,17643.549};
+			name="spawn_005";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
+		};
+		class Item10
+		{
+			position[]={4957.0562,75.57312,16156.104};
+			name="spawn_006";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
+		};
+		class Item11
+		{
+			position[]={12377.376,23.177906,15672.314};
+			name="spawn_007";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
+		};
+		class Item12
+		{
+			position[]={5115.3164,48.902946,11215.024};
+			name="spawn_008";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
+		};
+		class Item13
+		{
+			position[]={10699.642,17.250025,12248.611};
+			name="spawn_009";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			fillName="Border";
+			a=200;
+			b=200;
 			drawBorder=1;
 		};
 		class Item14
 		{
-			position[]={1107.5698,-0.17159644,13636.373};
+			position[]={25726.039,20.649782,21379.945};
 			name="spawn_010";
-			text="Gerdan";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorBlue";
-			fillName="DiagGrid";
-			a=150;
-			b=150;
+			colorName="ColorBlack";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
 		};
 		class Item15
 		{
-			position[]={1085.52,0.17413379,13166.27};
+			position[]={20994.686,40.090298,16970.24};
 			name="spawn_011";
-			text="Pradesh";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorBlue";
-			fillName="DiagGrid";
-			a=150;
-			b=150;
+			colorName="ColorBlack";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
 		};
 		class Item16
 		{
-			position[]={1056.387,-0.1841073,12645.114};
+			position[]={18139.43,25.466845,15248.927};
 			name="spawn_012";
-			text="Titoli";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorBlue";
-			fillName="DiagGrid";
-			a=150;
-			b=150;
+			colorName="ColorBlack";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
 		};
 		class Item17
 		{
@@ -1816,6 +1815,31 @@ class Mission
 			type="mil_box";
 			colorName="ColorCIV";
 			angle=-75.726578;
+		};
+		class Item26
+		{
+			position[]={19414.85,39.022045,13252.236};
+			name="spawn_013";
+			text="Titoli";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
+		};
+		class Item27
+		{
+			position[]={20809.85,34.927578,6743.4932};
+			name="spawn_014";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
 		};
 	};
 	class Sensors
