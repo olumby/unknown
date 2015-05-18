@@ -6,6 +6,7 @@
 #define acc_list 245231
 #define mag_list 245336
 #define buy_button 245434
+#define close_button 245134
 #define weapon_filter 245431
 #define main_up 535433
 #define main_down 535233

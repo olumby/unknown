@@ -21,6 +21,7 @@ gunStoreFilter = compile preprocessFileLineNumbers "client\dialogs\gunStore\gunS
 gunStoreSelection = compile preprocessFileLineNumbers "client\dialogs\gunStore\gunStoreSelection.sqf";
 gunStoreMainSelection = compile preprocessFileLineNumbers "client\dialogs\gunStore\gunStoreMainSelection.sqf";
 gunStoreChangeQty = compile preprocessFileLineNumbers "client\dialogs\gunStore\gunStoreChangeQty.sqf";
+buyWeapons = compile preprocessFileLineNumbers "client\dialogs\gunStore\buyWeapons.sqf";
 
 // Admin
 isAdmin = compile preprocessFileLineNumbers "client\functions\isAdmin.sqf";

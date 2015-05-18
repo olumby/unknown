@@ -187,6 +187,7 @@ class GunStore
         {
             idc = buy_button;
             text = "BUY GEAR";
+            onButtonClick = "_this call buyWeapons;";
 
             #define buyButtonW scaleFix(0.21)
             #define buyButtonX ((screenX + screenW) - buyButtonW)
@@ -349,7 +350,7 @@ class GunStore
         };
         class closeButton: RscButtonDark
         {
-            idc = -1;
+            idc = close_button;
             text = "CLOSE";
             onButtonClick = "closeDialog 0;";
 
