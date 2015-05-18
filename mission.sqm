@@ -11,7 +11,9 @@ class Mission
 		"A3_Structures_F_Furniture",
 		"A3_Structures_F_Heli_Items_Airport",
 		"A3_Structures_F_EPA_Civ_Constructions",
-		"a3_map_altis"
+		"a3_map_altis",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f"
 	};
 	addOnsAuto[]=
 	{
@@ -1632,9 +1634,8 @@ class Mission
 		{
 			position[]={10859.021,33.158836,13518.522};
 			name="vehicleStore_001_label";
-			text="Vehicle Store";
-			type="mil_box";
-			colorName="ColorCIV";
+			type="c_car";
+			colorName="ColorPink";
 		};
 		class Item8
 		{
@@ -1755,9 +1756,8 @@ class Mission
 		{
 			position[]={20479.068,41.224285,8997.8086};
 			name="vehicleStore_002_label";
-			text="Vehicle Store";
-			type="mil_box";
-			colorName="ColorCIV";
+			type="c_car";
+			colorName="ColorPink";
 		};
 		class Item19
 		{
@@ -1770,51 +1770,43 @@ class Mission
 		{
 			position[]={14746.903,47.52,20740.449};
 			name="vehicleStore_003_label";
-			text="Vehicle Store";
-			type="mil_box";
-			colorName="ColorCIV";
+			type="c_car";
+			colorName="ColorPink";
 		};
 		class Item21
 		{
 			position[]={9405.4697,118.37527,15917.369};
 			name="gunStore_001_label";
-			text="Gun Store";
-			type="mil_box";
-			colorName="ColorCIV";
+			type="c_unknown";
+			colorName="ColorPink";
 		};
 		class Item22
 		{
 			position[]={20257.393,54.819695,11656.077};
 			name="gunStore_002_label";
-			text="Gun Store";
-			type="mil_box";
-			colorName="ColorCIV";
+			type="c_unknown";
+			colorName="ColorPink";
 		};
 		class Item23
 		{
 			position[]={27049.52,21.051485,23238.17};
 			name="gunStore_003_label";
-			text="Gun Store";
-			type="mil_box";
-			colorName="ColorCIV";
+			type="c_unknown";
+			colorName="ColorPink";
 		};
 		class Item24
 		{
 			position[]={5262.2456,81.407372,11502.354};
 			name="serviceVehicle_001_label";
-			text="Service Vehicle";
-			type="mil_box";
-			colorName="ColorCIV";
-			angle=176.77748;
+			type="n_maint";
+			colorName="ColorPink";
 		};
 		class Item25
 		{
 			position[]={23154.99,3.1900001,18970.943};
 			name="serviceVehicle_002_label";
-			text="Service Vehicle";
-			type="mil_box";
-			colorName="ColorCIV";
-			angle=-75.726578;
+			type="n_maint";
+			colorName="ColorPink";
 		};
 		class Item26
 		{
@@ -1945,15 +1937,6 @@ class OutroLoose
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
 		year=2035;
-		month=6;
-		day=24;
-		hour=12;
-		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
-	};
-};
-                                                     	year=2035;
 		month=6;
 		day=24;
 		hour=12;
