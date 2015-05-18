@@ -33,7 +33,15 @@ else
     _spawnBox = uiNamespace getVariable "storeSpawn";
     // add weapons
     {
-        _spawnBox addWeaponCargo [(_x select 0), 1];
+        if (isClass (configFile >> "CfgWeapons" >> (_x select 0))) then
+        {
+            _spawnBox addWeaponCargo [(_x select 0), 1];
+        }
+        else
+        {
+            _spawnBox addMagazineCargo [(_x select 0), 1];
+        }
+
     } forEach (uiNamespace getVariable ["gunStoreCartWeapons", []]);
 
     // add magazines
