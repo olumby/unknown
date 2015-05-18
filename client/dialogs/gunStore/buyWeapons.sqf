@@ -30,6 +30,21 @@ else
 
     // check and charge the user
 
+    _spawnBox = uiNamespace getVariable "storeSpawn";
+    // add weapons
+    {
+        _spawnBox addWeaponCargo [(_x select 0), 1];
+    } forEach (uiNamespace getVariable ["gunStoreCartWeapons", []]);
+
+    // add magazines
+    {
+        _spawnBox addMagazineCargo [(_x select 0), 1];
+    } forEach (uiNamespace getVariable ["gunStoreCartMagazines", []]);
+
+    // add accessories
+    {
+        _spawnBox addItemCargo [(_x select 0), 1];
+    } forEach (uiNamespace getVariable ["gunStoreCartAccessories", []]);
 
     gunStoreDialogOpen = false;
     closeDialog 0;

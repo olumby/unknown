@@ -9,7 +9,7 @@ if(isServer) then
     _storeDirection = getDir _store;
     _storeTable = createVehicle ["Land_Pallets_stack_F", (getPos _store), [], 0, "CAN_COLLIDE"];
     _storeTable setDir _storeDirection;
-    _store attachTo [_storeTable, [0,0.2,0.6]]; 
+    _store attachTo [_storeTable, [0,0.2,0.6]];
 
     _store allowDamage false;
     _storeTable allowDamage false;
@@ -17,7 +17,6 @@ if(isServer) then
 
 if(hasInterface) then
 {
-    _store addAction ["Open Gun Store", "client\dialogs\gunStore\openGunStore.sqf", [vehicleVarName _store], 1.5, false, false, "", "_this distance _target < 3"];
 
     _storeBox = "Box_NATO_WpsSpecial_F" createVehicleLocal (getPos _store);
     clearBackpackCargo _storeBox;
@@ -32,4 +31,6 @@ if(hasInterface) then
     if (!isNull attachedTo _store) then {
         (attachedTo _store) setVariable ["R3F_LOG_disabled", true];
     };
+
+    _store addAction ["Open Gun Store", "client\dialogs\gunStore\openGunStore.sqf", [vehicleVarName _store, _storeBox], 1.5, false, false, "", "_this distance _target < 3"];
 };
