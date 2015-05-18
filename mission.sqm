@@ -1115,7 +1115,7 @@ class Mission
 		class Item13
 		{
 			position[]={3767.74,7.5689702,4420.1299};
-			azimut=-214.95599;
+			azimut=-124.95599;
 			id=62;
 			side="EMPTY";
 			vehicle="Land_Laptop_device_F";
