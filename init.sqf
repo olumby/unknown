@@ -13,3 +13,4 @@ if (!isDedicated) then {
 
 // Third Party Stuff
 execVM "external\R3F_LOG\init.sqf";
+execVM "external\Jump\init.sqf";
