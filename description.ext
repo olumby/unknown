@@ -30,12 +30,17 @@ wreckRemovalMaxTime = 1200; //seconds
 disableChannels[]={0,1,2,6};
 
 #include "map\customVehicles.hpp"
+
 #include "defines.hpp"
 #include "client\dialogs\helpers.hpp"
 #include "client\dialogs\spawnDialog\spawnDialog.hpp"
 #include "client\dialogs\vehicleStore\vehicleStore.hpp"
 #include "client\dialogs\gunStore\gunStore.hpp"
 #include "client\admin\adminMenu.hpp"
+class RscTitles
+{
+    #include "client\dialogs\hud\playerHud.hpp"
+};
 
 // Third Party Stuff
 #include "external\R3F_LOG\desc_include.h"
