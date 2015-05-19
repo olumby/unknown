@@ -9,6 +9,7 @@ if (isServer) then
 
     while {true} do
     {
+        // the sleep is required to ensure the trigger is set up, also helps reduce load on server.
         sleep 1;
         _flagPossession = [];
         {
