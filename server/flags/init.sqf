@@ -37,12 +37,17 @@ if (isServer) then
         _flagPole allowDamage false;
 
         _flagTrigger = createTrigger ["EmptyDetector", _x select 0, true];
+        _flagTrigger setTriggerArea [_x select 1, _x select 1, 0, false];
+        _flagTrigger setTriggerActivation ["ANY", "PRESENT", true];
+        _flagTrigger setTriggerStatements ["this", "", ""];
 
         _flagInformation pushBack [_innerMarker, _outerMarker, _flagPole, _flagTrigger];
     } forEach _flags;
 
     missionNamespace setVariable ["flagInformation", _flagInformation];
     publicVariable "flagInformation";
+
+    [] execVM "server\flags\flagMonitor.sqf";
 };
 
 // flagArray = missionNamespace getVariable "flagInformation"; theFlag = ((flagArray select 1) select 2); newFlag = createVehicle ["Flag_Red_F", getMarkerPos ((flagArray select 1) select 0), [], 0, "CAN_COLLIDE"]; deleteVehicle theFlag; (flagArray select 1) set [2, newFlag]; missionNamespace setVariable ["flagInformation", flagArray, true];
