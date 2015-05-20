@@ -32,6 +32,7 @@ if (isServer) then
         _iconMarker setMarkerType "mil_flag";
         _iconMarker setMarkerSize [1, 1];
         _iconMarker setMarkerColor "ColorWhite";
+        _iconMarker setMarkerText (_x select 3);
 
         _flagPole = createVehicle ["FlagPole_F", _x select 0, [], 0, "NONE"];
         _flagPole allowDamage false;
