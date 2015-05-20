@@ -15,26 +15,14 @@ if (isServer) then
         {
             _trigger = _x select 3;
             _triggerPlayers = list _trigger;
-
-            _blues = 0;
-            _greens = 0;
-            _reds = 0;
+            _blues = 0; _reds = 0; _greens = 0;
 
             {
                 switch (side _x) do
                 {
-                    case west:
-                    {
-                        _blues = _blues + 1;
-                    };
-                    case east:
-                    {
-                        _reds = _reds + 1;
-                    };
-                    case resistance:
-                    {
-                        _greens = _greens + 1;
-                    };
+                    case west: { _blues = _blues + 1; };
+                    case east: { _reds = _reds + 1; };
+                    case resistance: { _greens = _greens + 1; };
                 };
             } forEach _triggerPlayers;
 
