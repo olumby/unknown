@@ -37,17 +37,18 @@ while {true} do
 
         if ( _blue > _green && _blue > _red ) then
         {
-            _interface ctrlSetBackgroundColor [0.24,0.27,0.94,0.5];
+
+            _interface ctrlSetBackgroundColor [0,0.3,0.94,0.5];
             _interface ctrlSetTextColor [1,1,1,1];
         };
         if ( _red > _green && _red > _blue ) then
         {
-            _interface ctrlSetBackgroundColor [0.94,0.24,0.24,0.5];
+            _interface ctrlSetBackgroundColor [0.5,0,0,0.5];
             _interface ctrlSetTextColor [1,1,1,1];
         };
         if ( _green > _red && _green > _blue ) then
         {
-            _interface ctrlSetBackgroundColor [0,0.47,0.08,0.5];
+            _interface ctrlSetBackgroundColor [0,0.5,0,0.5];
             _interface ctrlSetTextColor [1,1,1,1];
         };
         if ( _blue == 0 && _red == 0 && _green == 0 ) then
