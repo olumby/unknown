@@ -74,7 +74,7 @@
 
 #define SL_TEXTURES       0x10
 
-// progress bar 
+// progress bar
 #define ST_VERTICAL       0x01
 #define ST_HORIZONTAL     0
 
@@ -121,6 +121,15 @@ class RscTitle : RscText {
     font = "PuristaMedium";
     sizeEx = 0.036;
     colorText[] = {0.95, 0.95, 0.95, 1};
+};
+
+class RscFlagBox : RscText {
+    font = "PuristaMedium";
+    sizeEx = 0.03;
+    colorBackground[] = {1,1,1,0.5};
+    colorText[] = {0,0,0,0.7};
+    style = ST_CENTER;
+    shadow = 0;
 };
 
 class RscPicture
@@ -252,7 +261,7 @@ class RscListNBox {
     colorSelectBackground2[] = {1,1,1,0.5};
     colorPicture[] = {1,1,1,1};
     colorPictureSelected[] = {1,1,1,1};
-    colorPictureDisabled[] = {1,1,1,1};  
+    colorPictureDisabled[] = {1,1,1,1};
     soundSelect[] = {"",0.1,1};
     soundExpand[] = {"",0.1,1};
     soundCollapse[] = {"",0.1,1};
@@ -322,7 +331,7 @@ class RscFrame
 };
 
 class RscBackground
-{ 
+{
     idc = -1;
     type = CT_STATIC;
     style = ST_CENTER;

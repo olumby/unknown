@@ -6,11 +6,9 @@
 
 if (isServer) then
 {
-
+    sleep 1; // required to ensure the trigger is set up
     while {true} do
     {
-        // the sleep is required to ensure the trigger is set up, also helps reduce load on server.
-        sleep 1;
         _flagPossession = [];
         {
             _trigger = _x select 3;
@@ -27,10 +25,11 @@ if (isServer) then
             } forEach _triggerPlayers;
 
             _flagPossession pushBack [_blues, _reds, _greens];
-
         } forEach flagInformation;
 
         missionNamespace setVariable ["flagPossession", _flagPossession];
         publicVariable "flagPossession";
+
+        sleep 0.5;
     };
 };
