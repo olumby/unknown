@@ -3,7 +3,7 @@
  */
 
 #define player_hud 324233
-#define flag_delta 396813
-#define flag_charlie 326833
-#define flag_bravo 326803
-#define flag_alpha 326873
+#define flag_0 396813
+#define flag_1 326833
+#define flag_2 326803
+#define flag_3 326873

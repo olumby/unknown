@@ -14,81 +14,81 @@ class PlayerHud
 
     class controls
     {
-        class hudFlagDelta: RscFlagBox
+        class hudFlag3: RscFlagBox
         {
-            idc = flag_delta;
+            idc = flag_3;
             colorBackground[] = {1,1,1,0.5};
             colorText[] = {0,0,0,1};
             style = ST_CENTER;
             shadow = 0;
-            text = "D";
+            text = "Flag";
 
-            #define hudFlagDeltaW 0.10
-            #define hudFlagDeltaH 0.06
-            #define hudFlagDeltaY ((safeZoneY + safeZoneH) - hudFlagDeltaH - (edgeOffsetY * 0.5))
-            #define hudFlagDeltaX ((safeZoneX + safeZoneW) - hudFlagDeltaW - (edgeOffsetX * 0.5))
+            #define hudFlag3W 0.10
+            #define hudFlag3H 0.06
+            #define hudFlag3Y ((safeZoneY + safeZoneH) - hudFlag3H - (edgeOffsetY * 0.5))
+            #define hudFlag3X ((safeZoneX + safeZoneW) - hudFlag3W - (edgeOffsetX * 0.5))
 
-            x = hudFlagDeltaX;
-            y = hudFlagDeltaY;
-            w = hudFlagDeltaW;
-            h = hudFlagDeltaH;
+            x = hudFlag3X;
+            y = hudFlag3Y;
+            w = hudFlag3W;
+            h = hudFlag3H;
         };
-        class hudFlagCharlie: RscFlagBox
+        class hudFlag2: RscFlagBox
         {
-            idc = flag_charlie;
+            idc = flag_2;
             colorBackground[] = {1,1,1,0.5};
             colorText[] = {0,0,0,1};
             style = ST_CENTER;
             shadow = 0;
-            text = "C";
+            text = "Flag";
 
-            #define hudFlagCharlieW 0.10
-            #define hudFlagCharlieH 0.06
-            #define hudFlagCharlieY ((safeZoneY + safeZoneH) - hudFlagCharlieH - (edgeOffsetY * 0.5))
-            #define hudFlagCharlieX ((safeZoneX + safeZoneW) - hudFlagCharlieW - hudFlagDeltaW - edgeOffsetX)
+            #define hudFlag2W 0.10
+            #define hudFlag2H 0.06
+            #define hudFlag2Y ((safeZoneY + safeZoneH) - hudFlag2H - (edgeOffsetY * 0.5))
+            #define hudFlag2X ((safeZoneX + safeZoneW) - hudFlag2W - hudFlag3W - edgeOffsetX)
 
-            x = hudFlagCharlieX;
-            y = hudFlagCharlieY;
-            w = hudFlagCharlieW;
-            h = hudFlagCharlieH;
+            x = hudFlag2X;
+            y = hudFlag2Y;
+            w = hudFlag2W;
+            h = hudFlag2H;
         };
-        class hudFlagBravo: RscFlagBox
+        class hudFlag1: RscFlagBox
         {
-            idc = flag_bravo;
+            idc = flag_1;
             colorBackground[] = {1,1,1,0.5};
             colorText[] = {0,0,0,1};
             style = ST_CENTER;
             shadow = 0;
-            text = "B";
+            text = "Flag";
 
-            #define hudFlagBravoW 0.10
-            #define hudFlagBravoH 0.06
-            #define hudFlagBravoY ((safeZoneY + safeZoneH) - hudFlagBravoH - (edgeOffsetY * 0.5))
-            #define hudFlagBravoX ((safeZoneX + safeZoneW) - hudFlagBravoW - hudFlagCharlieW - hudFlagDeltaW - (edgeOffsetX * 1.5))
+            #define hudFlag1W 0.10
+            #define hudFlag1H 0.06
+            #define hudFlag1Y ((safeZoneY + safeZoneH) - hudFlag1H - (edgeOffsetY * 0.5))
+            #define hudFlag1X ((safeZoneX + safeZoneW) - hudFlag1W - hudFlag2W - hudFlag3W - (edgeOffsetX * 1.5))
 
-            x = hudFlagBravoX;
-            y = hudFlagBravoY;
-            w = hudFlagBravoW;
-            h = hudFlagBravoH;
+            x = hudFlag1X;
+            y = hudFlag1Y;
+            w = hudFlag1W;
+            h = hudFlag1H;
         };
-        class hudFlagAlpha: RscFlagBox
+        class hudFlag0: RscFlagBox
         {
-            idc = flag_alpha;
+            idc = flag_0;
             colorBackground[] = {1,1,1,0.5};
             colorText[] = {0,0,0,1};
             style = ST_CENTER;
             shadow = 0;
-            text = "A";
+            text = "Flag";
 
-            #define hudFlagAlphaW 0.10
-            #define hudFlagAlphaH 0.06
-            #define hudFlagAlphaY ((safeZoneY + safeZoneH) - hudFlagAlphaH - (edgeOffsetY * 0.5))
-            #define hudFlagAlphaX ((safeZoneX + safeZoneW) - hudFlagAlphaW - hudFlagBravoW - hudFlagCharlieW - hudFlagDeltaW - (edgeOffsetX * 2))
+            #define hudFlag0W 0.10
+            #define hudFlag0H 0.06
+            #define hudFlag0Y ((safeZoneY + safeZoneH) - hudFlag0H - (edgeOffsetY * 0.5))
+            #define hudFlag0X ((safeZoneX + safeZoneW) - hudFlag0W - hudFlag1W - hudFlag2W - hudFlag3W - (edgeOffsetX * 2))
 
-            x = hudFlagAlphaX;
-            y = hudFlagAlphaY;
-            w = hudFlagAlphaW;
-            h = hudFlagAlphaH;
+            x = hudFlag0X;
+            y = hudFlag0Y;
+            w = hudFlag0W;
+            h = hudFlag0H;
         };
     };
 };

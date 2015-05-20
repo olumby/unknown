@@ -41,7 +41,7 @@ if (isServer) then
         _flagTrigger setTriggerActivation ["ANY", "PRESENT", true];
         _flagTrigger setTriggerStatements ["this", "", ""];
 
-        _flagInformation pushBack [_innerMarker, _outerMarker, _flagPole, _flagTrigger];
+        _flagInformation pushBack [_innerMarker, _outerMarker, _flagPole, _flagTrigger, _x select 3];
     } forEach _flags;
 
     missionNamespace setVariable ["flagInformation", _flagInformation];
