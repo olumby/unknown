@@ -42,9 +42,6 @@ while {true} do
             };
             _flagProgress ctrlSetTextColor _progressColor;
         };
-
-
-
     };
     sleep 0.5;
 };
