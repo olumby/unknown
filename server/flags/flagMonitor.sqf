@@ -4,6 +4,8 @@
 
 waitUntil { !isNil "flagInformation" };
 
+#define capture_time 30
+
 fnc_changeFlag =
 {
     _side = _this select 0;
@@ -54,7 +56,7 @@ fnc_whenTeam =
 
     switch (true) do
     {
-        case (_previousCapStart != 0 && _previousCapTime <= 30 && _previousContestors == _side):
+        case (_previousCapStart != 0 && _previousCapTime <= capture_time && _previousContestors == _side):
         {
             _currentSide = _previousHolders;
             _contestors = _side;
@@ -62,7 +64,7 @@ fnc_whenTeam =
             _capTime = diag_tickTime - _previousCapStart;
             [_currentSide, _contestors, _capStart, _capTime];
         };
-        case ( (_previousCapStart != 0 && _previousCapTime > 30) || _previousHolders == _side ):
+        case ( (_previousCapStart != 0 && _previousCapTime > capture_time) || _previousHolders == _side ):
         {
             _currentSide = _side;
             _contestors = civilian;
