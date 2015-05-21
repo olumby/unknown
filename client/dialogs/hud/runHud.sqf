@@ -26,7 +26,6 @@ while {true} do
         };
     };
 
-    reverse flagPossession;
     {
         _currentInterface = _flagInterface select _forEachIndex;
         _interface = _display displayCtrl _currentInterface;
