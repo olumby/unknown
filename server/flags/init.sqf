@@ -50,5 +50,3 @@ if (isServer) then
 
     [] execVM "server\flags\flagMonitor.sqf";
 };
-
-// flagArray = missionNamespace getVariable "flagInformation"; theFlag = ((flagArray select 1) select 2); newFlag = createVehicle ["Flag_Red_F", getMarkerPos ((flagArray select 1) select 0), [], 0, "CAN_COLLIDE"]; deleteVehicle theFlag; (flagArray select 1) set [2, newFlag]; missionNamespace setVariable ["flagInformation", flagArray, true];

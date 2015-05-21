@@ -4,6 +4,45 @@
 
 waitUntil { !isNil "flagInformation" };
 
+fnc_changeFlag =
+{
+    _side = _this select 0;
+    _flagIndex = _this select 1;
+
+    _flagType = switch (_side) do
+    {
+        case west:
+        {
+            "Flag_NATO_F";
+        };
+        case east:
+        {
+            "Flag_CSAT_F";
+        };
+        case resistance:
+        {
+            "Flag_AAF_F";
+        };
+        case civilian:
+        {
+            "FlagPole_F";
+        };
+        default
+        {
+            "FlagPole_F";
+        };
+    };
+
+    deleteVehicle ((flagInformation select _flagIndex) select 2);
+
+    newFlag = createVehicle [_flagType, getMarkerPos ((flagInformation select _flagIndex) select 0), [], 0, "CAN_COLLIDE"];
+
+    (flagInformation select _flagIndex) set [2, newFlag];
+
+    missionNamespace setVariable ["flagInformation", flagInformation];
+    publicVariable "flagInformation";
+};
+
 fnc_whenTeam =
 {
     _previousHolders = _this select 0;
@@ -11,6 +50,7 @@ fnc_whenTeam =
     _previousCapStart = _this select 2;
     _previousCapTime = _this select 3;
     _side = _this select 4;
+    _flagIndex = _this select 5;
 
     switch (true) do
     {
@@ -28,6 +68,12 @@ fnc_whenTeam =
             _contestors = civilian;
             _capTime = 0;
             _capStart = 0;
+
+            if (_previousHolders != _side) then
+            {
+                [_side, _flagIndex] call fnc_changeFlag;
+            };
+
             [_currentSide, _contestors, _capStart, _capTime];
         };
         default
@@ -97,15 +143,15 @@ if (isServer) then
                 {
                     case ( _blues > _reds && _blues > _greens ):
                     {
-                        _re = [_previousHolders, _previousContestors, _previousCapStart, _previousCapTime, west] call fnc_whenTeam;
+                        _re = [_previousHolders, _previousContestors, _previousCapStart, _previousCapTime, west, _forEachIndex] call fnc_whenTeam;
                     };
                     case ( _reds > _blues && _reds > _greens ):
                     {
-                        _re = [_previousHolders, _previousContestors, _previousCapStart, _previousCapTime, east] call fnc_whenTeam;
+                        _re = [_previousHolders, _previousContestors, _previousCapStart, _previousCapTime, east, _forEachIndex] call fnc_whenTeam;
                     };
                     case ( _greens > _reds && _greens > _blues ):
                     {
-                        _re = [_previousHolders, _previousContestors, _previousCapStart, _previousCapTime, resistance] call fnc_whenTeam;
+                        _re = [_previousHolders, _previousContestors, _previousCapStart, _previousCapTime, resistance, _forEachIndex] call fnc_whenTeam;
                     };
                     case ( (_blues + _reds + _greens) == 0 ):
                     {
