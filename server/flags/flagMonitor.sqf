@@ -47,6 +47,7 @@ if (isServer) then
                         {
                             case (_previousCapStart != 0 && _previousCapTime <= 30):
                             {
+                                _currentSide = _previousHolders;
                                 _contestors = west;
                                 _tickTime = diag_tickTime - _previousCapStart;
                                 _capTime = _tickTime;
@@ -60,6 +61,7 @@ if (isServer) then
                             };
                             default
                             {
+                                _currentSide = _previousHolders;
                                 _contestors = west;
                                 _capStart = diag_tickTime;
                             };
@@ -71,6 +73,7 @@ if (isServer) then
                         {
                             case (_previousCapStart != 0 && _previousCapTime <= 30):
                             {
+                                _currentSide = _previousHolders;
                                 _contestors = east;
                                 _tickTime = diag_tickTime - _previousCapStart;
                                 _capTime = _tickTime;
@@ -84,6 +87,7 @@ if (isServer) then
                             };
                             default
                             {
+                                _currentSide = _previousHolders;
                                 _contestors = east;
                                 _capStart = diag_tickTime;
                             };
@@ -95,6 +99,7 @@ if (isServer) then
                         {
                             case (_previousCapStart != 0 && _previousCapTime <= 30):
                             {
+                                _currentSide = _previousHolders;
                                 _contestors = resistance;
                                 _tickTime = diag_tickTime - _previousCapStart;
                                 _capTime = _tickTime;
@@ -108,6 +113,7 @@ if (isServer) then
                             };
                             default
                             {
+                                _currentSide = _previousHolders;
                                 _contestors = resistance;
                                 _capStart = diag_tickTime;
                             };
