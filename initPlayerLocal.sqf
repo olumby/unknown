@@ -8,6 +8,7 @@ enableSentences false;
 
 9999 cutText ["Fixing Netcode, please wait.", "BLACK", 0.01];
 
+// Compile Scripts
 call compile preprocessFileLineNumbers "client\compile.sqf";
 
 // Setup flags
