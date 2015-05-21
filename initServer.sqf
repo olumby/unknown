@@ -1,6 +1,9 @@
 // Enable Groups
 ["Initialize"] call BIS_fnc_dynamicGroups;
 
+// Compile Scripts
+call compile preprocessFileLineNumbers "server\compile.sqf";
+
 // Set admins
 [] execVM "server\functions\admins.sqf";
 
