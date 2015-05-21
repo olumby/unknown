@@ -36,104 +36,69 @@ if (isServer) then
                 _previousCapStart = (_previousFlagProssession select _forEachIndex) select 5;
                 _previousCapTime = (_previousFlagProssession select _forEachIndex) select 6;
 
-
                 _capStart = _previousCapStart;
 
+                _isTeam = true;
+                _side = civilian;
+                
                 switch (true) do
                 {
                     case ( _blues > _reds && _blues > _greens ):
                     {
-                        switch (true) do
-                        {
-                            case (_previousCapStart != 0 && _previousCapTime <= 30):
-                            {
-                                _currentSide = _previousHolders;
-                                _contestors = west;
-                                _tickTime = diag_tickTime - _previousCapStart;
-                                _capTime = _tickTime;
-                            };
-                            case ( (_previousCapStart != 0 && _previousCapTime > 30) || _previousHolders == west ):
-                            {
-                                _currentSide = west;
-                                _contestors = civilian;
-                                _capTime = 0;
-                                _capStart = 0;
-                            };
-                            default
-                            {
-                                _currentSide = _previousHolders;
-                                _contestors = west;
-                                _capStart = diag_tickTime;
-                            };
-                        };
+                        _side = west;
                     };
                     case ( _reds > _blues && _reds > _greens ):
                     {
-                        switch (true) do
-                        {
-                            case (_previousCapStart != 0 && _previousCapTime <= 30):
-                            {
-                                _currentSide = _previousHolders;
-                                _contestors = east;
-                                _tickTime = diag_tickTime - _previousCapStart;
-                                _capTime = _tickTime;
-                            };
-                            case ( (_previousCapStart != 0 && _previousCapTime > 30) || _previousHolders == east ):
-                            {
-                                _currentSide = east;
-                                _contestors = civilian;
-                                _capTime = 0;
-                                _capStart = 0;
-                            };
-                            default
-                            {
-                                _currentSide = _previousHolders;
-                                _contestors = east;
-                                _capStart = diag_tickTime;
-                            };
-                        };
+                        _side = east;
                     };
                     case ( _greens > _reds && _greens > _blues ):
                     {
-                        switch (true) do
-                        {
-                            case (_previousCapStart != 0 && _previousCapTime <= 30):
-                            {
-                                _currentSide = _previousHolders;
-                                _contestors = resistance;
-                                _tickTime = diag_tickTime - _previousCapStart;
-                                _capTime = _tickTime;
-                            };
-                            case ( (_previousCapStart != 0 && _previousCapTime > 30) || _previousHolders == resistance ):
-                            {
-                                _currentSide = resistance;
-                                _contestors = civilian;
-                                _capTime = 0;
-                                _capStart = 0;
-                            };
-                            default
-                            {
-                                _currentSide = _previousHolders;
-                                _contestors = resistance;
-                                _capStart = diag_tickTime;
-                            };
-                        };
+                        _side = resistance;
                     };
                     case ( _blues == 0 && _reds == 0 && _greens == 0 ):
                     {
-                        _currentSide = _previousHolders;
-                        if (_previousContestors != civilian) then
+                        _isTeam = false;
+                    };
+                };
+
+                if (_isTeam) then
+                {
+                    switch (true) do
+                    {
+                        case (_previousCapStart != 0 && _previousCapTime <= 30):
                         {
+                            _currentSide = _previousHolders;
+                            _contestors = _side;
+                            _tickTime = diag_tickTime - _previousCapStart;
+                            _capTime = _tickTime;
+                        };
+                        case ( (_previousCapStart != 0 && _previousCapTime > 30) || _previousHolders == _side ):
+                        {
+                            _currentSide = _side;
                             _contestors = civilian;
                             _capTime = 0;
                             _capStart = 0;
                         };
+                        default
+                        {
+                            _currentSide = _previousHolders;
+                            _contestors = _side;
+                            _capStart = diag_tickTime;
+                        };
+                    };
+                }
+                else
+                {
+                    _currentSide = _previousHolders;
+                    if (_previousContestors != civilian) then
+                    {
+                        _contestors = civilian;
+                        _capTime = 0;
+                        _capStart = 0;
                     };
                 };
             };
 
-            //  blue    op     indi     current holders             contestors                  cap start   cap time
-            // [_blues, _reds, _greens, west/east/resistance/empty, west/east/resistance/empty, _startTick, _currentTick]
             _flagPossession pushBack [_blues, _reds, _greens, _currentSide, _contestors, _capStart, _capTime];
         } forEach flagInformation;
 
