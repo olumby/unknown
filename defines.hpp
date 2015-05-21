@@ -341,3 +341,15 @@ class RscBackground
     colorText[] = {1,1,1,1};
     text = "";
 };
+
+class RscProgress
+{
+    type = CT_PROGRESS;
+    style = 0;
+    colorFrame[] = {0,0,0,1};
+    colorBar[] = {1,1,1,1};
+    texture = "#(argb,8,8,3)color(1,1,1,1)";
+    shadow = 0;
+    w = 1;
+    h = 0.03;
+};
