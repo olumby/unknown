@@ -29,32 +29,38 @@ while {true} do
     {
         _currentInterface = _flagInterface select _forEachIndex;
         _interface = _display displayCtrl _currentInterface;
-
-        _blue = _x select 0;
-        _red = _x select 1;
-        _green = _x select 2;
-
-        if ( _blue > _green && _blue > _red ) then
-        {
-
-            _interface ctrlSetBackgroundColor [0,0.3,0.94,0.5];
-            _interface ctrlSetTextColor [1,1,1,1];
-        };
-        if ( _red > _green && _red > _blue ) then
-        {
-            _interface ctrlSetBackgroundColor [0.5,0,0,0.5];
-            _interface ctrlSetTextColor [1,1,1,1];
-        };
-        if ( _green > _red && _green > _blue ) then
-        {
-            _interface ctrlSetBackgroundColor [0,0.5,0,0.5];
-            _interface ctrlSetTextColor [1,1,1,1];
-        };
-        if ( _blue == 0 && _red == 0 && _green == 0 ) then
-        {
-            _interface ctrlSetBackgroundColor [1,1,1,0.5];
-            _interface ctrlSetTextColor [0,0,0,0.7];
-        };
         _interface ctrlSetText ((flagInformation select _forEachIndex) select 4);
+
+        _holders = _x select 3;
+        _contestors = _x select 4;
+
+        if ( _contestors != _holders && _holders != civilian) then
+        {
+            // show some sort of contestor notification..
+        };
+
+        switch (_holders) do
+        {
+            case west:
+            {
+                _interface ctrlSetBackgroundColor [0,0.3,0.94,0.5];
+                _interface ctrlSetTextColor [1,1,1,1];
+            };
+            case east:
+            {
+                _interface ctrlSetBackgroundColor [0.5,0,0,0.5];
+                _interface ctrlSetTextColor [1,1,1,1];
+            };
+            case resistance:
+            {
+                _interface ctrlSetBackgroundColor [0,0.5,0,0.5];
+                _interface ctrlSetTextColor [1,1,1,1];
+            };
+            default
+            {
+                _interface ctrlSetBackgroundColor [1,1,1,0.5];
+                _interface ctrlSetTextColor [0,0,0,0.7];
+            };
+        };
     } forEach flagPossession;
 };
