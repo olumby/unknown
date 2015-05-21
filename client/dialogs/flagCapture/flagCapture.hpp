@@ -20,13 +20,30 @@ class FlagCapture
 
             #define captureProgressW 0.25
             #define captureProgressH 0.02
-            #define captureProgressX CENTER(1, captureProgressW)
+            #define captureProgressX (CENTER(1, captureProgressW))
             #define captureProgressY (safeZoneY + safeZoneH) - ((safeZoneY + 1) / 2)
 
             x = captureProgressX;
             y = captureProgressY;
             w = captureProgressW;
             h = captureProgressH;
+        };
+        class captureMessage: RscTitle
+        {
+            idc = flag_message;
+            colorBackground[] = {0, 0, 0, 0};
+            style = ST_CENTER;
+            text = "";
+
+            #define captureMessageW 1
+            #define captureMessageH 0.04
+            #define captureMessageX (CENTER(1, captureMessageW))
+            #define captureMessageY (captureProgressY + (edgeOffsetY * 1.5))
+
+            x = captureMessageX;
+            y = captureMessageY;
+            w = captureMessageW;
+            h = captureMessageH;
         };
     };
 };
