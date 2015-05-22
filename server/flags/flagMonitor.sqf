@@ -15,17 +15,11 @@ if (isServer) then
         _flagPossession = [];
         {
             _trigger = _x select 3;
-            _triggerPlayers = list _trigger; // this list needs to be processed to remove certain altitudes and include players in vehicles.
+            _triggerPlayers = list _trigger;
 
-            _blues = 0; _reds = 0; _greens = 0;
-            {
-                switch (side _x) do
-                {
-                    case west: { _blues = _blues + 1; };
-                    case east: { _reds = _reds + 1; };
-                    case resistance: { _greens = _greens + 1; };
-                };
-            } forEach _triggerPlayers;
+            _blues = ({ alive _x && side _x == west && vehicle _x in _triggerPlayers } count allUnits);
+            _reds = ({ alive _x && side _x == east && vehicle _x in _triggerPlayers } count allUnits);
+            _greens = ({ alive _x && side _x == resistance && vehicle _x in _triggerPlayers } count allUnits);
 
             _currentSide = civilian;
             _contestors = civilian;
