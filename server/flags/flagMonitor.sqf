@@ -15,7 +15,7 @@ if (isServer) then
         _flagPossession = [];
         {
             _trigger = _x select 3;
-            _triggerPlayers = list _trigger;
+            _triggerPlayers = list _trigger; // this list needs to be processed to remove certain altitudes and include players in vehicles.
 
             _blues = 0; _reds = 0; _greens = 0;
             {
