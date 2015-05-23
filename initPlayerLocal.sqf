@@ -13,7 +13,6 @@ call compile preprocessFileLineNumbers "client\compile.sqf";
 
 // Setup flags
 [] execVM "client\flags\init.sqf";
-[] execVM "client\dialogs\flagCapture\runFlagCapture.sqf";
 
 // Setup HUD
 [] execVM "client\dialogs\hud\runHud.sqf";

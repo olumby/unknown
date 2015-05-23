@@ -26,3 +26,8 @@ if(!isNil "flagInformation" && hasInterface) then
         _outerFlagTrigger setTriggerStatements [_outerCondition, _outerActivation, _outerDeactivation];
     } foreach flagInformation;
 };
+
+// Start flag payouts.
+[] execVM "client\flags\flagFinance.sqf";
+// Set up flag interface
+[] execVM "client\dialogs\flagCapture\runFlagCapture.sqf";
