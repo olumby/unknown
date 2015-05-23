@@ -18,7 +18,7 @@ if(!isNil "flagInformation" && hasInterface) then
 
         _outerCondition = "(vehicle player) in thisList";
         _outerActivation = format ["player setVariable [""inOuterFlagZone"", true]; player setVariable [""flagIndex"", %1]", _forEachIndex];
-        _outerDeactivation = "player setVariable [""inFlagZone"", false]";
+        _outerDeactivation = "player setVariable [""inOuterFlagZone"", false]";
 
         _outerFlagTrigger = _x select 4;
         _outerFlagTrigger setTriggerArea [(getMarkerSize (_x select 1)) select 0, (getMarkerSize (_x select 1)) select 1, 0, false];
