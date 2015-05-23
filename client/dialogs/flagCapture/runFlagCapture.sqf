@@ -25,7 +25,7 @@ while {true} do
             _flagProgress = _display displayCtrl flag_progress;
             _flagMessage = _display displayCtrl flag_message;
 
-            _flagMessage ctrlSetText format ["Capturing %1", _flag select 4];
+            _flagMessage ctrlSetText format ["Capturing %1", _flag select 5];
             _flagProgress progressSetPosition ((_flagPossession select 6) / capture_time);
             _progressColor = switch (side player) do
             {

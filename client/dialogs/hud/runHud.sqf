@@ -29,7 +29,7 @@ while {true} do
     {
         _currentInterface = _flagInterface select _forEachIndex;
         _interface = _display displayCtrl _currentInterface;
-        _interface ctrlSetText ((flagInformation select _forEachIndex) select 4);
+        _interface ctrlSetText ((flagInformation select _forEachIndex) select 5);
 
         _holders = _x select 3;
         _contestors = _x select 4;

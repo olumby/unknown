@@ -37,12 +37,17 @@ if (isServer) then
         _flagPole = createVehicle ["FlagPole_F", _x select 0, [], 0, "NONE"];
         _flagPole allowDamage false;
 
-        _flagTrigger = createTrigger ["EmptyDetector", _x select 0, true];
-        _flagTrigger setTriggerArea [_x select 1, _x select 1, 0, false];
-        _flagTrigger setTriggerActivation ["ANY", "PRESENT", true];
-        _flagTrigger setTriggerStatements ["this", "", ""];
+        _flagInnerTrigger = createTrigger ["EmptyDetector", _x select 0, true];
+        _flagInnerTrigger setTriggerArea [_x select 1, _x select 1, 0, false];
+        _flagInnerTrigger setTriggerActivation ["ANY", "PRESENT", true];
+        _flagInnerTrigger setTriggerStatements ["this", "", ""];
 
-        _flagInformation pushBack [_innerMarker, _outerMarker, _flagPole, _flagTrigger, _x select 3];
+        _flagOuterTrigger = createTrigger ["EmptyDetector", _x select 0, true];
+        _flagOuterTrigger setTriggerArea [_x select 2, _x select 2, 0, false];
+        _flagOuterTrigger setTriggerActivation ["ANY", "PRESENT", true];
+        _flagOuterTrigger setTriggerStatements ["this", "", ""];
+
+        _flagInformation pushBack [_innerMarker, _outerMarker, _flagPole, _flagInnerTrigger, _flagOuterTrigger, _x select 3];
     } forEach _flags;
 
     missionNamespace setVariable ["flagInformation", _flagInformation];
