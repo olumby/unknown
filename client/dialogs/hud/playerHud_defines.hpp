@@ -7,3 +7,4 @@
 #define flag_1 326833
 #define flag_2 326803
 #define flag_3 326873
+#define health_bar 396271

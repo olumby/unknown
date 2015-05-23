@@ -13,9 +13,33 @@ while {true} do
     1000 cutRsc ["PlayerHud", "PLAIN", 0, false];
     _display = uiNameSpace getVariable "PlayerHud";
 
+    // Set Player Health Bar
+    _healthBar = _display displayCtrl health_bar;
+    _damage = (1 - (damage player));
+    _healthBar progressSetPosition (_damage);
+    switch (true) do
+    {
+        case (_damage <= 0.25):
+        {
+            _healthBar ctrlSetTextColor [0.73,0.12,0.02,0.8];
+        };
+        case (_damage <= 0.50):
+        {
+            _healthBar ctrlSetTextColor [1,0.52,0.08,0.8];
+        };
+        case (_damage <= 0.75):
+        {
+            _healthBar ctrlSetTextColor [0.78,0.78,0.02,0.8];
+        };
+        case (_damage <= 1):
+        {
+            _healthBar ctrlSetTextColor [0.2,0.73,0.14,0.8];
+        };
+    };
+
     _flagInterface = [flag_0, flag_1, flag_2, flag_3];
 
-    // hide unused flag boxes
+    // Hide unused flag boxes
     if( (count _flagInterface) > (count flagPossession) ) then
     {
         _diff = (count _flagInterface) - (count flagPossession);
@@ -36,7 +60,7 @@ while {true} do
 
         if ( _contestors != _holders && _holders != civilian) then
         {
-            // show some sort of contestor notification..
+            // TODO: show some sort of contestor notification..
         };
 
         switch (_holders) do
