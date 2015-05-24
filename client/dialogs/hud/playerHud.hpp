@@ -105,12 +105,46 @@ class PlayerHud
             #define healthBarW 0.2
             #define healthBarH 0.02
             #define healthBarX ((safeZoneX + safeZoneW) - healthBarW - (edgeOffsetX * 0.5))
-            #define healthBarY (hudFlagY - healthBarH - (edgeOffsetY * 0.5))
+            #define healthBarY (hudFlagY - healthBarH - edgeOffsetY)
 
             x = healthBarX;
             y = healthBarY;
             w = healthBarW;
             h = healthBarH;
+        };
+        class moneyDisplayBank: RscStructuredText
+        {
+            idc = money_display_bank;
+            colorBackground[] = {0, 0, 0, 0};
+            size = 0.03;
+            font = "PuristaSemibold";
+
+            #define moneyDisplayBankW 1
+            #define moneyDisplayBankH 0.04
+            #define moneyDisplayBankX ((safeZoneX + safeZoneW) - moneyDisplayBankW - (edgeOffsetX * 0.5))
+            #define moneyDisplayBankY (hudFlagY - moneyDisplayBankH - healthBarH - (edgeOffsetY * 1.5))
+
+            x = moneyDisplayBankX;
+            y = moneyDisplayBankY;
+            w = moneyDisplayBankW;
+            h = moneyDisplayBankH;
+        };
+        class moneyDisplayHand: RscStructuredText
+        {
+            idc = money_display_hand;
+            colorBackground[] = {0, 0, 0, 0};
+            size = 0.03;
+            font = "PuristaSemibold";
+
+            #define moneyDisplayHandW 1
+            #define moneyDisplayHandH 0.04
+            #define moneyDisplayHandX ((safeZoneX + safeZoneW) - moneyDisplayHandW - (edgeOffsetX * 0.5))
+            #define moneyDisplayHandY (hudFlagY - moneyDisplayHandH - moneyDisplayBankH - healthBarH - (edgeOffsetY * 1.5))
+
+            x = moneyDisplayHandX;
+            y = moneyDisplayHandY;
+            w = moneyDisplayHandW;
+            h = moneyDisplayHandH;
         };
     };
 };

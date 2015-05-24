@@ -352,3 +352,22 @@ class RscProgress
     w = 1;
     h = 0.03;
 };
+
+class RscStructuredText
+{
+    idc = -1;
+    type = CT_STRUCTURED_TEXT;
+    style = ST_LEFT;
+    colorBackground[] = {0,0,0,0};
+    size = 0.03;
+    text = "";
+    class Attributes {
+        font = "Purista";
+        color = "#ffffff";
+        align = "left";
+        valign = "middle";
+        shadow = false;
+        shadowColor = "#000000";
+        size = "1";
+    };
+};

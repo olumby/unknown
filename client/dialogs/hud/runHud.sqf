@@ -37,6 +37,16 @@ while {true} do
         };
     };
 
+    // Money
+    _moneyDisplayBank = _display displayCtrl money_display_bank;
+    _moneyDisplayHand = _display displayCtrl money_display_hand;
+
+    _bankString = format ["<t color='#bbbbbb' align='right' size='1.2'>%1<img size='1' image='assets\image\austral.paa'/></t>", profileNamespace getVariable ["uk_var_cashInBank", 0]];
+    _handString = format ["<t color='#ffffff' align='right' size='1.2'>%1<img size='1' image='assets\image\austral.paa'/></t>", profileNamespace getVariable ["uk_var_cashOnHand", 0]];
+    _moneyDisplayBank ctrlSetStructuredText (parseText _bankString);
+    _moneyDisplayHand ctrlSetStructuredText (parseText _handString);
+
+    // Flags
     _flagInterface = [flag_0, flag_1, flag_2, flag_3];
 
     // Hide unused flag boxes
