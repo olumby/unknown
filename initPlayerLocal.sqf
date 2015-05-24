@@ -11,6 +11,9 @@ enableSentences false;
 // Compile Scripts
 call compile preprocessFileLineNumbers "client\compile.sqf";
 
+// Draw map icons
+[] execVM "client\functions\drawIcons.sqf";
+
 // Setup flags
 [] execVM "client\flags\init.sqf";
 
