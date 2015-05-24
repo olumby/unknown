@@ -16,3 +16,8 @@ call compile preprocessFileLineNumbers "client\compile.sqf";
 
 // Setup HUD
 [] execVM "client\dialogs\hud\runHud.sqf";
+
+
+player addAction ["Give me 100", "client\testMoney.sqf", 100];
+player addAction ["Give me 1000", "client\testMoney.sqf", 1000];
+player addAction ["Give me 12345", "client\testMoney.sqf", 12345];
