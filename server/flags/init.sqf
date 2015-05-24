@@ -53,5 +53,5 @@ if (isServer) then
     missionNamespace setVariable ["flagInformation", _flagInformation];
     publicVariable "flagInformation";
 
-    [] execVM "server\flags\flagMonitor.sqf";
+    [] spawn flagMonitor;
 };

@@ -6,6 +6,7 @@ spawnPlayer = compile preprocessFileLineNumbers "client\functions\spawnPlayer.sq
 spawnPlayerRandom = compile preprocessFileLineNumbers "client\functions\spawnPlayerRandom.sqf";
 spawnPlayerOnLocation = compile preprocessFileLineNumbers "client\functions\spawnPlayerOnLocation.sqf";
 gearPlayerUp = compile preprocessFileLineNumbers "client\functions\gearPlayerUp.sqf";
+runHud = compile preprocessFileLineNumbers "client\dialogs\hud\runHud.sqf";
 
 // Vehicles
 spawnVehicle = compile preprocessFileLineNumbers "client\functions\vehicleSpawn.sqf";
@@ -26,3 +27,7 @@ buyWeapons = compile preprocessFileLineNumbers "client\dialogs\gunStore\buyWeapo
 // Admin
 isAdmin = compile preprocessFileLineNumbers "client\functions\isAdmin.sqf";
 openAdminMenu = compile preprocessFileLineNumbers "client\admin\openAdminMenu.sqf";
+
+// Flags
+flagFinance = compile preprocessFileLineNumbers "client\flags\flagFinance.sqf";
+runFlagCapture = compile preprocessFileLineNumbers "client\dialogs\flagCapture\runFlagCapture.sqf";

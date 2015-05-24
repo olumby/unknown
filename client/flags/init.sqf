@@ -28,6 +28,6 @@ if(!isNil "flagInformation" && hasInterface) then
 };
 
 // Start flag payouts.
-[] execVM "client\flags\flagFinance.sqf";
+[] spawn flagFinance;
 // Set up flag interface
-[] execVM "client\dialogs\flagCapture\runFlagCapture.sqf";
+[] spawn runFlagCapture;

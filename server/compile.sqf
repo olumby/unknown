@@ -1,4 +1,6 @@
 // Flags
+flagMonitor = compile preprocessFileLineNumbers "server\flags\flagMonitor.sqf";
+
 fnc_changeFlag = compile preprocessFileLineNumbers "server\flags\fnc_changeFlag.sqf";
 fnc_whenTeam = compile preprocessFileLineNumbers "server\flags\fnc_whenTeam.sqf";
 fnc_whenEmpty = compile preprocessFileLineNumbers "server\flags\fnc_whenEmpty.sqf";
