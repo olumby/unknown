@@ -1,12 +1,7 @@
 /*
  * When a term holds possession of a flag, returns part of possession array.
- * Args:
- *     side       previous loops flag holders
- *     side       previous loops contesting flag holders
- *     number     previous loops capture start time
- *     number     previous loops capture time
- *     side       players side
- *     number     index of flag being captured
+ *
+ * Params: [<previousHolders: Side>, <previousContestors: Side>, <previousCapStartTime: Number>, <previousCapTime: Number>, <playerSide: Side>, <flagIndex: Number>]
  */
 
 #define capture_time 30

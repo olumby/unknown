@@ -1,8 +1,7 @@
 /*
  * Change the physical flag when captured.
- * Args:
- *     side       side to change to
- *     number     the index of the flag to change
+ *
+ * Params: [<side: Side>, <index: Number>]
  */
 
 #define capture_time 30

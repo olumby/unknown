@@ -1,8 +1,7 @@
 /*
  * Change the qty for a gun store item.
- * Args:
- *     string     type of item
- *     int        qty change
+ *
+ * Params: [<itemType: String>, <qtyChange: Number>]
  */
 
 #include "gunStore_defines.hpp"

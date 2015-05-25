@@ -1,10 +1,7 @@
 /*
  * When the flag is empty, returns part of possession array.
- * Args:
- *     side       previous loops flag holders
- *     side       previous loops contesting flag holders
- *     number     previous loops capture start time
- *     number     previous loops capture time
+ *
+ * Params: [<previousHolders: Side>, <previousContestors: Side>, <previousCapStartTime: Number>, <previousCapTime: Number>]
  */
 
 #define capture_time 30

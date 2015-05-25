@@ -1,9 +1,7 @@
 /*
- * Get a player ready for spawn, then hand off to appropriate function. 
- * Args:
- *     int       spawn type (random,town,halo)
- *     boolean   gear up (give player a load out)
- *     array     spawn data (location, name)
+ * Get a player ready for spawn, then hand off to appropriate function.
+ *
+ * Params: [<spawnType: Number>, <gearUp: Boolean>, <spawnData: Array>]
  */
 
 _spawnType = _this select 0;
@@ -17,7 +15,7 @@ if (_gearUp) then
 
 switch (_spawnType) do
 {
-    case 1: { 
+    case 1: {
         _spawnData call spawnPlayerOnLocation;
     };
     case 2: {

@@ -1,7 +1,7 @@
 /*
  * Check if the provided player is an admin.
- * Args:
- *     object     the player to check.
+ *
+ * Params: [<player: Object>]
  */
 
 _player = [_this, 0, player] call BIS_fnc_param;

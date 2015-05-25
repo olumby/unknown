@@ -1,7 +1,7 @@
 /*
  * Returns a formatted number as a string.
- * Args:
- *     number     the number to be formatted.
+ *
+ * Params: [<number: Number>]
  */
 
 _number = [_this, 0, 0] call BIS_fnc_param;

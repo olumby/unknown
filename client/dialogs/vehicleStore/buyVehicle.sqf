@@ -1,11 +1,7 @@
 /*
  * Purchase, spawn and charge a vehicle.
- * Args:
- *     string      main vehicle class
- *     int         price
- *     array       spawn location
- *     boolean     has variation
- *     string      variation class
+ *
+ * Params: [<vehicleClass: String>, <price: Number>, <spawnLocation: Array - Position>, <hasVariation: Boolean>, <variationClass: String>]
  */
 
 _class = _this select 0;
@@ -23,7 +19,7 @@ if (_hasVar) then
     _var = _this select 4;
 
     _veh = createVehicle [_class, (_pos findEmptyPosition [1, 150, _class]), [], 0, "NONE"];
-    
+
     waitUntil { !isNil "_veh"; !isNull _veh; };
     _veh setVariable ["BIS_enableRandomization", false, true];
     [_veh, _var, _var] call BIS_fnc_initVehicle;

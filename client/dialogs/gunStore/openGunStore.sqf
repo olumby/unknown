@@ -1,8 +1,7 @@
 /*
  * Open the gun store, should be called from addAction.
- * Args:
- *     string    store name
- *     object    store spawn box
+ *
+ * Params: [<storeName: String>, <storeSpawnBox: Object>]
  */
 
 uiNamespace setVariable ["storeName", _this select 3 select 0];

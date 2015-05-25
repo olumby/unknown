@@ -1,8 +1,7 @@
 /*
  * Spawn a player on a provided marker.
- * Args:
- *     string    spawn name
- *     string    marker name
+ *
+ * Params: [<spawnName: String>, <markerName: String>]
  */
 
 _pos = getMarkerPos (_this select 1);

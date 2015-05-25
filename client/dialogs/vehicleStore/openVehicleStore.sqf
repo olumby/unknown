@@ -1,7 +1,7 @@
 /*
  * Open the vehicle store, should be called from addAction.
- * Args:
- *     string    store name
+ *
+ * Params: [<storeName: String>]
  */
 
 uiNamespace setVariable ["storeName", _this select 3 select 0];
