@@ -41,8 +41,8 @@ while {true} do
     _moneyDisplayBank = _display displayCtrl money_display_bank;
     _moneyDisplayHand = _display displayCtrl money_display_hand;
 
-    _bankString = format ["<t color='#bbbbbb' align='right' size='1.2'>%1<img size='1' image='assets\image\austral.paa'/></t>", profileNamespace getVariable ["uk_var_cashInBank", 0]];
-    _handString = format ["<t color='#ffffff' align='right' size='1.2'>%1<img size='1' image='assets\image\austral.paa'/></t>", profileNamespace getVariable ["uk_var_cashOnHand", 0]];
+    _bankString = format ["<t color='#bbbbbb' align='right' size='1.2'>%1<img size='1' image='assets\image\austral.paa'/></t>", [profileNamespace getVariable ["uk_var_cashInBank", 0]] call fnc_formatNumber];
+    _handString = format ["<t color='#ffffff' align='right' size='1.2'>%1<img size='1' image='assets\image\austral.paa'/></t>", [profileNamespace getVariable ["uk_var_cashOnHand", 0]] call fnc_formatNumber];
     _moneyDisplayBank ctrlSetStructuredText (parseText _bankString);
     _moneyDisplayHand ctrlSetStructuredText (parseText _handString);
 
