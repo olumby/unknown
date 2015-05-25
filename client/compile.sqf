@@ -31,3 +31,6 @@ openAdminMenu = compile preprocessFileLineNumbers "client\admin\openAdminMenu.sq
 // Flags
 flagFinance = compile preprocessFileLineNumbers "client\flags\flagFinance.sqf";
 runFlagCapture = compile preprocessFileLineNumbers "client\dialogs\flagCapture\runFlagCapture.sqf";
+
+// Misc
+fnc_formatNumber = compile preprocessFileLineNumbers "client\functions\fnc_formatNumber.sqf";
