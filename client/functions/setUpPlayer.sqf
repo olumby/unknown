@@ -13,7 +13,23 @@ removeBackpack player;
 removeGoggles player;
 removeHeadgear player;
 
-player unassignItem "NVGoggles";
-player removeItem "NVGoggles";
+switch (side player) do
+{
+    case west:
+    {
+        player unassignItem "NVGoggles";
+        player removeItem "NVGoggles";
+    };
+    case east:
+    {
+        player unassignItem "NVGoggles_OPFOR";
+        player removeItem "NVGoggles_OPFOR";
+    };
+    case resistance:
+    {
+        player unassignItem "NVGoggles_INDEP";
+        player removeItem "NVGoggles_INDEP";
+    };
+};
 
 [] spawn spawnDialog;
