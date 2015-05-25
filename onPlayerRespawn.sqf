@@ -1,1 +1,3 @@
 [] spawn setupPlayer;
+
+hint "respawned";

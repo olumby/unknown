@@ -17,5 +17,5 @@ spawnLocations = compileFinal str
     ["spawn_011", "Paros"],
     ["spawn_012", "Charkia"],
     ["spawn_013", "Dorida"],
-    ["spawn_013", "Selakano"]
+    ["spawn_014", "Selakano"]
 ];

@@ -1,4 +1,5 @@
 respawn = "BASE";
+respawnTemplates[] = {"Revive", "MenuPosition"};
 respawnDelay = 5;
 respawnOnStart = 1;
 respawnDialog = 0;

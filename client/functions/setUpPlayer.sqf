@@ -32,4 +32,4 @@ switch (side player) do
     };
 };
 
-[] spawn spawnDialog;
+//[] spawn spawnDialog;
