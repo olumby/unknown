@@ -2,7 +2,7 @@
  * Give the admin god mode.
  */
 
-if ([player] call isAdmin) then
+if ([player] call fnc_isAdmin) then
 {
     _display = uiNamespace getVariable "UK_AdminDialog";
 

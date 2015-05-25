@@ -4,7 +4,7 @@
 
 #include "adminMenu_defines.hpp"
 
-if ([player] call isAdmin) then
+if ([player] call fnc_isAdmin) then
 {
     createDialog "AdminDialog";
     adminDialogOpen = true;
@@ -18,7 +18,7 @@ if ([player] call isAdmin) then
         _godButton ctrlSetText "Disable Player God";
     };
 
-    if (vehicle player != player) then 
+    if (vehicle player != player) then
     {
         _vehGodButton ctrlEnable true;
         if (vehicle player getVariable ["VehGodModeEnabled", false]) then

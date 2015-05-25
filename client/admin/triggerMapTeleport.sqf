@@ -2,7 +2,7 @@
  * Let admin teleport to map location.
  */
 
-if ([player] call isAdmin) then
+if ([player] call fnc_isAdmin) then
 {
     closeDialog 0;
     hint "Open the map and click where you want to teleport to.";
@@ -11,7 +11,7 @@ if ([player] call isAdmin) then
         hint "";
 
         ["adminTeleport","onMapSingleClick"] call BIS_fnc_removeStackedEventHandler;
-    }] call BIS_fnc_addStackedEventHandler;    
+    }] call BIS_fnc_addStackedEventHandler;
 }
 else
 {

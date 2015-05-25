@@ -2,7 +2,7 @@
  * Give the admins vehicle god mode.
  */
 
-if ([player] call isAdmin) then
+if ([player] call fnc_isAdmin) then
 {
     if (vehicle player != player) then
     {
