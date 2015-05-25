@@ -2,6 +2,12 @@
  * Runs every time the player spawns.
  */
 
+// TODO: Adjust position, this needs serious work and extracting to another file
+// Check the type of spawn, etc.. maybe change gear depending on type of spawn..
+_list = player nearRoads 200;
+_roadToMove = _list select (floor (random (count _list)));
+player setPos (getPos _roadToMove);
+
 player enableFatigue false;
 
 enableSentences false;
@@ -32,4 +38,4 @@ switch (side player) do
     };
 };
 
-//[] spawn spawnDialog;
+call gearPlayerUp;

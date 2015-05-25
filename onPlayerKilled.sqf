@@ -17,6 +17,9 @@ while {!(alive player)} do
         _activeSpawns pushBack _curSpawn;
     } forEach (call spawnLocations);
 
+    _curSpawn = [missionNamespace, [9418,20238,500]] call BIS_fnc_addRespawnPosition;
+    _activeSpawns pushBack _curSpawn;
+
     missionNamespace setVariable ["activeSpawns", _activeSpawns];
 
     sleep 3;
