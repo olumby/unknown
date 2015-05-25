@@ -1,3 +1,9 @@
+/*
+ * Executed when player is killed in singleplayer or in multiplayer mission.
+ * Args:
+ *     [<oldUnit: Object>, <killer: Object>, <respawn: Number?>, <respawnDelay: Object>]
+ */
+
 while {!(alive player)} do
 {
     _activeSpawns = missionNamespace getVariable ["activeSpawns", []];
