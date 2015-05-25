@@ -1,5 +1,3 @@
-hint "Killed";
-
 while {!(alive player)} do
 {
     _activeSpawns = missionNamespace getVariable ["activeSpawns", []];
