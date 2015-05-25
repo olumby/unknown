@@ -6,14 +6,15 @@
 
 #include "gunStore_defines.hpp"
 
-_qtyChange = _this select 1;
+_qtyChange = [_this, 1, 1] call BIS_fnc_param;
 
 _display = uiNamespace getVariable "UK_GunStoreDialog";
 
 _list = _display displayCtrl main_list;
 _cartType = "";
 
-switch (_this select 0) do
+_itemType = [_this, 0, "main"] call BIS_fnc_param;
+switch (_itemType) do
 {
     case "main":
     {

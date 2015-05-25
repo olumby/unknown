@@ -4,8 +4,12 @@
  * Params: [<storeName: String>, <storeSpawnBox: Object>]
  */
 
-uiNamespace setVariable ["storeName", _this select 3 select 0];
-uiNamespace setVariable ["storeSpawn", _this select 3 select 1];
+_storeName = [(_this select 3), 0, ""] call BIS_fnc_param;
+uiNamespace setVariable ["storeName", _storeName];
+
+_storeSpawn = [(_this select 3), 1, ""] call BIS_fnc_param;
+uiNamespace setVariable ["storeSpawn", _storeSpawn];
+
 uiNamespace setVariable ["gunStoreCartWeapons", []];
 uiNamespace setVariable ["gunStoreCartMagazines", []];
 uiNamespace setVariable ["gunStoreCartAccessories", []];

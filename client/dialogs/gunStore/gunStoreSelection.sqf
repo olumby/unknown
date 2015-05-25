@@ -1,5 +1,7 @@
 /*
  * Called when any gun store item is selected.
+ *
+ * Params: [<itemType: String>]
  */
 
 #include "gunStore_defines.hpp"
@@ -8,7 +10,8 @@ _display = uiNamespace getVariable "UK_GunStoreDialog";
 _selectedItemValue = _display displayCtrl selected_value;
 _list = _display displayCtrl main_list;
 
-switch (_this select 0) do
+_itemType = [_this, 0, "main"] call BIS_fnc_param;
+switch (_itemType) do
 {
     case "main":
     {
