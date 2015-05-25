@@ -4,28 +4,28 @@
  * Params: [<vehicleClass: String>, <price: Number>, <spawnLocation: Array - Position>, <hasVariation: Boolean>, <variationClass: String>]
  */
 
-_class = _this select 0;
-_price = _this select 1;
-_pos = _this select 2;
-_hasVar = _this select 3;
+_vehicleClass = [_this, 0, ""] call BIS_fnc_param;
+_price = [_this, 1, 0] call BIS_fnc_param;
+_spawnLocation = [_this, 2, [0,0,0]] call BIS_fnc_param;
+_hasVariation = [_this, 3, false] call BIS_fnc_param;
 
 // we need to charge customers up here.
 
 closeDialog 0;
 vehicleStoreDialogOpen = false;
 
-if (_hasVar) then
+if (_hasVariation) then
 {
-    _var = _this select 4;
+    _variationClass = [_this, 4, ""] call BIS_fnc_param;
 
-    _veh = createVehicle [_class, (_pos findEmptyPosition [1, 150, _class]), [], 0, "NONE"];
+    _veh = createVehicle [_vehicleClass, (_spawnLocation findEmptyPosition [1, 150, _vehicleClass]), [], 0, "NONE"];
 
     waitUntil { !isNil "_veh"; !isNull _veh; };
     _veh setVariable ["BIS_enableRandomization", false, true];
-    [_veh, _var, _var] call BIS_fnc_initVehicle;
+    [_veh, _variationClass, _variationClass] call BIS_fnc_initVehicle;
 } else
 {
-    _veh = createVehicle [_class, (_pos findEmptyPosition [1, 150, _class]), [], 0, "NONE"];
+    _veh = createVehicle [_vehicleClass, (_spawnLocation findEmptyPosition [1, 150, _vehicleClass]), [], 0, "NONE"];
 };
 
 clearBackpackCargoGlobal _veh;

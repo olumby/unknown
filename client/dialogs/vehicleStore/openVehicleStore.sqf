@@ -4,7 +4,8 @@
  * Params: [<storeName: String>]
  */
 
-uiNamespace setVariable ["storeName", _this select 3 select 0];
+_storeName = [(_this select 3), 0, ""] call BIS_fnc_param;
+uiNamespace setVariable ["storeName", _storeName];
 
 #include "vehicleStore_defines.hpp"
 
