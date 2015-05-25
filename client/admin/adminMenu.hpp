@@ -88,7 +88,7 @@ class AdminDialog
             idc = god_button;
             text = "Enable Player God";
             style = ST_RIGHT;
-            onButtonClick = "[] execVM 'client\admin\triggerGodMode.sqf'";
+            onButtonClick = "[] execVM 'client\admin\toggleGodMode.sqf'";
 
             #define godButtonW scaleFix(0.3)
             #define godButtonH footerElementH
@@ -105,7 +105,7 @@ class AdminDialog
             idc = veh_god_button;
             text = "Enable Vehicle God";
             style = ST_RIGHT;
-            onButtonClick = "[] execVM 'client\admin\triggerVehGodMode.sqf'";
+            onButtonClick = "[] execVM 'client\admin\toggleVehGodMode.sqf'";
 
             #define vehGodButtonW scaleFix(0.3)
             #define vehGodButtonH footerElementH
@@ -122,7 +122,7 @@ class AdminDialog
             idc = map_teleport;
             text = "Map Teleport";
             style = ST_RIGHT;
-            onButtonClick = "[] execVM 'client\admin\triggerMapTeleport.sqf'";
+            onButtonClick = "[] execVM 'client\admin\performMapTeleport.sqf'";
 
             #define mapTeleportButtonW scaleFix(0.3)
             #define mapTeleportButtonH footerElementH
