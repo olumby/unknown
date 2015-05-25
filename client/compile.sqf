@@ -6,7 +6,7 @@ spawnPlayer = compile preprocessFileLineNumbers "client\functions\spawnPlayer.sq
 spawnPlayerRandom = compile preprocessFileLineNumbers "client\functions\spawnPlayerRandom.sqf";
 spawnPlayerOnLocation = compile preprocessFileLineNumbers "client\functions\spawnPlayerOnLocation.sqf";
 gearPlayerUp = compile preprocessFileLineNumbers "client\functions\gearPlayerUp.sqf";
-runHud = compile preprocessFileLineNumbers "client\dialogs\hud\runHud.sqf";
+runPlayerHud = compile preprocessFileLineNumbers "client\dialogs\hud\runPlayerHud.sqf";
 
 // Vehicles
 spawnVehicle = compile preprocessFileLineNumbers "client\functions\vehicleSpawn.sqf";

@@ -18,4 +18,4 @@ call compile preprocessFileLineNumbers "client\compile.sqf";
 [] execVM "client\flags\init.sqf";
 
 // Setup HUD
-[] spawn runHud;
+[] spawn runPlayerHud;
