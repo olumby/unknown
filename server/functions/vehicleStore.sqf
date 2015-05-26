@@ -1,5 +1,7 @@
 /*
  * Set up the vehicle stores.
+ *
+ * Params: [<store: Object>]
  */
 
 _store = _this select 0;
@@ -9,7 +11,7 @@ if(isServer) then
     _storeDirection = getDir _store;
     _storeTable = createVehicle ["Land_Pallets_stack_F", (getPos _store), [], 0, "CAN_COLLIDE"];
     _storeTable setDir _storeDirection;
-    _store attachTo [_storeTable, [0,0.2,0.6]]; 
+    _store attachTo [_storeTable, [0,0.2,0.6]];
 
     _store allowDamage false;
     _storeTable allowDamage false;

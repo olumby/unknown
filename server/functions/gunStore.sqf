@@ -1,5 +1,7 @@
 /*
  * Set up the gun stores.
+ *
+ * Params: [<store: Object>]
  */
 
 _store = _this select 0;
