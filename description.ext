@@ -30,7 +30,6 @@ wreckRemovalMaxTime = 1200; //seconds
 // Disabled VoIP Channels
 disableChannels[]={0,1,2,6};
 
-
 // Dialogs
 #include "defines.hpp"
 #include "client\dialogs\helpers.hpp"
@@ -49,8 +48,6 @@ class CfgVehicleTemplates
 {
     #include "cfgVehicleTemplates.hpp"
 };
-
-// Respawn
 
 // Third Party Stuff
 #include "external\R3F_LOG\desc_include.h"
