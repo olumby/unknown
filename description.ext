@@ -30,8 +30,8 @@ wreckRemovalMaxTime = 1200; //seconds
 // Disabled VoIP Channels
 disableChannels[]={0,1,2,6};
 
-#include "map\customVehicles.hpp"
 
+// Dialogs
 #include "defines.hpp"
 #include "client\dialogs\helpers.hpp"
 #include "client\dialogs\spawnDialog\spawnDialog.hpp"
@@ -43,6 +43,14 @@ class RscTitles
     #include "client\dialogs\playerHud\playerHud.hpp"
     #include "client\dialogs\flagCapture\flagCapture.hpp"
 };
+
+// Vehicles
+class CfgVehicleTemplates
+{
+    #include "cfgVehicleTemplates.hpp"
+};
+
+// Respawn
 
 // Third Party Stuff
 #include "external\R3F_LOG\desc_include.h"
