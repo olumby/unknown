@@ -1,7 +1,7 @@
 /*
  * Executed when player is killed in singleplayer or in multiplayer mission.
  *
- * Params: [<oldUnit: Object>, <killer: Object>, <respawn: Number?>, <respawnDelay: Object>]
+ * Params: [<oldUnit: Object>, <killer: Object>, <respawn: Number>, <respawnDelay: Object>]
  */
 
 while {!(alive player)} do
