@@ -1,3 +1,4 @@
+[] execVM "map\config.sqf";
 [] execVM "map\spawns.sqf";
 [] execVM "map\vehicleStores.sqf";
 [] execVM "map\gunStores.sqf";

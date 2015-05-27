@@ -7,8 +7,9 @@ fnc_drawIcons =
     _map = _this select 0;
 
     {
-        _icon = "\A3\ui_f\data\igui\cfg\islandmap\iconplayer_ca.paa";
-        _color = [0,0,1,1];
+        _iconPlayer = "\A3\ui_f\data\igui\cfg\islandmap\iconplayer_ca.paa";
+        _iconGroup = "\A3\ui_f\data\igui\cfg\islandmap\iconselect_ca.paa";
+        _color = call playerColor;
 
         if (side _x == side player) then
         {
@@ -18,19 +19,18 @@ fnc_drawIcons =
                 // {
                 //     _icon = getText (configFile >> "CfgVehicles" >> (vehicle _x) >> "icon");
                 // };
+                if (group _x == group player && _x != player) then
+                {
+                    _color = call groupColor;
+                    _map drawIcon [_iconGroup, _color, getPos (vehicle _x), 24, 24, getDir (vehicle _x)];
+                };
                 if (_x == player) then
                 {
-                    _color = [1,1,1,1];
+                    _color = call playerColor;
+                    _map drawIcon [_iconPlayer, _color, getPos (vehicle _x), 24, 24, getDir (vehicle _x)];
                 };
 
-                _map drawIcon [
-                    _icon,
-                    _color,
-                    getPos (vehicle _x),
-                    24,
-                    24,
-                    getDir (vehicle _x)
-                ];
+                _map drawIcon ["iconMan", _color, getPos (vehicle _x), 14, 14, getDir (vehicle _x)];
             };
         };
     } forEach allUnits;
