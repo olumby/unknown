@@ -4,6 +4,7 @@
 
 _map = _this select 0;
 
+// Players
 {
     _iconPlayer = "\A3\ui_f\data\igui\cfg\islandmap\iconplayer_ca.paa";
     _iconGroup = "\A3\ui_f\data\igui\cfg\islandmap\iconselect_ca.paa";
@@ -33,6 +34,7 @@ _map = _this select 0;
     };
 } forEach allUnits;
 
+// Stores
 fnc_iconForStore =
 {
     _array = _this select 0;
@@ -57,3 +59,14 @@ _storeIcons = _storeIcons + ([(call serviceVehicles), "assets\image\serviceVehic
     _dirPath = _missionStr select [0, (count _missionStr) - 15];
     _map drawIcon [(_dirPath + (_x select 0)), [1,1,1,1], (_x select 1), 30, 30, 0];
 } forEach _storeIcons;
+
+// Flags
+if(!isNil "flagInformation" && hasInterface) then
+{
+    {
+        _missionStr = (str missionConfigFile);
+        _dirPath = _missionStr select [0, (count _missionStr) - 15];
+
+        _map drawIcon [(_dirPath + "assets\image\alphaFlag.paa"), (call westColor), getMarkerPos (_x select 0), 30, 30, 0];
+    } foreach flagInformation;
+};

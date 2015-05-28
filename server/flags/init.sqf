@@ -26,13 +26,13 @@ if (isServer) then
         _outerMarker setMarkerSize [_x select 2, _x select 2];
         _outerMarker setMarkerColor "ColorCIV";
 
-        _iconName = format ["%1_icon", _x select 3];
-        _iconMarker = createMarker [_iconName, _x select 0];
-        _iconMarker setMarkerShape "ICON";
-        _iconMarker setMarkerType "mil_flag";
-        _iconMarker setMarkerSize [1, 1];
-        _iconMarker setMarkerColor "ColorWhite";
-        _iconMarker setMarkerText (_x select 3);
+        // _iconName = format ["%1_icon", _x select 3];
+        // _iconMarker = createMarker [_iconName, _x select 0];
+        // _iconMarker setMarkerShape "ICON";
+        // _iconMarker setMarkerType "mil_flag";
+        // _iconMarker setMarkerSize [1, 1];
+        // _iconMarker setMarkerColor "ColorWhite";
+        // _iconMarker setMarkerText (_x select 3);
 
         _flagPole = createVehicle ["FlagPole_F", _x select 0, [], 0, "NONE"];
         _flagPole allowDamage false;
