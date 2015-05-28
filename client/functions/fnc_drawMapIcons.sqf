@@ -33,7 +33,16 @@ _map = _this select 0;
     };
 } forEach allUnits;
 
-if (vehicle player != player) then
+_storeIcons = [];
+
 {
-    _icon = getText (configFile >> "cfgVehicles" >> (vehicle player) >> "icon");
-};
+    _marker = format ["%1_label", _x];
+    _pos = getMarkerPos _marker;
+    _storeIcons pushBack ["assets\image\gunStore.paa", _pos];
+} forEach (call gunStores);
+
+{
+    _missionStr = (str missionConfigFile);
+    _dirPath = _missionStr select [0, (count _missionStr) - 15];
+    _map drawIcon [(_dirPath + (_x select 0)), [1,1,1,1], (_x select 1), 30, 30, 0];
+} forEach _storeIcons;

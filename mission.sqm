@@ -1779,22 +1779,19 @@ class Mission
 		{
 			position[]={9405.4697,118.37527,15917.369};
 			name="gunStore_001_label";
-			type="c_unknown";
-			colorName="ColorPink";
+			type="Empty";
 		};
 		class Item19
 		{
 			position[]={20257.393,54.819695,11656.077};
 			name="gunStore_002_label";
-			type="c_unknown";
-			colorName="ColorPink";
+			type="Empty";
 		};
 		class Item20
 		{
 			position[]={27049.52,21.051485,23238.17};
 			name="gunStore_003_label";
-			type="c_unknown";
-			colorName="ColorPink";
+			type="Empty";
 		};
 		class Item21
 		{
