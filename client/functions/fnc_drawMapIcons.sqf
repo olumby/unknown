@@ -9,7 +9,7 @@ _map = _this select 0;
     _iconGroup = "\A3\ui_f\data\igui\cfg\islandmap\iconselect_ca.paa";
     _color = call playerColor;
 
-    if (side _x == side player) then
+    if (side _x == playerSide) then
     {
         if ((crew (vehicle _x) select 0) == _x) then
         {
