@@ -6,13 +6,11 @@ enableSentences false;
 // Enable Groups
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
-//9999 cutText ["Fixing Netcode, please wait.", "BLACK", 0.01];
-
 // Compile Scripts
 call compile preprocessFileLineNumbers "client\compile.sqf";
 
-// Draw map icons
-[] execVM "client\functions\drawIcons.sqf";
+// Draw Map Icons
+_mainEh = ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["draw", { [_this select 0] call fnc_drawMapIcons; }];
 
 // Setup flags
 [] execVM "client\flags\init.sqf";
