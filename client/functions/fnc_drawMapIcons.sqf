@@ -33,13 +33,24 @@ _map = _this select 0;
     };
 } forEach allUnits;
 
-_storeIcons = [];
-
+fnc_iconForStore =
 {
-    _marker = format ["%1_label", _x];
-    _pos = getMarkerPos _marker;
-    _storeIcons pushBack ["assets\image\gunStore.paa", _pos];
-} forEach (call gunStores);
+    _array = _this select 0;
+    _image = _this select 1;
+
+    _return = [];
+    {
+        _marker = format ["%1_label", _x];
+        _pos = getMarkerPos _marker;
+        _return pushBack [_image, _pos];
+    } forEach _array;
+
+    _return;
+};
+
+_storeIcons = ([(call gunStores), "assets\image\gunStore.paa"] call fnc_iconForStore);
+_storeIcons = _storeIcons + ([(call vehicleStores), "assets\image\vehicleStore.paa"] call fnc_iconForStore);
+_storeIcons = _storeIcons + ([(call serviceVehicles), "assets\image\serviceVehicle.paa"] call fnc_iconForStore);
 
 {
     _missionStr = (str missionConfigFile);

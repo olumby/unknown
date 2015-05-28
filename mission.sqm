@@ -1627,8 +1627,7 @@ class Mission
 		{
 			position[]={10859.021,33.158836,13518.522};
 			name="vehicleStore_001_label";
-			type="c_car";
-			colorName="ColorPink";
+			type="Empty";
 		};
 		class Item5
 		{
@@ -1758,8 +1757,7 @@ class Mission
 		{
 			position[]={20479.068,41.224285,8997.8086};
 			name="vehicleStore_002_label";
-			type="c_car";
-			colorName="ColorPink";
+			type="Empty";
 		};
 		class Item16
 		{
@@ -1772,8 +1770,7 @@ class Mission
 		{
 			position[]={14746.903,47.52,20740.449};
 			name="vehicleStore_003_label";
-			type="c_car";
-			colorName="ColorPink";
+			type="Empty";
 		};
 		class Item18
 		{
@@ -1797,15 +1794,13 @@ class Mission
 		{
 			position[]={5262.2456,81.407372,11502.354};
 			name="serviceVehicle_001_label";
-			type="n_maint";
-			colorName="ColorPink";
+			type="Empty";
 		};
 		class Item22
 		{
 			position[]={23154.99,3.1900001,18970.943};
 			name="serviceVehicle_002_label";
-			type="n_maint";
-			colorName="ColorPink";
+			type="Empty";
 		};
 		class Item23
 		{
