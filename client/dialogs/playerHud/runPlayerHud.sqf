@@ -73,28 +73,27 @@ while {true} do
             // TODO: show some sort of contestor notification..
         };
 
-        switch (_holders) do
+        _interfaceColors = switch (_holders) do
         {
             case west:
             {
-                _interface ctrlSetBackgroundColor [0,0.3,0.94,0.5];
-                _interface ctrlSetTextColor [1,1,1,1];
+                [(call westColor), [1,1,1,1]];
             };
             case east:
             {
-                _interface ctrlSetBackgroundColor [0.5,0,0,0.5];
-                _interface ctrlSetTextColor [1,1,1,1];
+                [(call eastColor), [1,1,1,1]];
             };
             case resistance:
             {
-                _interface ctrlSetBackgroundColor [0,0.5,0,0.5];
-                _interface ctrlSetTextColor [1,1,1,1];
+                [(call resistanceColor), [1,1,1,1]];
             };
             default
             {
-                _interface ctrlSetBackgroundColor [1,1,1,0.5];
-                _interface ctrlSetTextColor [0,0,0,0.7];
+                [[1,1,1,1], [0,0,0,1]];
             };
         };
+        (_interfaceColors select 0) set [3, 0.5];
+        _interface ctrlSetBackgroundColor (_interfaceColors select 0);
+        _interface ctrlSetTextColor (_interfaceColors select 1);
     } forEach flagPossession;
 };
