@@ -61,12 +61,33 @@ _storeIcons = _storeIcons + ([(call serviceVehicles), "assets\image\serviceVehic
 } forEach _storeIcons;
 
 // Flags
-if(!isNil "flagInformation" && hasInterface) then
+if(!isNil "flagInformation" && !isNil "flagPossession" ) then
 {
     {
+        _possession = flagPossession select _forEachIndex;
+        _color = switch (_possession select 3) do
+        {
+            case west:
+            {
+                call westColor;
+            };
+            case east:
+            {
+                call eastColor;
+            };
+            case resistance:
+            {
+                call resistanceColor;
+            };
+            default
+            {
+                call playerColor;
+            };
+        };
         _missionStr = (str missionConfigFile);
         _dirPath = _missionStr select [0, (count _missionStr) - 15];
+        _flagPath = format ["assets\image\flag%1.paa", _forEachIndex];
 
-        _map drawIcon [(_dirPath + "assets\image\alphaFlag.paa"), (call westColor), getMarkerPos (_x select 0), 30, 30, 0];
+        _map drawIcon [(_dirPath + _flagPath), _color, getMarkerPos (_x select 0), 30, 30, 0];
     } foreach flagInformation;
 };
