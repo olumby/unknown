@@ -48,5 +48,11 @@ class CfgVehicleTemplates
     #include "cfgVehicleTemplates.hpp"
 };
 
+// Respawn Inventory
+class CfgRespawnInventory
+{
+    #include "cfgRespawnInventory.hpp"
+};
+
 // Third Party Stuff
 #include "external\R3F_LOG\desc_include.h"
