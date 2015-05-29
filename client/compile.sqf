@@ -1,10 +1,5 @@
 // Player
 setupPlayer = compile preprocessFileLineNumbers "client\functions\setupPlayer.sqf";
-spawnDialog = compile preprocessFileLineNumbers "client\dialogs\spawnDialog\spawnDialog.sqf";
-spawnDialogSelection = compile preprocessFileLineNumbers "client\dialogs\spawnDialog\spawnDialogSelection.sqf";
-spawnPlayer = compile preprocessFileLineNumbers "client\functions\spawnPlayer.sqf";
-spawnPlayerRandom = compile preprocessFileLineNumbers "client\functions\spawnPlayerRandom.sqf";
-spawnPlayerOnLocation = compile preprocessFileLineNumbers "client\functions\spawnPlayerOnLocation.sqf";
 gearPlayerUp = compile preprocessFileLineNumbers "client\functions\gearPlayerUp.sqf";
 runPlayerHud = compile preprocessFileLineNumbers "client\dialogs\playerHud\runPlayerHud.sqf";
 
