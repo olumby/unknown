@@ -4,8 +4,6 @@
  * Params: [<side: Side>, <index: Number>]
  */
 
-#define capture_time 30
-
 _side = _this select 0;
 _flagIndex = _this select 1;
 

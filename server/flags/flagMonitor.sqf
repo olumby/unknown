@@ -4,8 +4,6 @@
 
 waitUntil { !isNil "flagInformation" };
 
-#define capture_time 30
-
 if (isServer) then
 {
     sleep 1; // required to ensure the trigger is set up

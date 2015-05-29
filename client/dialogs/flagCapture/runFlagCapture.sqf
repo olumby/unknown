@@ -6,8 +6,6 @@
 
 waitUntil { !isNil "flagPossession" && !isNil "flagInformation" };
 
-#define capture_time 30
-
 sleep 1;
 while {true} do
 {
@@ -26,7 +24,7 @@ while {true} do
             _flagMessage = _display displayCtrl flag_message;
 
             _flagMessage ctrlSetText format ["Capturing %1", _flag select 5];
-            _flagProgress progressSetPosition ((_flagPossession select 6) / capture_time);
+            _flagProgress progressSetPosition ((_flagPossession select 6) / (call flagCaptureTime));
             _progressColor = switch (side player) do
             {
                 case west:

@@ -4,8 +4,6 @@
  * Params: [<previousHolders: Side>, <previousContestors: Side>, <previousCapStartTime: Number>, <previousCapTime: Number>]
  */
 
-#define capture_time 30
-
 _previousHolders = _this select 0;
 _previousContestors = _this select 1;
 _previousCapStart = _this select 2;

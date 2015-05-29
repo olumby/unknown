@@ -4,8 +4,6 @@
  * Params: [<previousHolders: Side>, <previousContestors: Side>, <previousCapStartTime: Number>, <previousCapTime: Number>, <playerSide: Side>, <flagIndex: Number>]
  */
 
-#define capture_time 30
-
 _previousHolders = _this select 0;
 _previousContestors = _this select 1;
 _previousCapStart = _this select 2;
@@ -15,7 +13,7 @@ _flagIndex = _this select 5;
 
 switch (true) do
 {
-    case (_previousCapStart != 0 && _previousCapTime <= capture_time && _previousContestors == _side):
+    case (_previousCapStart != 0 && _previousCapTime <= (call flagCaptureTime) && _previousContestors == _side):
     {
         _currentSide = _previousHolders;
         _contestors = _side;
@@ -23,7 +21,7 @@ switch (true) do
         _capTime = diag_tickTime - _previousCapStart;
         [_currentSide, _contestors, _capStart, _capTime];
     };
-    case ( (_previousCapStart != 0 && _previousCapTime > capture_time) || _previousHolders == _side ):
+    case ( (_previousCapStart != 0 && _previousCapTime > (call flagCaptureTime)) || _previousHolders == _side ):
     {
         _currentSide = _side;
         _contestors = civilian;
