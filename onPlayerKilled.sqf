@@ -4,6 +4,10 @@
  * Params: [<oldUnit: Object>, <killer: Object>, <respawn: Number>, <respawnDelay: Object>]
  */
 
+// TODO: See onPlayerRespawn.sqf - revive loadout
+// Save player loadout
+[player, [missionNamespace, "revivalLoadout"]] call BIS_fnc_saveInventory;
+
 // Add draw event to respawn map
 waitUntil { !isNull (uiNamespace getVariable "RscDisplayRespawn_display") };
 _respawnDisplay = uiNamespace getVariable ["RscDisplayRespawn_display", displayNull];
@@ -38,8 +42,10 @@ while { playerSide != side player } do
         _newPositions pushBack _newPosition;
     } forEach _availableMarkers;
 
-    _haloJump = [missionNamespace, [9418,20238,1000], " HALO Jump"] call BIS_fnc_addRespawnPosition;
+    _haloJump = [missionNamespace, [9418,20238,1000], "HALO Jump"] call BIS_fnc_addRespawnPosition;
     _newPositions pushBack _haloJump;
+    _groundSpawn = [missionNamespace, [8048,22640,0], "Ground Spawn"] call BIS_fnc_addRespawnPosition;
+    _newPositions pushBack _groundSpawn;
 
     missionNamespace setVariable ["activeSpawnPositions", _newPositions];
 
