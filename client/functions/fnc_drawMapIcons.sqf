@@ -14,10 +14,6 @@ _map = _this select 0;
     {
         if ((crew (vehicle _x) select 0) == _x) then
         {
-            // if ((configFile >> "CfgVehicles" >> typeOf(vehicle _x) >> "icon") != "") then
-            // {
-            //     _icon = getText (configFile >> "CfgVehicles" >> (vehicle _x) >> "icon");
-            // };
             if (group _x == group player && _x != player) then
             {
                 _color = call groupColor;
@@ -29,7 +25,13 @@ _map = _this select 0;
                 _map drawIcon [_iconPlayer, _color, getPos (vehicle _x), 24, 24, getDir (vehicle _x)];
             };
 
-            _map drawIcon ["iconMan", _color, getPos (vehicle _x), 14, 14, getDir (vehicle _x)];
+            _icon = getText (configFile >> "CfgVehicles" >> typeOf (vehicle _x) >> "icon");
+            if (_icon == "") then { _icon == "iconMan" };
+
+            _size = 22;
+            if (_x == player) then { _size = 15; };
+
+            _map drawIcon [_icon, _color, getPos (vehicle _x), _size, _size, getDir (vehicle _x), name (vehicle _x), false, 0.025, "Purista", "right"];
         };
     };
 } forEach allUnits;
