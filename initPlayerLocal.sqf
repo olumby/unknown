@@ -17,6 +17,10 @@ call compile preprocessFileLineNumbers "client\compile.sqf";
     _gpsEh = ((uiNamespace getVariable ["RscMiniMap", displayNull]) displayCtrl 101) ctrlAddEventHandler ["draw", { [_this select 0] call fnc_drawMapIcons; }];
 };
 
+[] spawn {
+    _playerIconsEh = addMissionEventHandler ["Draw3D", { call fnc_drawPlayerIcons } ];
+}
+
 // Setup flags
 [] execVM "client\flags\init.sqf";
 

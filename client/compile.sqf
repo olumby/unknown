@@ -25,4 +25,5 @@ runFlagCapture = compile preprocessFileLineNumbers "client\dialogs\flagCapture\r
 // Misc
 fnc_formatNumber = compile preprocessFileLineNumbers "client\functions\fnc_formatNumber.sqf";
 fnc_drawMapIcons = compile preprocessFileLineNumbers "client\functions\fnc_drawMapIcons.sqf";
+fnc_drawPlayerIcons = compile preprocessFileLineNumbers "client\functions\fnc_drawPlayerIcons.sqf";
 fnc_haloJump = compile preprocessFileLineNumbers "client\functions\fnc_haloJump.sqf";
