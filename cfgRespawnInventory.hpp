@@ -49,7 +49,7 @@ class eastHeli1
     uniformClass = "U_O_PilotCoveralls";
     backpack = "B_AssaultPack_ocamo";
 };
-class resistanceHeli1
+class guerHeli1
 {
     weapons[] = {
         "hgun_ACPC2_F"
@@ -161,7 +161,7 @@ class eastHalo2: eastHalo1
         "16Rnd_9x21_Mag"
     };
 };
-class resistanceHalo1
+class guerHalo1
 {
     weapons[] = {
         "SMG_01_F",
@@ -190,7 +190,7 @@ class resistanceHalo1
     uniformClass = "U_I_CombatUniform";
     backpack = "B_AssaultPack_dgtl";
 };
-class resistanceHalo2: resistanceHalo1
+class guerHalo2: guerHalo1
 {
     weapons[] = {
         "SMG_02_F",
@@ -255,7 +255,7 @@ class eastTown1
     uniformClass = "U_IG_Guerilla2_1";
     backpack = "B_AssaultPack_blk";
 };
-class resistanceTown1
+class guerTown1
 {
     weapons[] = {
         "hgun_ACPC2_F"
