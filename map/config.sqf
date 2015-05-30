@@ -11,3 +11,5 @@ eastColor = compileFinal str [0.67,0.00,0.00,1.00];
 resistanceColor = compileFinal str [0.00,0.55,0.00,1.00];
 civilianColor = compileFinal str [0.47,0.00,0.59,1.00];
 pinkColor = compileFinal str [0.75,0.00,0.75,1.00];
+
+heliSpawnAltitude = compileFinal "250";

@@ -17,6 +17,12 @@ while { playerSide != side player } do
 {
     _curPositions = missionNamespace getVariable ["activeSpawnPositions", []];
 
+    // Remove current Spawns
+    {
+        _x call BIS_fnc_removeRespawnPosition;
+    } forEach _curPositions;
+
+    // Spawn on friendly towns
     _availableMarkers = [];
     {
         _marker = _x select 0;
@@ -32,16 +38,22 @@ while { playerSide != side player } do
         };
     } forEach (call spawnLocations);
 
-    {
-        _x call BIS_fnc_removeRespawnPosition;
-    } forEach _curPositions;
-
     _newPositions = [];
     {
         _newPosition = [missionNamespace, _x] call BIS_fnc_addRespawnPosition;
         _newPositions pushBack _newPosition;
     } forEach _availableMarkers;
 
+    // Spawn on friendly helicopters
+    {
+        if (alive _x && side _x == playerSide && vehicle _x != _x && driver vehicle _x == _x && vehicle _x isKindOf "Helicopter" && (getPos vehicle _x) select 2 > (call heliSpawnAltitude)) then
+        {
+            _newPosition = [missionNamespace, vehicle _x] call BIS_fnc_addRespawnPosition;
+            _newPositions pushBack _newPosition;
+        };
+    } forEach allUnits;
+
+    // Debug spawn types
     _haloJump = [missionNamespace, [9418,20238,1000], "HALO Jump"] call BIS_fnc_addRespawnPosition;
     _newPositions pushBack _haloJump;
     _groundSpawn = [missionNamespace, [8048,22640,0], "Ground Spawn"] call BIS_fnc_addRespawnPosition;
