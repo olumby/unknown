@@ -23,19 +23,9 @@ else
 
     switch (true) do
     {
-        case (floor ((getPosATL player) select 2) == 0):
-        {
-            // Town Spawn
-            _loadoutName = format ["%1Town1", _prefix];
-            _loadout = [player, _path >> _loadoutName] call BIS_fnc_loadInventory;
-
-            _list = player nearRoads 200;
-            _roadToMove = _list select (floor (random (count _list)));
-            player setPos (getPos _roadToMove);
-        };
         case ((floor ((getPosATL player) select 2) > 900) && typeOf (vehicle player) == "Steerable_Parachute_F"):
         {
-            // Halo Jump
+            // Halo Jump (Helis and Beacons)
             _loadouts = [format ["%1Halo1", _prefix], format ["%1Halo2", _prefix]];
             _loadoutName = _loadouts select (floor (random (count _loadouts)));
             _loadout = [player, _path >> _loadoutName] call BIS_fnc_loadInventory;
@@ -43,6 +33,38 @@ else
             deleteVehicle (vehicle player);
 
             [player, 150, true, true] spawn fnc_haloJump;
+        };
+        case (typeOf (vehicle player) == "Steerable_Parachute_F"):
+        {
+            // Lower altidute heli jump.
+            _loadoutName = format ["%1Heli1", _prefix];
+            _loadout = [player, _path >> _loadoutName] call BIS_fnc_loadInventory;
+
+            deleteVehicle (vehicle player);
+
+            [player, 200, true, false] spawn fnc_haloJump;
+        };
+        case ((vehicle player) isKindOf "Helicopter"):
+        {
+            // heli spawn
+            _loadoutName = format ["%1Heli1", _prefix];
+            _loadout = [player, _path >> _loadoutName] call BIS_fnc_loadInventory;
+
+            waitUntil { vehicle player == player };
+            if (floor ((getPosATL player) select 2) > 200) then
+            {
+                [player, 180, false, false] spawn fnc_haloJump;
+            };
+        };
+        default
+        {
+            // Town/Ground Spawn
+            _loadoutName = format ["%1Town1", _prefix];
+            _loadout = [player, _path >> _loadoutName] call BIS_fnc_loadInventory;
+
+            _list = player nearRoads 200;
+            _roadToMove = _list select (floor (random (count _list)));
+            player setPos (getPos _roadToMove);
         };
     };
 };
