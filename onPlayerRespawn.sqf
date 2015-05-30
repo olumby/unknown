@@ -40,18 +40,28 @@ else
             _loadoutName = _loadouts select (floor (random (count _loadouts)));
             _loadout = [player, _path >> _loadoutName] call BIS_fnc_loadInventory;
 
-            player action ["GetOut", vehicle player];
+            deleteVehicle (vehicle player);
 
             _chem = "chemlight_red" createVehicle [0,0,0];
-            _chem attachTo [player, [0, -0.05, 0.05], "LeftShoulder"];
+            _chem attachTo [player, [-0.05,-0.2,-0.014], "lfemur"];
+            _smoke = "SmokeShellRed" createVehicle [0,0,0];
+            _smoke attachTo [player, [-0.05,-0.2,0], "lfemur"];
 
+            // when ~135m from ground
             waitUntil { ((getPosATL player) select 2) < 135 };
             _chute = createVehicle ["Steerable_Parachute_F", getPosATL player, [], getDir player, "FLY"];
             _chute setPos (getPos player);
             player assignAsDriver _chute;
             player moveIndriver _chute;
 
-            waitUntil { ((getPosATL player) select 2) < 2 };
+            // when in chute
+            waitUntil { animationState player == "para_pilot" };
+            detach _smoke;
+            deleteVehicle _smoke;
+            _chem attachTo [vehicle player, [-0.05,-0.2,-0.014], "lfemur"];
+
+            // when ~20m from ground
+            waitUntil { ((getPosATL player) select 2) < 20 };
             detach _chem;
             deleteVehicle _chem;
         };
