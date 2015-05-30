@@ -1,6 +1,4 @@
 // Player
-setupPlayer = compile preprocessFileLineNumbers "client\functions\setupPlayer.sqf";
-gearPlayerUp = compile preprocessFileLineNumbers "client\functions\gearPlayerUp.sqf";
 runPlayerHud = compile preprocessFileLineNumbers "client\dialogs\playerHud\runPlayerHud.sqf";
 
 // Vehicle Store
