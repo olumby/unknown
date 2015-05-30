@@ -17,12 +17,12 @@ _map = _this select 0;
             if (group _x == group player && _x != player) then
             {
                 _color = call groupColor;
-                _map drawIcon [_iconGroup, _color, getPos (vehicle _x), 24, 24, getDir (vehicle _x)];
+                _map drawIcon [_iconGroup, _color, visiblePosition (vehicle _x), 24, 24, getDir (vehicle _x)];
             };
             if (_x == player) then
             {
                 _color = call playerColor;
-                _map drawIcon [_iconPlayer, _color, getPos (vehicle _x), 24, 24, getDir (vehicle _x)];
+                _map drawIcon [_iconPlayer, _color, visiblePosition (vehicle _x), 24, 24, getDir (vehicle _x)];
             };
 
             _icon = getText (configFile >> "CfgVehicles" >> typeOf (vehicle _x) >> "icon");
@@ -31,7 +31,7 @@ _map = _this select 0;
             _size = 22;
             if (_x == player) then { _size = 15; };
 
-            _map drawIcon [_icon, _color, getPos (vehicle _x), _size, _size, getDir (vehicle _x), name (vehicle _x), false, 0.025, "Purista", "right"];
+            _map drawIcon [_icon, _color, visiblePosition (vehicle _x), _size, _size, getDir (vehicle _x), name (vehicle _x), false, 0.025, "Purista", "right"];
         };
     };
 } forEach allUnits;
