@@ -28,6 +28,7 @@ if (isServer) then
 
         _flagPole = createVehicle ["FlagPole_F", _x select 0, [], 0, "NONE"];
         _flagPole allowDamage false;
+        _flagPole setVariable ["R3F_LOG_disabled", true, true];
 
         _flagInnerTrigger = createTrigger ["EmptyDetector", _x select 0, true];
         _flagInnerTrigger setTriggerArea [_x select 1, _x select 1, 0, false];

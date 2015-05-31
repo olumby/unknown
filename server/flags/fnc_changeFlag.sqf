@@ -33,9 +33,10 @@ _flagType = switch (_side) do
 
 deleteVehicle ((flagInformation select _flagIndex) select 2);
 
-newFlag = createVehicle [_flagType, getMarkerPos ((flagInformation select _flagIndex) select 0), [], 0, "CAN_COLLIDE"];
+_newFlag = createVehicle [_flagType, getMarkerPos ((flagInformation select _flagIndex) select 0), [], 0, "CAN_COLLIDE"];
+_newFlag setVariable ["R3F_LOG_disabled", true, true];
 
-(flagInformation select _flagIndex) set [2, newFlag];
+(flagInformation select _flagIndex) set [2, _newFlag];
 
 missionNamespace setVariable ["flagInformation", flagInformation];
 publicVariable "flagInformation";
