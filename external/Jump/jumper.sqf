@@ -12,7 +12,7 @@ fn_jumpAnimation = {
 
 if (_key in actionKeys "GetOver") then
 {
-    if (stance player in ["STAND", "CROUCH"]) then
+    if ((stance player in ["STAND", "CROUCH"]) && animationState player != "AovrPercMrunSrasWrflDf") then
     {
         player spawn {
             [player, "fn_jumpAnimation"] call BIS_fnc_MP;
