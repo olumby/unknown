@@ -19,7 +19,7 @@ call compile preprocessFileLineNumbers "client\compile.sqf";
 
 [] spawn {
     _playerIconsEh = addMissionEventHandler ["Draw3D", { call fnc_drawPlayerIcons } ];
-}
+};
 
 // Setup flags
 [] execVM "client\flags\init.sqf";
