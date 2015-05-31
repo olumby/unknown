@@ -5,8 +5,9 @@
  */
 
 _side = [_this, 0, west] call BIS_fnc_param;
+_alpha = [_this 1, 1] call BIS_fnc_param;
 
-switch (_side) do
+_color = switch (_side) do
 {
     case west:
     {
@@ -29,3 +30,6 @@ switch (_side) do
         call playerColor;
     };
 };
+
+_color set [2, _alpha];
+_color;
