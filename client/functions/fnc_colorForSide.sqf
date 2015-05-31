@@ -5,7 +5,7 @@
  */
 
 _side = [_this, 0, west] call BIS_fnc_param;
-_alpha = [_this 1, 1] call BIS_fnc_param;
+_alpha = [_this, 1, 1] call BIS_fnc_param;
 
 _color = switch (_side) do
 {
@@ -31,5 +31,5 @@ _color = switch (_side) do
     };
 };
 
-_color set [2, _alpha];
+_color set [3, _alpha];
 _color;
