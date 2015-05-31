@@ -47,14 +47,11 @@ if (isServer) then {
 
     for "_i" from 1 to _aiCount do
     {
-        _unit = _missionGroup createUnit ["c_man_1", _missionPosition, [], 0, "Form"];
+        _availableLoadouts = ["aiRifle1","aiRifle2","aiRifle3"];
 
-        _unit addWeapon "arifle_TRG21_F";
-        _unit setRank "SERGEANT";
-        _unit addVest "V_PlateCarrier1_rgr";
-        _unit addMagazine "30Rnd_556x45_Stanag";
-        _unit addMagazine "30Rnd_556x45_Stanag";
-        _unit addMagazine "30Rnd_556x45_Stanag";
+        _unit = _missionGroup createUnit ["c_man_1", _missionPosition, [], 0, "Form"];
+        _loadout = _availableLoadouts select (floor (random (count _availableLoadouts)));
+        [_unit, missionConfigFile >> "CfgRespawnInventory" >> _loadout] call BIS_fnc_loadInventory;
     };
 
 

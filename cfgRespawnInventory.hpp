@@ -280,3 +280,42 @@ class guerTown1
     uniformClass = "U_OG_Guerilla1_1";
     backpack = "B_AssaultPack_rgr";
 };
+// AI Inventories
+class aiRifle1
+{
+    weapons[] = {
+        "arifle_TRG21_F"
+    };
+    magazines[] = {
+        "30Rnd_556x45_Stanag_Tracer_Yellow",
+        "30Rnd_556x45_Stanag_Tracer_Yellow",
+        "30Rnd_556x45_Stanag_Tracer_Yellow",
+        "30Rnd_556x45_Stanag_Tracer_Yellow",
+        "30Rnd_556x45_Stanag_Tracer_Yellow",
+        "HandGrenade",
+        "HandGrenade",
+        "SmokeShell",
+        "SmokeShell"
+    };
+    items[] = {
+        "FirstAidKit",
+        "FirstAidKit"
+    };
+    linkedItems[] = {
+        "V_PlateCarrierIA1_dgtl",
+        "H_Shemag_olive",
+        "ItemMap",
+        "ItemCompass",
+        "ItemWatch",
+        "ItemRadio"
+    };
+    uniformClass = "U_OG_Guerilla1_1";
+};
+class aiRifle2: aiRifle1
+{
+    uniformClass = "U_OG_Guerilla2_2";
+};
+class aiRifle3: aiRifle1
+{
+    uniformClass = "U_OG_Guerilla2_3";
+};

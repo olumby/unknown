@@ -1,3 +1,3 @@
 sleep 10;
 
-_outPostMissions = [[8048,22640,0], 5] execVM "server\missions\outpostMission.sqf";
+_outPostMissions = [[8100,22591,0], 6] execVM "server\missions\outpostMission.sqf";

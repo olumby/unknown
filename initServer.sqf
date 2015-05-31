@@ -1,5 +1,4 @@
-// Friendly
-
+// Set friend status
 civilian setFriend [west, 0];
 civilian setFriend [east, 0];
 civilian setFriend [resistance, 0];
