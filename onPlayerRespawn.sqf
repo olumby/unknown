@@ -48,7 +48,7 @@ else
 
             [player, 200, true, false] spawn fnc_haloJump;
         };
-        case ((vehicle player) isKindOf "Helicopter"):
+        case ((vehicle player) isKindOf "Helicopter_Base_F"):
         {
             // heli spawn
             _loadoutName = format ["%1Heli1", _prefix];

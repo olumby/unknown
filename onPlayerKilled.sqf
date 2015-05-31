@@ -46,7 +46,7 @@ while { playerSide != side player } do
 
     // Spawn on friendly helicopters
     {
-        if (alive _x && side _x == playerSide && vehicle _x != _x && driver vehicle _x == _x && vehicle _x isKindOf "Helicopter" && (getPos vehicle _x) select 2 > (call heliSpawnAltitude)) then
+        if (alive _x && side _x == playerSide && vehicle _x != _x && driver vehicle _x == _x && vehicle _x isKindOf "Helicopter_Base_F" && (getPos vehicle _x) select 2 > (call heliSpawnAltitude)) then
         {
             _newPosition = [missionNamespace, vehicle _x] call BIS_fnc_addRespawnPosition;
             _newPositions pushBack _newPosition;
