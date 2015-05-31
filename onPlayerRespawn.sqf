@@ -9,6 +9,10 @@ waitUntil { alive player };
 player enableFatigue false;
 enableSentences false;
 
+// Fix setFriend civilian Ammo Boxes
+player addAction ["Inventory", { if (cursorTarget isKindOf "reammobox_f") then { (_this select 1) action ["Gear", cursorTarget]; }; }, [], 1.5, false, false, "", "(cursorTarget isKindOf 'reammobox_f') && (_this distance cursorTarget < 3)"];
+
+// Respawn loadouts
 if (player getVariable ["BIS_revive_incapacitated", false]) then
 {
     // TODO: Strange revival loadout
