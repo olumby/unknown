@@ -64,10 +64,12 @@ fnc_vehicleIcon =
             _pos set [2, (_pos select 2) + 0.7];
             _pos = ((vehicle _x) modelToWorld (_pos));
 
+            _color = [playerSide] call fnc_colorForSide;
+
             _iconSize = 0.6 * (1 - (_distance / (call friendlyTagDrawDistance))) max 0.4 min 0.6;
             _fontSize = 0.03 * (1 - (_distance / (call friendlyNameTagDrawDistance))) max 0.025 min 0.03;
 
-            drawIcon3D [_icon, (call westColor), _pos, _iconSize, _iconSize, 0, _name, 1, _fontSize, "Purista"];
+            drawIcon3D [_icon, _color, _pos, _iconSize, _iconSize, 0, _name, 1, _fontSize, "Purista"];
         };
     };
 } forEach allUnits;

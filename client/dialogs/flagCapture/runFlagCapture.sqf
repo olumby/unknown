@@ -25,21 +25,8 @@ while {true} do
 
             _flagMessage ctrlSetText format ["Capturing %1", _flag select 5];
             _flagProgress progressSetPosition ((_flagPossession select 6) / (call flagCaptureTime));
-            _progressColor = switch (side player) do
-            {
-                case west:
-                {
-                    [0,0.3,0.94,0.6]
-                };
-                case east:
-                {
-                    [0.5,0,0,0.6];
-                };
-                default
-                {
-                    [0,0.5,0,0.6];
-                };
-            };
+
+            _progressColor = [playerSide, 0.6] call fnc_colorForSide;
             _flagProgress ctrlSetTextColor _progressColor;
         };
     };

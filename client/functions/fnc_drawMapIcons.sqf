@@ -67,25 +67,7 @@ if(!isNil "flagInformation" && !isNil "flagPossession" ) then
 {
     {
         _possession = flagPossession select _forEachIndex;
-        _color = switch (_possession select 3) do
-        {
-            case west:
-            {
-                call westColor;
-            };
-            case east:
-            {
-                call eastColor;
-            };
-            case resistance:
-            {
-                call resistanceColor;
-            };
-            default
-            {
-                call playerColor;
-            };
-        };
+        _color = [_possession select 3] call fnc_colorForSide;
         _missionStr = (str missionConfigFile);
         _dirPath = _missionStr select [0, (count _missionStr) - 15];
         _flagPath = format ["assets\image\flag%1.paa", _forEachIndex];
