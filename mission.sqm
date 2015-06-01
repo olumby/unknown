@@ -923,7 +923,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3.2785482,0.0024259796,0.91766357};
+					position[]={0.55563885,0.14028898,0.46539307};
 					class args
 					{
 						items=4;
@@ -976,7 +976,7 @@ class Mission
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
 			text="vehicleStore_001";
-			init="_store = [this] execVM ""server\functions\vehicleStore.sqf""";
+			init="_store = [this] execVM 'server\functions\fnc_buildVehicleStore.sqf'";
 		};
 		class Item1
 		{
@@ -988,7 +988,7 @@ class Mission
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
 			text="vehicleStore_002";
-			init="_store = [this] execVM ""server\functions\vehicleStore.sqf""";
+			init="_store = [this] execVM 'server\functions\fnc_buildVehicleStore.sqf'";
 		};
 		class Item2
 		{
@@ -1000,7 +1000,7 @@ class Mission
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
 			text="vehicleStore_003";
-			init="_store = [this] execVM ""server\functions\vehicleStore.sqf""";
+			init="_store = [this] execVM 'server\functions\fnc_buildVehicleStore.sqf'";
 		};
 		class Item3
 		{
@@ -1106,7 +1106,7 @@ class Mission
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
 			text="gunStore_001";
-			init="_store = [this] execVM ""server\functions\gunStore.sqf""";
+			init="_store = [this] execVM 'server\functions\fnc_buildGunStore.sqf'";
 		};
 		class Item14
 		{
@@ -1117,7 +1117,7 @@ class Mission
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
 			text="gunStore_002";
-			init="_store = [this] execVM ""server\functions\gunStore.sqf""";
+			init="_store = [this] execVM 'server\functions\fnc_buildGunStore.sqf'";
 		};
 		class Item15
 		{
@@ -1128,7 +1128,7 @@ class Mission
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
 			text="gunStore_003";
-			init="_store = [this] execVM ""server\functions\gunStore.sqf""";
+			init="_store = [this] execVM 'server\functions\fnc_buildGunStore.sqf'";
 		};
 		class Item16
 		{
@@ -1827,26 +1827,6 @@ class Mission
 			a=200;
 			b=200;
 			drawBorder=1;
-		};
-	};
-	class Sensors
-	{
-		items=1;
-		class Item0
-		{
-			position[]={1.2125481,0.0024183823,1.1412964};
-			a=1;
-			b=1;
-			rectangular=1;
-			activationBy="ALPHA";
-			repeating=1;
-			interruptable=1;
-			type="SWITCH";
-			age="UNKNOWN";
-			expActiv="[player] call openAdminMenu;";
-			class Effects
-			{
-			};
 		};
 	};
 };
