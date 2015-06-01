@@ -11,7 +11,7 @@
 // Add draw event to respawn map
 waitUntil { !isNull (uiNamespace getVariable "RscDisplayRespawn_display") };
 _respawnDisplay = uiNamespace getVariable ["RscDisplayRespawn_display", displayNull];
-_respawnEh = (_respawnDisplay displayCtrl 1050) ctrlAddEventHandler ["draw", { [_this select 0] call fnc_drawMapIcons; }];
+_respawnEh = (_respawnDisplay displayCtrl 1050) ctrlAddEventHandler ["draw", { [_this select 0] call e_drawMapIcons; }];
 
 while { playerSide != side player } do
 {
