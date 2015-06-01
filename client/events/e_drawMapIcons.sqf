@@ -6,32 +6,25 @@ _map = _this select 0;
 
 // Players
 {
-    _iconPlayer = "\A3\ui_f\data\igui\cfg\islandmap\iconplayer_ca.paa";
-    _iconGroup = "\A3\ui_f\data\igui\cfg\islandmap\iconselect_ca.paa";
-    _color = call playerColor;
-
     if (side _x == playerSide) then
     {
         if ((crew (vehicle _x) select 0) == _x) then
         {
-            if (group _x == group player && _x != player) then
-            {
-                _color = call groupColor;
-                _map drawIcon [_iconGroup, _color, visiblePosition (vehicle _x), 24, 24, getDir (vehicle _x)];
-            };
-            if (_x == player) then
-            {
-                _color = call playerColor;
-                _map drawIcon [_iconPlayer, _color, visiblePosition (vehicle _x), 24, 24, getDir (vehicle _x)];
-            };
+            _color = call playerColor;
 
             _icon = getText (configFile >> "CfgVehicles" >> typeOf (vehicle _x) >> "icon");
             if (_icon == "") then { _icon == "iconMan" };
 
-            _size = 22;
-            if (_x == player) then { _size = 15; };
+            _text = name (vehicle _x);
+            if (_x == player) then
+            {
+                _text = "";
+                if (vehicle _x == _x) then { _icon = "iconManVirtual" };
+            };
+            // color for groups
+            if (group _x == group player && _x != player) then { _color = call groupColor };
 
-            _map drawIcon [_icon, _color, visiblePosition (vehicle _x), _size, _size, getDir (vehicle _x), name (vehicle _x), false, 0.025, "Purista", "right"];
+            _map drawIcon [_icon, _color, visiblePosition (vehicle _x), 24, 24, getDir (vehicle _x), _text, false, 0.03, "PuristaMedium", "right"];
         };
     };
 } forEach allUnits;
