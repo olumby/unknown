@@ -28,3 +28,6 @@ fnc_drawMapIcons = compile preprocessFileLineNumbers "client\functions\fnc_drawM
 fnc_drawPlayerIcons = compile preprocessFileLineNumbers "client\functions\fnc_drawPlayerIcons.sqf";
 fnc_haloJump = compile preprocessFileLineNumbers "client\functions\fnc_haloJump.sqf";
 fnc_colorForSide = compile preprocessFileLineNumbers "client\functions\fnc_colorForSide.sqf";
+
+// Events
+e_keyDown = compile preprocessFileLineNumbers "client\events\e_keyDown.sqf";
