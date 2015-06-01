@@ -60,9 +60,9 @@ fnc_vehicleIcon =
             _name = if (cursorTarget == vehicle _x && _distance < (call friendlyNameTagDrawDistance)) then { name (vehicle _x) } else { "" };
 
             _mempoint = if (vehicle _x == _x) then {"head" } else {"engine"};
-            _pos = _x selectionPosition _mempoint;
+            _pos = (vehicle _x) modelToWorldVisual ((vehicle _x) selectionPosition _mempoint);
             _pos set [2, (_pos select 2) + 0.7];
-            _pos = ((vehicle _x) modelToWorld (_pos));
+            //_pos = ((vehicle _x) modelToWorld (_pos));
 
             _color = [playerSide] call fnc_colorForSide;
 
