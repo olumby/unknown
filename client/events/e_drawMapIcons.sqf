@@ -37,25 +37,19 @@ fnc_iconForStore =
     _array = _this select 0;
     _image = _this select 1;
 
-    _return = [];
+    _missionStr = (str missionConfigFile);
+    _dirPath = _missionStr select [0, (count _missionStr) - 15];
     {
         _marker = format ["%1_label", _x];
         _pos = getMarkerPos _marker;
-        _return pushBack [_image, _pos];
-    } forEach _array;
 
-    _return;
+        _map drawIcon [(_dirPath + _image), [1,1,1,1], _pos, 30, 30, 0];
+    } forEach _array;
 };
 
 _storeIcons = ([(call gunStores), "assets\image\gunStore.paa"] call fnc_iconForStore);
 _storeIcons = _storeIcons + ([(call vehicleStores), "assets\image\vehicleStore.paa"] call fnc_iconForStore);
 _storeIcons = _storeIcons + ([(call serviceVehicles), "assets\image\serviceVehicle.paa"] call fnc_iconForStore);
-
-{
-    _missionStr = (str missionConfigFile);
-    _dirPath = _missionStr select [0, (count _missionStr) - 15];
-    _map drawIcon [(_dirPath + (_x select 0)), [1,1,1,1], (_x select 1), 30, 30, 0];
-} forEach _storeIcons;
 
 // Flags
 if(!isNil "flagInformation" && !isNil "flagPossession" ) then
