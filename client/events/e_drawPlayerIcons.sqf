@@ -5,45 +5,20 @@
 fnc_vehicleIcon =
 {
     _object = _this select 0;
-
     switch (true) do
     {
-        case (_object isKindOf "Man"):
-        {
-            "\a3\ui_f\data\map\Markers\NATO\b_inf.paa";
-        };
-        case (_object isKindOf "Tank"):
-        {
-            "\a3\ui_f\data\map\Markers\NATO\b_armor.paa";
-        };
-        case (_object isKindOf "Land"):
-        {
-            "\a3\ui_f\data\map\Markers\NATO\b_motor_inf.paa";
-        };
-        case (_object isKindOf "Plane"):
-        {
-            "\a3\ui_f\data\map\Markers\NATO\b_plane.paa";
-        };
-        case (_object isKindOf "Air"):
-        {
-            "\a3\ui_f\data\map\Markers\NATO\b_air.paa";
-        };
-        case (_object isKindOf "Ship"):
-        {
-            "\a3\ui_f\data\map\Markers\NATO\b_naval.paa";
-        };
-        default
-        {
-            "\a3\ui_f\data\map\Markers\NATO\b_unknown.paa";
-        };
+        case (_object isKindOf "Man"): { "\a3\ui_f\data\map\Markers\NATO\b_inf.paa" };
+        case (_object isKindOf "Tank"): { "\a3\ui_f\data\map\Markers\NATO\b_armor.paa" };
+        case (_object isKindOf "Land"): { "\a3\ui_f\data\map\Markers\NATO\b_motor_inf.paa" };
+        case (_object isKindOf "Plane"): { "\a3\ui_f\data\map\Markers\NATO\b_plane.paa" };
+        case (_object isKindOf "Air"): { "\a3\ui_f\data\map\Markers\NATO\b_air.paa" };
+        case (_object isKindOf "Ship"): { "\a3\ui_f\data\map\Markers\NATO\b_naval.paa" };
+        default { "\a3\ui_f\data\map\Markers\NATO\b_unknown.paa" };
     };
 };
 
+_uavUnits = allUnitsUAV;
 {
-    _iconPlayer = "\A3\ui_f\data\igui\cfg\islandmap\iconplayer_ca.paa";
-    _iconGroup = "\A3\ui_f\data\igui\cfg\islandmap\iconselect_ca.paa";
-    _color = call playerColor;
-
     if (side _x == playerSide) then
     {
         if ((crew (vehicle _x) select 0) == _x) then
@@ -62,17 +37,14 @@ fnc_vehicleIcon =
             _pos set [2, (_pos select 2) + 0.7];
 
             _color = [playerSide] call fnc_colorForSide;
-
             _iconSize = 0.6 * (1 - (_distance / (call friendlyTagDrawDistance))) max 0.4 min 0.6;
-
 
             drawIcon3D [_icon, _color, _pos, _iconSize, _iconSize, 0, "", 1, 0.3, "Purista"];
 
-            if (cursorTarget == vehicle _x && _distance < (call friendlyNameTagDrawDistance)) then
+            if ( (cursorTarget == vehicle _x) && (_distance < (call friendlyNameTagDrawDistance)) && !((vehicle _x ) in _uavUnits)) then
             {
                 drawIcon3D ["#(argb,8,8,3)color(0,0,0,0)", (call playerColor), positionCameraToWorld [0,0,2], 0, 0, 0, name (vehicle _x), 1, 0.03, "PuristaSemiBold"];
             };
-
         };
     };
 } forEach allUnits;

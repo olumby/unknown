@@ -5,6 +5,7 @@
 _map = _this select 0;
 
 // Players
+_uavUnits = allUnitsUAV;
 {
     if (side _x == playerSide) then
     {
@@ -21,6 +22,7 @@ _map = _this select 0;
                 _text = "";
                 if (vehicle _x == _x) then { _icon = "iconManVirtual" };
             };
+            if (vehicle _x in _uavUnits) then { _text = ""; };
             // color for groups
             if (group _x == group player && _x != player) then { _color = call groupColor };
 
