@@ -57,19 +57,22 @@ fnc_vehicleIcon =
 
             _icon = [vehicle _x] call fnc_vehicleIcon;
 
-            _name = if (cursorTarget == vehicle _x && _distance < (call friendlyNameTagDrawDistance)) then { name (vehicle _x) } else { "" };
-
             _mempoint = if (vehicle _x == _x) then {"head" } else {"engine"};
             _pos = (vehicle _x) modelToWorldVisual ((vehicle _x) selectionPosition _mempoint);
             _pos set [2, (_pos select 2) + 0.7];
-            //_pos = ((vehicle _x) modelToWorld (_pos));
 
             _color = [playerSide] call fnc_colorForSide;
 
             _iconSize = 0.6 * (1 - (_distance / (call friendlyTagDrawDistance))) max 0.4 min 0.6;
-            _fontSize = 0.03 * (1 - (_distance / (call friendlyNameTagDrawDistance))) max 0.025 min 0.03;
 
-            drawIcon3D [_icon, _color, _pos, _iconSize, _iconSize, 0, _name, 1, _fontSize, "Purista"];
+
+            drawIcon3D [_icon, _color, _pos, _iconSize, _iconSize, 0, "", 1, 0.3, "Purista"];
+
+            if (cursorTarget == vehicle _x && _distance < (call friendlyNameTagDrawDistance)) then
+            {
+                drawIcon3D ["#(argb,8,8,3)color(0,0,0,0)", (call playerColor), positionCameraToWorld [0,0,2], 0, 0, 0, name (vehicle _x), 1, 0.03, "PuristaSemiBold"];
+            };
+
         };
     };
 } forEach allUnits;
