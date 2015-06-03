@@ -4,7 +4,7 @@
  * Params: [<newUnit: Object>, <oldUnit: Object>, <respawn: Number>, <respawnDelay: Number>]
  */
 
-waitUntil { alive player };
+waitUntil { alive player && isNil "BIS_fnc_respawnMenuPosition_positions" };
 
 player enableFatigue false;
 enableSentences false;
