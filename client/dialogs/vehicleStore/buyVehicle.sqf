@@ -14,6 +14,16 @@ _hasVariation = [_this, 3, false] call BIS_fnc_param;
 closeDialog 0;
 vehicleStoreDialogOpen = false;
 
+fnc_clearVehicleInventory =
+{
+    _veh = _this select 0;
+
+    clearBackpackCargoGlobal _veh;
+    clearMagazineCargoGlobal _veh;
+    clearWeaponCargoGlobal _veh;
+    clearItemCargoGlobal _veh;
+};
+
 if (_hasVariation) then
 {
     _variationClass = [_this, 4, ""] call BIS_fnc_param;
@@ -23,12 +33,9 @@ if (_hasVariation) then
     waitUntil { !isNil "_veh"; !isNull _veh; };
     _veh setVariable ["BIS_enableRandomization", false, true];
     [_veh, _variationClass, _variationClass] call BIS_fnc_initVehicle;
+    [_veh] call fnc_clearVehicleInventory;
 } else
 {
     _veh = createVehicle [_vehicleClass, (_spawnLocation findEmptyPosition [1, 150, _vehicleClass]), [], 0, "NONE"];
+    [_veh] call fnc_clearVehicleInventory;
 };
-
-clearBackpackCargoGlobal _veh;
-clearMagazineCargoGlobal _veh;
-clearWeaponCargoGlobal _veh;
-clearItemCargoGlobal _veh;
