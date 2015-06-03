@@ -22,11 +22,14 @@ civilian setFriend [civilian, 1];
 // Compile Scripts
 call compile preprocessFileLineNumbers "server\compile.sqf";
 
-// Set admins
+// Setup admins
 [] execVM "server\functions\admins.sqf";
 
-// Setup flags
+// Setup Flags
 [] execVM "server\flags\init.sqf";
 
-// Start up a mission
+// Start Missions
 [] execVM "server\missions\init.sqf";
+
+// Setup Spawns
+[] execVM "server\spawns\init.sqf";
