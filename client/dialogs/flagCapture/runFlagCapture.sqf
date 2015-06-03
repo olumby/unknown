@@ -3,6 +3,7 @@
  */
 
 #include "flagCapture_defines.hpp"
+disableSerialization;
 
 waitUntil { !isNil "flagPossession" && !isNil "flagInformation" };
 

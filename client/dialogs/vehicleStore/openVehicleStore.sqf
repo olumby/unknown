@@ -4,10 +4,11 @@
  * Params: [<storeName: String>]
  */
 
+#include "vehicleStore_defines.hpp"
+disableSerialization;
+
 _storeName = [(_this select 3), 0, ""] call BIS_fnc_param;
 uiNamespace setVariable ["storeName", _storeName];
-
-#include "vehicleStore_defines.hpp"
 
 createDialog "VehicleStore";
 vehicleStoreDialogOpen = true;

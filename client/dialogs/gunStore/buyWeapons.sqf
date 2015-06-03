@@ -3,6 +3,7 @@
  */
 
 #include "gunStore_defines.hpp"
+disableSerialization;
 
 _display = uiNamespace getVariable "UK_GunStoreDialog";
 

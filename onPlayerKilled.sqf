@@ -4,6 +4,8 @@
  * Params: [<oldUnit: Object>, <killer: Object>, <respawn: Number>, <respawnDelay: Object>]
  */
 
+disableSerialization;
+
 // TODO: See onPlayerRespawn.sqf - revive loadout
 // Save player loadout
 [player, [missionNamespace, "revivalLoadout"]] call BIS_fnc_saveInventory;

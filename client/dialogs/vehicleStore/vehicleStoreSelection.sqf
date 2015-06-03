@@ -3,6 +3,7 @@
  */
 
 #include "vehicleStore_defines.hpp"
+disableSerialization;
 
 _display = uiNamespace getVariable "UK_VehicleStoreDialog";
 _vehicleList = _display displayCtrl vehicle_list;

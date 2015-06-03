@@ -5,6 +5,7 @@
  */
 
 #include "gunStore_defines.hpp"
+disableSerialization;
 
 _display = uiNamespace getVariable "UK_GunStoreDialog";
 _selectedItemValue = _display displayCtrl selected_value;

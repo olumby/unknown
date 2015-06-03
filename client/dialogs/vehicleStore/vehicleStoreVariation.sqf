@@ -3,6 +3,7 @@
  */
 
 #include "vehicleStore_defines.hpp"
+disableSerialization;
 
 _display = uiNamespace getVariable "UK_VehicleStoreDialog";
 _vehicleList = _display displayCtrl vehicle_list;
@@ -27,7 +28,7 @@ _buttonAction = "";
 _storeName = uiNamespace getVariable "storeName";
 _storeSpawn = getMarkerPos (format ["%1_spawn", _storeName]);
 
-if (_selectedVariationClass == "novar") then 
+if (_selectedVariationClass == "novar") then
 {
     // buy vehicle normal
     _buttonAction = format ["[""%1"",%2,[%3,%4,%5],false,""""] spawn buyVehicle;", _vehicleAdvanced select 0, _vehicleAdvanced select 1, _storeSpawn select 0, _storeSpawn select 1, _storeSpawn select 2];

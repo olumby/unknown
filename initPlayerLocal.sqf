@@ -1,3 +1,9 @@
+/*
+ * Executed locally when player joins mission (includes both mission start and JIP).
+ */
+
+disableSerialization;
+
 waitUntil { !isNull player; time > 0.1 };
 
 enableRadio false;

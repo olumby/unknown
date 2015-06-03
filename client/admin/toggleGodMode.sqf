@@ -2,6 +2,8 @@
  * Give the admin god mode.
  */
 
+disableSerialization;
+
 if ([player] call fnc_isAdmin) then
 {
     _display = uiNamespace getVariable "UK_AdminDialog";

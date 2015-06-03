@@ -5,6 +5,7 @@
  */
 
 #include "playerFeed_defines.hpp"
+disableSerialization;
 
 _message = [_this, 0, ""] call BIS_fnc_param;
 

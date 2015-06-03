@@ -5,6 +5,7 @@
  */
 
 #include "gunStore_defines.hpp"
+disableSerialization;
 
 _qtyChange = [_this, 1, 1] call BIS_fnc_param;
 

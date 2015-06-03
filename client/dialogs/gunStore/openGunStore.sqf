@@ -4,6 +4,9 @@
  * Params: [<storeName: String>, <storeSpawnBox: Object>]
  */
 
+#include "gunStore_defines.hpp"
+disableSerialization;
+
 _storeName = [(_this select 3), 0, ""] call BIS_fnc_param;
 uiNamespace setVariable ["storeName", _storeName];
 
@@ -13,8 +16,6 @@ uiNamespace setVariable ["storeSpawn", _storeSpawn];
 uiNamespace setVariable ["gunStoreCartWeapons", []];
 uiNamespace setVariable ["gunStoreCartMagazines", []];
 uiNamespace setVariable ["gunStoreCartAccessories", []];
-
-#include "gunStore_defines.hpp"
 
 createDialog "GunStore";
 gunStoreDialogOpen = true;

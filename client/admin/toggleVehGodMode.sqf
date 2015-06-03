@@ -2,6 +2,8 @@
  * Give the admins vehicle god mode.
  */
 
+disableSerialization;
+
 if ([player] call fnc_isAdmin) then
 {
     if (vehicle player != player) then

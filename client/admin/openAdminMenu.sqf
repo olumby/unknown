@@ -3,6 +3,7 @@
  */
 
 #include "adminMenu_defines.hpp"
+disableSerialization;
 
 if ([player] call fnc_isAdmin) then
 {
