@@ -67,8 +67,8 @@ class PlayerHud
 
             #define hudFlag1W 0.10
             #define hudFlag1H hudFlagH
-            #define hudFlag1Y hudFlagY
-            #define hudFlag1X ((safeZoneX + safeZoneW) - hudFlag1W - hudFlag2W - hudFlag3W - (edgeOffsetX * 1.5))
+            #define hudFlag1Y (hudFlagY - hudFlagH - (edgeOffsetY * 0.5))
+            #define hudFlag1X ((safeZoneX + safeZoneW) - hudFlag1W - (edgeOffsetX * 0.5))
 
             x = hudFlag1X;
             y = hudFlag1Y;
@@ -86,8 +86,8 @@ class PlayerHud
 
             #define hudFlag0W 0.10
             #define hudFlag0H hudFlagH
-            #define hudFlag0Y hudFlagY
-            #define hudFlag0X ((safeZoneX + safeZoneW) - hudFlag0W - hudFlag1W - hudFlag2W - hudFlag3W - (edgeOffsetX * 2))
+            #define hudFlag0Y (hudFlagY - hudFlagH - (edgeOffsetY * 0.5))
+            #define hudFlag0X ((safeZoneX + safeZoneW) - hudFlag0W - hudFlag1W - edgeOffsetX)
 
             x = hudFlag0X;
             y = hudFlag0Y;
@@ -95,17 +95,17 @@ class PlayerHud
             h = hudFlag0H;
         };
 
-        // Player info
+        //Player info
         class healthBar: RscProgress
         {
             idc = health_bar;
             colorFrame[] = {0,0,0,0.3};
             colorBar[] = {0.73,0.12,0.02,0.8};
 
-            #define healthBarW 0.2
+            #define healthBarW (0.2 + (edgeOffsetX * 0.5))
             #define healthBarH 0.02
             #define healthBarX ((safeZoneX + safeZoneW) - healthBarW - (edgeOffsetX * 0.5))
-            #define healthBarY (hudFlagY - healthBarH - edgeOffsetY)
+            #define healthBarY ((hudFlagY - (hudFlagH)) - healthBarH - edgeOffsetY)
 
             x = healthBarX;
             y = healthBarY;
@@ -119,10 +119,10 @@ class PlayerHud
             size = 0.03;
             font = "PuristaSemibold";
 
-            #define moneyDisplayBankW 1
+            #define moneyDisplayBankW (0.2 + (edgeOffsetX * 0.5))
             #define moneyDisplayBankH 0.04
             #define moneyDisplayBankX ((safeZoneX + safeZoneW) - moneyDisplayBankW - (edgeOffsetX * 0.5))
-            #define moneyDisplayBankY (hudFlagY - moneyDisplayBankH - healthBarH - (edgeOffsetY * 1.5))
+            #define moneyDisplayBankY ((hudFlagY - (hudFlagH)) - moneyDisplayBankH - healthBarH - (edgeOffsetY * 1.5))
 
             x = moneyDisplayBankX;
             y = moneyDisplayBankY;
@@ -136,10 +136,10 @@ class PlayerHud
             size = 0.03;
             font = "PuristaSemibold";
 
-            #define moneyDisplayHandW 1
+            #define moneyDisplayHandW (0.2 + (edgeOffsetX * 0.5))
             #define moneyDisplayHandH 0.04
             #define moneyDisplayHandX ((safeZoneX + safeZoneW) - moneyDisplayHandW - (edgeOffsetX * 0.5))
-            #define moneyDisplayHandY (hudFlagY - moneyDisplayHandH - moneyDisplayBankH - healthBarH - (edgeOffsetY * 1.5))
+            #define moneyDisplayHandY ((hudFlagY - (hudFlagH)) - moneyDisplayHandH - moneyDisplayBankH - healthBarH - (edgeOffsetY * 1.5))
 
             x = moneyDisplayHandX;
             y = moneyDisplayHandY;
