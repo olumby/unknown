@@ -39,6 +39,7 @@ disableChannels[]={0,1,2,6};
 class RscTitles
 {
     #include "client\dialogs\playerHud\playerHud.hpp"
+    #include "client\dialogs\playerFeed\playerFeed.hpp"
     #include "client\dialogs\flagCapture\flagCapture.hpp"
 };
 
