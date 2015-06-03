@@ -107,7 +107,7 @@ class RscText
     colorText[] = {1,1,1,.7};
     text = "";
     shadow = 2;
-    font = "Purista";
+    font = "PuristaMedium";
     sizeEx = 0.02300;
     fixedWidth = 0;
     x = 0;
@@ -226,7 +226,7 @@ class RscListBox
     tooltipColorText[] = {1, 1, 1, 1};
     tooltipColorBox[] = {1, 1, 1, 1};
     tooltipColorShade[] = {0, 0, 0, 0.65};
-    font = "Purista";
+    font = "PuristaMedium";
     sizeEx = 0.035;
     shadow = 0;
     colorShadow[] = {0, 0, 0, 0.5};
@@ -249,7 +249,7 @@ class RscListNBox {
     style = 16;
     type = CT_LISTNBOX;
     shadow = 0;
-    font = "Purista";
+    font = "PuristaMedium";
     sizeEx = 0.035;
     color[] = {0.95,0.95,0.95,1};
     colorText[] = {1,1,1,1.0};
@@ -304,7 +304,7 @@ class RscCombo {
     color[] = {1, 1, 1, 1};
     colorActive[] = {1, 0, 0, 1};
     colorDisabled[] = {1, 1, 1, 0.25};
-    font = "Purista";
+    font = "PuristaMedium";
     sizeEx = 0.035;
     class ComboScrollBar {
         color[] = {1,1,1,0.6};
@@ -335,7 +335,7 @@ class RscBackground
     idc = -1;
     type = CT_STATIC;
     style = ST_CENTER;
-    font = "Purista";
+    font = "PuristaMedium";
     sizeEx = 0.03;
     colorBackground[] = {0,0,0,1};
     colorText[] = {1,1,1,1};
@@ -362,7 +362,7 @@ class RscStructuredText
     size = 0.03;
     text = "";
     class Attributes {
-        font = "Purista";
+        font = "PuristaMedium";
         color = "#ffffff";
         align = "left";
         valign = "middle";

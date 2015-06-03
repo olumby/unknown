@@ -39,7 +39,7 @@ _uavUnits = allUnitsUAV;
             _color = [playerSide] call fnc_colorForSide;
             _iconSize = 0.6 * (1 - (_distance / (call friendlyTagDrawDistance))) max 0.4 min 0.6;
 
-            drawIcon3D [_icon, _color, _pos, _iconSize, _iconSize, 0, "", 1, 0.3, "Purista"];
+            drawIcon3D [_icon, _color, _pos, _iconSize, _iconSize, 0, "", 1, 0.3, "PuristaMedium"];
 
             if ( (cursorTarget == vehicle _x) && (_distance < (call friendlyNameTagDrawDistance)) && !((vehicle _x ) in _uavUnits)) then
             {
