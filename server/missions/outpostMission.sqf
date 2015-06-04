@@ -10,8 +10,15 @@ if (isServer) then {
     _missionPosition = [_this, 0, [0,0,0]] call BIS_fnc_param;
     _aiCount = [_this, 1, 5] call BIS_fnc_param;
 
-    _furnature = [
+    _ammoBoxes =
+    [
+        [35, "B_CargoNet_01_ammo_f", [3,-4,0]]
+    ];
+
+    _furniture =
+    [
         [0, "Land_HBarrier_5_F", [0,0,0]],
+        [0, "Land_LampShabby_F", [1.5,-13.5,0]],
         [90, "Land_HBarrier_5_F", [0.2,-1.4,0]],
         [0, "Land_HBarrier_5_F", [5.7,0,0]],
         [90, "Land_HBarrier_5_F", [10.0,-1.4,0]],
@@ -27,7 +34,7 @@ if (isServer) then {
         [0, "Land_MapBoard_F", [5.0,-1.5,0]]
     ];
 
-    _furnatureObj = [];
+    _furnitureObj = [];
     {
         _dir = _x select 0;
         _class = _x select 1;
@@ -40,8 +47,8 @@ if (isServer) then {
         _object setPos _newPos;
         _object setVariable ["R3F_LOG_disabled", true];
 
-        _furnatureObj pushBack _object;
-    } forEach _furnature;
+        _furnitureObj pushBack _object;
+    } forEach _furniture;
 
     _missionGroup = createGroup CIVILIAN;
 
