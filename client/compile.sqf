@@ -27,7 +27,9 @@ fnc_isAdmin = compile preprocessFileLineNumbers "client\functions\fnc_isAdmin.sq
 fnc_formatNumber = compile preprocessFileLineNumbers "client\functions\fnc_formatNumber.sqf";
 fnc_haloJump = compile preprocessFileLineNumbers "client\functions\fnc_haloJump.sqf";
 fnc_colorForSide = compile preprocessFileLineNumbers "client\functions\fnc_colorForSide.sqf";
+fnc_adjustPlayerMoney = compile preprocessFileLineNumbers "client\functions\fnc_adjustPlayerMoney.sqf";
 fnc_rewardPlayer = compile preprocessFileLineNumbers "client\functions\fnc_rewardPlayer.sqf";
+
 
 // Events
 e_drawMapIcons = compile preprocessFileLineNumbers "client\events\e_drawMapIcons.sqf";

@@ -18,6 +18,4 @@ if (count _localization > 0) then
 };
 
 // Add money to player
-_currentCash = profileNamespace getVariable ["uk_var_cashOnHand", 0];
-profileNamespace setVariable ["uk_var_cashOnHand", (_currentCash + _money)];
-saveProfileNamespace;
+[_money, false] call fnc_adjustPlayerMoney;
