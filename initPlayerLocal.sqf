@@ -40,6 +40,11 @@ call compile preprocessFileLineNumbers "client\compile.sqf";
 // Add kill event handler
 player addMPEventHandler ["MPKilled", { call e_playerKilled } ];
 
+// Locked ammo boxes event handler
+// TODO: Find way to block rearm options
+player addEventHandler ["InventoryOpened", { call e_lockedInventory }];
+player addEventHandler ["Take", { call e_lockedInventory }];
+
 // Setup flags
 [] execVM "client\flags\init.sqf";
 

@@ -34,21 +34,8 @@ if (isServer) then {
         [0, "Land_MapBoard_F", [5.0,-1.5,0]]
     ];
 
-    _furnitureObj = [];
-    {
-        _dir = _x select 0;
-        _class = _x select 1;
-        _pos = _x select 2;
-
-        _newPos = [(_missionPosition select 0) + (_pos select 0), (_missionPosition select 1) + (_pos select 1), (_missionPosition select 2) + (_pos select 2)];
-
-        _object = createVehicle [_class, _newPos, [], 0, "NONE"];
-        _object setDir _dir;
-        _object setPos _newPos;
-        _object setVariable ["R3F_LOG_disabled", true];
-
-        _furnitureObj pushBack _object;
-    } forEach _furniture;
+    _furnitureObj = [_missionPosition, _furniture] call fnc_createObjects;
+    _ammoObj = [_missionPosition, _ammoBoxes, true, resistance] call fnc_createObjects;
 
     _missionGroup = createGroup resistance;
 

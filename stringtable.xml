@@ -23,5 +23,11 @@
                 <English>Objective Kill</English>
             </Key>
         </Container>
+        <Container name="Missions">
+            <Key ID="str_object_locked">
+                <Original>Inventory Locked</Original>
+                <English>Inventory Locked</English>
+            </Key>
+        </Container>
     </Package>
 </Project>

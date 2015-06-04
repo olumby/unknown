@@ -35,3 +35,4 @@ e_drawMapIcons = compile preprocessFileLineNumbers "client\events\e_drawMapIcons
 e_drawPlayerIcons = compile preprocessFileLineNumbers "client\events\e_drawPlayerIcons.sqf";
 e_keyDown = compile preprocessFileLineNumbers "client\events\e_keyDown.sqf";
 e_playerKilled = compile preprocessFileLineNumbers "client\events\e_playerKilled.sqf";
+e_lockedInventory = compile preprocessFileLineNumbers "client\events\e_lockedInventory.sqf";
