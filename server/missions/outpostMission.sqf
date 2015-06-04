@@ -37,17 +37,23 @@ if (isServer) then {
     _furnitureObj = [_missionPosition, _furniture] call fnc_createObjects;
     _ammoObj = [_missionPosition, _ammoBoxes, true, resistance] call fnc_createObjects;
 
+    _aiPos = [((_missionPosition select 0) + 5), ((_missionPosition select 1) - 6), (_missionPosition select 2)];
     _missionGroup = createGroup resistance;
 
     for "_i" from 1 to _aiCount do
     {
         _availableLoadouts = ["aiRifle1","aiRifle2","aiRifle3"];
 
-        _unit = _missionGroup createUnit ["i_soldier_universal_f", _missionPosition, [], 0, "Form"];
+        _unit = _missionGroup createUnit ["i_soldier_universal_f", _aiPos, [], 0, "Form"];
         _loadout = _availableLoadouts select (floor (random (count _availableLoadouts)));
         [_unit, missionConfigFile >> "CfgRespawnInventory" >> _loadout] call BIS_fnc_loadInventory;
     };
 
+    _missionGroup setBehaviour "SAFE";
+    _missionGroup setCombatMode "RED";
+    _missionWp = _missionGroup addWaypoint [_aiPos, 0];
+    _missionWp setWaypointType "HOLD";
+    _missionWp setWaypointFormation "WEDGE";
 
     // _sv = [_spawnPos, _spawnDir, _vehClass, EAST] call BIS_fnc_spawnVehicle;
     //
