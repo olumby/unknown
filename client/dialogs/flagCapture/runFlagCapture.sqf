@@ -29,6 +29,13 @@ while {true} do
 
             _progressColor = [playerSide, 0.6] call fnc_colorForSide;
             _flagProgress ctrlSetTextColor _progressColor;
+
+            player setVariable ["isCapturingFlag", true];
+        };
+        if ( (_flagPossession select 3) == (side player) && player getVariable ["isCapturingFlag", false] ) then
+        {
+            ["flag_capture", (call moneyFlagCapture)] call fnc_rewardPlayer;
+            player setVariable ["isCapturingFlag", false]
         };
     };
     sleep 0.5;

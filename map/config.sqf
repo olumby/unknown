@@ -18,7 +18,7 @@ friendlyNameTagDrawDistance = compileFinal "50";
 
 // Flag scoring
 flagPayoutTime = compileFinal "40";
-moneyCapture = compileFinal "2000";
+moneyFlagCapture = compileFinal "2000";
 moneyFlagDefence = compileFinal "500";
 moneyFlagAttack = compileFinal "100";
 moneyFlagDefKill = compileFinal "200";
