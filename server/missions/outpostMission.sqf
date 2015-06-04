@@ -50,13 +50,13 @@ if (isServer) then {
         _furnitureObj pushBack _object;
     } forEach _furniture;
 
-    _missionGroup = createGroup CIVILIAN;
+    _missionGroup = createGroup resistance;
 
     for "_i" from 1 to _aiCount do
     {
         _availableLoadouts = ["aiRifle1","aiRifle2","aiRifle3"];
 
-        _unit = _missionGroup createUnit ["c_man_1", _missionPosition, [], 0, "Form"];
+        _unit = _missionGroup createUnit ["i_soldier_universal_f", _missionPosition, [], 0, "Form"];
         _loadout = _availableLoadouts select (floor (random (count _availableLoadouts)));
         [_unit, missionConfigFile >> "CfgRespawnInventory" >> _loadout] call BIS_fnc_loadInventory;
     };
