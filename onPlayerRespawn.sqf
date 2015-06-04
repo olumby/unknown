@@ -9,9 +9,6 @@ waitUntil { alive player && isNil "BIS_fnc_respawnMenuPosition_positions" };
 player enableFatigue false;
 enableSentences false;
 
-// Fix setFriend civilian Ammo Boxes
-player addAction [(localize "str_a3_gear1"), { if (cursorTarget isKindOf "reammobox_f") then { (_this select 1) action ["Gear", cursorTarget]; }; }, [], 0, false, false, "", "(cursorTarget isKindOf 'reammobox_f') && (_this distance cursorTarget < 3)"];
-
 // Respawn loadouts
 if (player getVariable ["BIS_revive_incapacitated", false]) then
 {
