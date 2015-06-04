@@ -9,25 +9,29 @@ disableSerialization;
 
 _message = [_this, 0, ""] call BIS_fnc_param;
 
-if (count _message > 0) then
+1002 cutRsc ["PlayerFeed", "PLAIN", 0, false];
+_display = uiNameSpace getVariable "PlayerFeed";
+_playerFeed = _display displayCtrl player_feed;
+
+_messages = missionNamespace getVariable ["playerFeedInformation", []];
+
+_newMessages = [];
 {
-    1002 cutRsc ["PlayerFeed", "PLAIN", 0, false];
+    if !(time - (_x select 1) > 10) then { _newMessages pushBack _x };
+} forEach _messages;
 
-    _display = uiNameSpace getVariable "PlayerFeed";
-    _playerFeed = _display displayCtrl player_feed;
+// Add new message
+if (count _message > 0) then { _newMessages pushBack [_message, time] };
 
-    _messages = missionNamespace getVariable ["playerFeedInformation", ["","","","",""]];
-    _messages pushBack _message;
-    reverse _messages;
-    _messages = _messages select [0, 5];
-    reverse _messages;
+missionNamespace setVariable ["playerFeedInformation", _newMessages];
 
-    _displayMessages = [];
-    {
-        _displayMessages pushBack (parseText ("<t align='right'>" + _x + "</t><br />"));
-    } forEach _messages;
-
-    _playerFeed ctrlSetStructuredText (composeText _displayMessages);
-
-    missionNamespace setVariable ["playerFeedInformation", _messages];
+_feedComposition = [];
+if (count _newMessages < 5) then
+{
+    for "_i" from 1 to (5 - (count _newMessages)) do { _feedComposition pushBack lineBreak };
 };
+{
+    _feedComposition pushBack (parseText ("<t align='right'>" + (_x select 0) + "</t><br />"));
+} forEach _newMessages;
+
+_playerFeed ctrlSetStructuredText (composeText _feedComposition);
