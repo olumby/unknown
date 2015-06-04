@@ -16,12 +16,12 @@ while {true} do
             _flagIndex = player getVariable ["flagIndex", 0];
             _flagPossession = flagPossession select _flagIndex;
             if (_flagPossession select 3 == playerSide) then {
-                ["flag_defence", (call moneyFlagDefence)] call fnc_addPlayerPoints;
+                ["flag_defence", (call moneyFlagDefence)] call fnc_rewardPlayer;
             };
 
             if (player getVariable ["inOuterFlagZone", false] && player getVariable ["inFlagZone", false] && _flagPossession select 3 != playerSide) then
             {
-                ["flag_attack", (call moneyFlagAttack)] call fnc_addPlayerPoints;
+                ["flag_attack", (call moneyFlagAttack)] call fnc_rewardPlayer;
             };
         };
 
