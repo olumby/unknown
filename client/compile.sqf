@@ -30,8 +30,8 @@ fnc_colorForSide = compile preprocessFileLineNumbers "client\functions\fnc_color
 fnc_adjustPlayerMoney = compile preprocessFileLineNumbers "client\functions\fnc_adjustPlayerMoney.sqf";
 fnc_rewardPlayer = compile preprocessFileLineNumbers "client\functions\fnc_rewardPlayer.sqf";
 
-
 // Events
 e_drawMapIcons = compile preprocessFileLineNumbers "client\events\e_drawMapIcons.sqf";
 e_drawPlayerIcons = compile preprocessFileLineNumbers "client\events\e_drawPlayerIcons.sqf";
 e_keyDown = compile preprocessFileLineNumbers "client\events\e_keyDown.sqf";
+e_playerKilled = compile preprocessFileLineNumbers "client\events\e_playerKilled.sqf";

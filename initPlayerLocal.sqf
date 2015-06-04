@@ -37,6 +37,9 @@ call compile preprocessFileLineNumbers "client\compile.sqf";
     _playerIconsEh = addMissionEventHandler ["Draw3D", { call e_drawPlayerIcons } ];
 };
 
+// Add kill event handler
+player addMPEventHandler ["MPKilled", { call e_playerKilled } ];
+
 // Setup flags
 [] execVM "client\flags\init.sqf";
 
