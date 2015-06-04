@@ -1,5 +1,6 @@
 // Player
 runPlayerHud = compile preprocessFileLineNumbers "client\dialogs\playerHud\runPlayerHud.sqf";
+updatePlayerFeed = compile preprocessFileLineNumbers "client\dialogs\playerFeed\updatePlayerFeed.sqf";
 
 // Vehicle Store
 vehicleStoreFilter = compile preprocessFileLineNumbers "client\dialogs\vehicleStore\vehicleStoreFilter.sqf";
@@ -15,17 +16,18 @@ gunStoreChangeQty = compile preprocessFileLineNumbers "client\dialogs\gunStore\g
 buyWeapons = compile preprocessFileLineNumbers "client\dialogs\gunStore\buyWeapons.sqf";
 
 // Admin
-fnc_isAdmin = compile preprocessFileLineNumbers "client\functions\fnc_isAdmin.sqf";
 openAdminMenu = compile preprocessFileLineNumbers "client\admin\openAdminMenu.sqf";
 
 // Flags
 flagFinance = compile preprocessFileLineNumbers "client\flags\flagFinance.sqf";
 runFlagCapture = compile preprocessFileLineNumbers "client\dialogs\flagCapture\runFlagCapture.sqf";
 
-// Misc
+// Functions
+fnc_isAdmin = compile preprocessFileLineNumbers "client\functions\fnc_isAdmin.sqf";
 fnc_formatNumber = compile preprocessFileLineNumbers "client\functions\fnc_formatNumber.sqf";
 fnc_haloJump = compile preprocessFileLineNumbers "client\functions\fnc_haloJump.sqf";
 fnc_colorForSide = compile preprocessFileLineNumbers "client\functions\fnc_colorForSide.sqf";
+fnc_addPlayerPoints = compile preprocessFileLineNumbers "client\functions\fnc_addPlayerPoints.sqf";
 
 // Events
 e_drawMapIcons = compile preprocessFileLineNumbers "client\events\e_drawMapIcons.sqf";

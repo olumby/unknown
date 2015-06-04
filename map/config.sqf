@@ -15,3 +15,10 @@ pinkColor = compileFinal str [0.75,0.00,0.75,1.00];
 heliSpawnAltitude = compileFinal "250";
 friendlyTagDrawDistance = compileFinal "500";
 friendlyNameTagDrawDistance = compileFinal "50";
+
+// Flag scoring
+moneyCapture = compileFinal "2000";
+moneyFlagDefence = compileFinal "500";
+moneyFlagAttack = compileFinal "100";
+moneyFlagDefKill = compileFinal "200";
+moneyFlagAtkKill = compileFinal "100";

@@ -1,13 +1,13 @@
 /*
  * Update the player feed with most recent information.
  *
- * Params: [<message: String/Boolean>]
+ * Params: [<message: String>]
  */
 
 #include "playerFeed_defines.hpp"
 disableSerialization;
 
-_message = [_this, 0, ""] call BIS_fnc_param;
+_message = [_this, 0, "", [""]] call BIS_fnc_param;
 
 1002 cutRsc ["PlayerFeed", "PLAIN", 0, false];
 _display = uiNameSpace getVariable "PlayerFeed";
@@ -22,6 +22,10 @@ _newMessages = [];
 
 // Add new message
 if (count _message > 0) then { _newMessages pushBack [_message, time] };
+
+reverse _newMessages;
+_newMessages = _newMessages select [0, 5];
+reverse _newMessages;
 
 missionNamespace setVariable ["playerFeedInformation", _newMessages];
 

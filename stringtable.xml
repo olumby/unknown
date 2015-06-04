@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="Unknown">
+    <Package name="Unknown">
+        <Container name="Flags">
+            <Key ID="str_cmd_flag_capture">
+                <Original>Flag Captured</Original>
+                <English>Flag Captured</English>
+            </Key>
+            <Key ID="str_cmd_flag_attack">
+                <Original>Objective Attack</Original>
+                <English>Objective Attack</English>
+            </Key>
+            <Key ID="str_cmd_flag_defence">
+                <Original>Objective Defence</Original>
+                <English>Objective Defence</English>
+            </Key>
+            <Key ID="str_cmd_flag_attack_kill">
+                <Original>Objective Kill</Original>
+                <English>Objective Kill</English>
+            </Key>
+            <Key ID="str_cmd_flag_defence_kill">
+                <Original>Objective Kill</Original>
+                <English>Objective Kill</English>
+            </Key>
+        </Container>
+    </Package>
+</Project>
