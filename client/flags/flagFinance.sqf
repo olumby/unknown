@@ -7,7 +7,7 @@ waitUntil { !isNil "flagPossession" };
 while {true} do
 {
     _curTime = time;
-    _lastPay = player getVariable ["lastPayTime", _curTime - (call flagPayoutTime)];
+    _lastPay = player getVariable ["lastPayTime", (_curTime - (call flagPayoutTime))];
 
     if( _curTime >= _lastPay + (call flagPayoutTime)) then
     {
@@ -16,12 +16,12 @@ while {true} do
             _flagIndex = player getVariable ["flagIndex", 0];
             _flagPossession = flagPossession select _flagIndex;
             if (_flagPossession select 3 == playerSide) then {
-                ["flag_attack", (call moneyFlagDefence)] call fnc_addPlayerPoints;
+                ["flag_defence", (call moneyFlagDefence)] call fnc_addPlayerPoints;
             };
 
             if (player getVariable ["inOuterFlagZone", false] && player getVariable ["inFlagZone", false] && _flagPossession select 3 != playerSide) then
             {
-                ["flag_defence", (call moneyFlagAttack)] call fnc_addPlayerPoints;
+                ["flag_attack", (call moneyFlagAttack)] call fnc_addPlayerPoints;
             };
         };
 
