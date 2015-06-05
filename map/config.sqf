@@ -23,3 +23,6 @@ moneyFlagDefence = compileFinal "300";
 moneyFlagAttack = compileFinal "100";
 moneyFlagDefKill = compileFinal "100";
 moneyFlagAtkKill = compileFinal "50";
+
+// missionStart
+missionMaxLength = compileFinal "120";

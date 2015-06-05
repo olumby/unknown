@@ -55,22 +55,24 @@ if (isServer) then {
     _missionWp setWaypointType "HOLD";
     _missionWp setWaypointFormation "WEDGE";
 
-    // _sv = [_spawnPos, _spawnDir, _vehClass, EAST] call BIS_fnc_spawnVehicle;
-    //
-    // _veh = _sv select 0;
-    // _grp = _sv select 2;
-    // _grp setBehaviour "CARELESS";
-    //
-    // _wp = _grp addWaypoint [_destPos, 0];
-    // _wp setWaypointType "MOVE";
-    // _wp setWaypointSpeed "LIMITED";
+    _missionStartTime = diag_tickTime;
 
-    // waitUntil{ !canMove _veh OR {alive _x} count crew _veh == 0};
-    // sleep 10;
-    // {deleteVehicle _x} forEach crew _veh;
-    // deletevehicle _veh;
+    waitUntil { (({ alive _x } count units _missionGroup) == 0) || ((diag_tickTime - _missionStartTime) > (call missionMaxLength)) };
 
-    // {deleteVehicle _x} forEach units _veh;
+    _success = (({ alive _x } count units _missionGroup) == 0);
 
-    // deleteGroup _grp;
+    if (_success) then
+    {
+        diag_log "Mission Completeted";
+
+        // unlock base, ammobox and remove indie respawn option
+    }
+    else
+    {
+        diag_log "Mission Failed";
+
+        // tidy up. Delete base, ammobox, and indie respawn option
+    };
+
+    // delete group
 };
