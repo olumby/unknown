@@ -12,7 +12,7 @@ if (isServer) then {
 
     _ammoBoxes =
     [
-        [35, "B_CargoNet_01_ammo_f", [3,-4,0]]
+        [35, "I_CargoNet_01_ammo_f", [3,-4,0]]
     ];
 
     _furniture =
