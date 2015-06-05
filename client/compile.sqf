@@ -31,9 +31,10 @@ fnc_adjustPlayerMoney = compile preprocessFileLineNumbers "client\functions\fnc_
 fnc_rewardPlayer = compile preprocessFileLineNumbers "client\functions\fnc_rewardPlayer.sqf";
 
 // Events
-registerEvents = compile preprocessFileLineNumbers "client\events\registerEvents.sqf"; 
+registerEvents = compile preprocessFileLineNumbers "client\events\registerEvents.sqf";
 e_drawMapIcons = compile preprocessFileLineNumbers "client\events\e_drawMapIcons.sqf";
 e_drawPlayerIcons = compile preprocessFileLineNumbers "client\events\e_drawPlayerIcons.sqf";
 e_keyDown = compile preprocessFileLineNumbers "client\events\e_keyDown.sqf";
 e_playerKilled = compile preprocessFileLineNumbers "client\events\e_playerKilled.sqf";
 e_lockedInventory = compile preprocessFileLineNumbers "client\events\e_lockedInventory.sqf";
+e_pvarMissionNotification = compile preprocessFileLineNumbers "client\events\e_pvarMissionNotification.sqf";

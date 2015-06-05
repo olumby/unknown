@@ -32,5 +32,5 @@ player addMPEventHandler ["MPKilled", { call e_playerKilled } ];
 player addEventHandler ["InventoryOpened", { call e_lockedInventory }];
 player addEventHandler ["Take", { call e_lockedInventory }];
 
-
 // Public variable events.
+"bc_missionNotification" addPublicVariableEventHandler { call e_pvarMissionNotification };

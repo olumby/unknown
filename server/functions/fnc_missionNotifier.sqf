@@ -10,8 +10,8 @@ _pos = [_this, 2, [0,0,0], [[]]] call BIS_fnc_param;
 _notification = [_this, 3, [], [[]]] call BIS_fnc_param;
 
 // Set up notification broadcast
-bc_notification = _notification;
-publicVariable "bc_notification";
+bc_missionNotification = _notification;
+publicVariable "bc_missionNotification";
 
 // add/remove mission from active array
 _bc_activeMissions = missionNamespace getVariable ["bc_activeMissions", []];
@@ -22,5 +22,5 @@ _new_bc_activeMissions = switch (_type) do
     default { _bc_activeMissions };
 };
 
-missionNamespace setVariable ["bc_activeMissions", _new_bc_activeMissions]
+missionNamespace setVariable ["bc_activeMissions", _new_bc_activeMissions];
 publicVariable "bc_activeMissions";
