@@ -56,6 +56,7 @@ if (isServer) then {
     _missionWp setWaypointFormation "WEDGE";
 
     _missionStartTime = diag_tickTime;
+    ["start", "outpost", _missionPosition, [[west,"attack"],[east,"attack"],[resistance,"defend"]]] call fnc_missionNotifier;
 
     waitUntil { (({ alive _x } count units _missionGroup) == 0) || ((diag_tickTime - _missionStartTime) > (call missionMaxLength)) };
 
