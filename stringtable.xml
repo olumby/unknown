@@ -29,7 +29,7 @@
                 <English>Inventory Locked</English>
             </Key>
         </Container>
-        <Container name="MissionsCommon">
+        <Container name="MissionOutpost">
             <Key ID="str_mission_outpost_title">
                 <Original>AAF Outpost</Original>
                 <English>AAF Outpost</English>
@@ -50,9 +50,13 @@
                 <Original>The outpost has been secured.</Original>
                 <English>The outpost has been secured.</English>
             </Key>
-            <Key ID="str_mission_outpost_failed">
+            <Key ID="str_mission_outpost_lost">
                 <Original>You have failed, our outpost was lost.</Original>
                 <English>You have failed, our outpost was lost.</English>
+            </Key>
+            <Key ID="str_mission_outpost_failed">
+                <Original>You have failed to take out the AAF outpost.</Original>
+                <English>You have failed to take out the AAF outpost.</English>
             </Key>
         </Container>
     </Package>
