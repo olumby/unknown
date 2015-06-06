@@ -55,5 +55,11 @@ class CfgRespawnInventory
     #include "cfgRespawnInventory.hpp"
 };
 
+// Notifications
+class CfgNotifications
+{
+    #include "cfgNotifications.hpp"
+};
+
 // Third Party Stuff
 #include "external\R3F_LOG\desc_include.h"

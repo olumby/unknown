@@ -10,7 +10,7 @@ _pos = [_this, 2, [0,0,0], [[]]] call BIS_fnc_param;
 _notification = [_this, 3, [], [[]]] call BIS_fnc_param;
 
 // Set up notification broadcast
-bc_missionNotification = _notification;
+bc_missionNotification = [_name, _pos, _notification];
 publicVariable "bc_missionNotification";
 
 // add/remove mission from active array

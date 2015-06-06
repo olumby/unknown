@@ -23,10 +23,36 @@
                 <English>Objective Kill</English>
             </Key>
         </Container>
-        <Container name="Missions">
+        <Container name="MissionsCommon">
             <Key ID="str_object_locked">
                 <Original>Inventory Locked</Original>
                 <English>Inventory Locked</English>
+            </Key>
+        </Container>
+        <Container name="MissionsCommon">
+            <Key ID="str_mission_outpost_title">
+                <Original>AAF Outpost</Original>
+                <English>AAF Outpost</English>
+            </Key>
+            <Key ID="str_mission_outpost_attack">
+                <Original>An AAF outpost has been spotted, take it out.</Original>
+                <English>An AAF outpost has been spotted, take it out.</English>
+            </Key>
+            <Key ID="str_mission_outpost_defend">
+                <Original>Defend out outpost at all costs.</Original>
+                <English>Defend out outpost at all costs.</English>
+            </Key>
+            <Key ID="str_mission_outpost_completed">
+                <Original>The AAF outpost has been neutralized.</Original>
+                <English>The AAF outpost has been neutralized.</English>
+            </Key>
+            <Key ID="str_mission_outpost_defended">
+                <Original>The outpost has been secured.</Original>
+                <English>The outpost has been secured.</English>
+            </Key>
+            <Key ID="str_mission_outpost_failed">
+                <Original>You have failed, our outpost was lost.</Original>
+                <English>You have failed, our outpost was lost.</English>
             </Key>
         </Container>
     </Package>

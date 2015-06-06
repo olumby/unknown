@@ -56,7 +56,7 @@ if (isServer) then {
     _missionWp setWaypointFormation "WEDGE";
 
     _missionStartTime = diag_tickTime;
-    ["start", "outpost", _missionPosition, [[west,"attack"],[east,"attack"],[resistance,"defend"]]] call fnc_missionNotifier;
+    ["add", "outpost", _missionPosition, [[west,"attack"],[east,"attack"],[resistance,"defend"]]] call fnc_missionNotifier;
 
     waitUntil { (({ alive _x } count units _missionGroup) == 0) || ((diag_tickTime - _missionStartTime) > (call missionMaxLength)) };
 
@@ -64,15 +64,13 @@ if (isServer) then {
 
     if (_success) then
     {
-        diag_log "Mission Completeted";
-
         // unlock base, ammobox and remove indie respawn option
+        ["remove", "outpost", _missionPosition, [[west,"completed"],[east,"completed"],[resistance,"failed"]]] call fnc_missionNotifier;
     }
     else
     {
-        diag_log "Mission Failed";
-
         // tidy up. Delete base, ammobox, and indie respawn option
+        ["remove", "outpost", _missionPosition, [[west,"failed"],[east,"failed"],[resistance,"defended"]]] call fnc_missionNotifier;
     };
 
     // delete group
