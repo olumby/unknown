@@ -73,8 +73,9 @@ if (isServer) then {
         // unlock base objects, delete AI
         [_furnitureObj] call fnc_unlockObjects;
         { deleteVehicle _x } forEach (units _missionGroup);
-        ["hold", "outpost", _missionPosition, [[west,"failed"],[east,"failed"],[resistance,"defended"]]] call fnc_missionNotifier;
+        ["remove", "outpost", _missionPosition, [[west,"failed"],[east,"failed"],[resistance,"defended"]]] call fnc_missionNotifier;
     };
 
     deleteGroup _missionGroup;
+    missionNamespace setVariable ["activeOutpost", [false, diag_tickTime]];
 };
