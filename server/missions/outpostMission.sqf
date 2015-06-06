@@ -12,46 +12,45 @@ if (isServer) then {
 
     _ammoBoxes =
     [
-        [35, "I_CargoNet_01_ammo_f", [3,-4,0]]
+        [0,"I_CargoNet_01_ammo_F",[-2,3,0]]
     ];
 
     _furniture =
     [
-        [0, "Land_HBarrier_5_F", [0,0,0]],
-        [0, "Land_LampShabby_F", [1.5,-13.5,0]],
-        [90, "Land_HBarrier_5_F", [0.2,-1.4,0]],
-        [0, "Land_HBarrier_5_F", [5.7,0,0]],
-        [90, "Land_HBarrier_5_F", [10.0,-1.4,0]],
-        [90, "Land_HBarrier_5_F", [0.2,-9,0]],
-        [90, "Land_HBarrier_5_F", [10.0,-9,0]],
-        [0, "Land_HBarrier_5_F", [0.0,-14.9,0]],
-        [0, "Land_HBarrier_5_F", [5.7,-14.9,0]],
-        [270, "Land_BagBunker_Small_F", [12.5,-7.4,0]],
-        [270, "Land_HBarrier_3_F", [-3.0,-8.5,0]],
-        [0, "CamoNet_INDP_F", [5.0,-2,0]],
-        [0, "Land_WoodenTable_large_F", [3.3,-11.5,0]],
-        [0, "Land_WoodenTable_large_F", [7.0,-11.5,0]],
-        [0, "Land_MapBoard_F", [5.0,-1.5,0]]
+        [90,"Land_HBarrier_3_F",[7,5,0]],
+        [270,"Land_BagBunker_Small_F",[8,0,0]],
+        [90,"Land_HBarrier_3_F",[7,-2.8,0]],
+        [0,"Land_HBarrier_5_F",[-4.8,-5,0]],
+        [0,"Land_HBarrier_5_F",[1,-5,0]],
+        [0,"Land_HBarrier_5_F",[-4.8,5,0]],
+        [0,"Land_HBarrier_5_F",[1,5,0]],
+        [90,"Land_HBarrier_3_F",[-6.2,5,0]],
+        [90,"Land_HBarrier_3_F",[-6.2,-3,0]],
+        [90,"Land_HBarrier_5_F",[-9,2,0]],
+        [315,"Land_PortableLight_single_F",[-4.5,3.5,0]],
+        [225,"Land_PortableLight_single_F",[-4.5,-3.5,0]],
+        [0,"CamoNet_INDP_open_F",[0,-0.5,0]],
+        [0,"Land_WoodenTable_large_F",[5,-2.5,0]],
+        [45,"MapBoard_altis_F",[5,3,0]]
     ];
 
     _furnitureObj = [_missionPosition, _furniture] call fnc_createObjects;
     _ammoObj = [_missionPosition, _ammoBoxes, true, resistance] call fnc_createObjects;
 
-    _aiPos = [((_missionPosition select 0) + 5), ((_missionPosition select 1) - 6), (_missionPosition select 2)];
     _missionGroup = createGroup resistance;
 
     for "_i" from 1 to _aiCount do
     {
         _availableLoadouts = ["aiRifle1","aiRifle2","aiRifle3"];
 
-        _unit = _missionGroup createUnit ["i_soldier_universal_f", _aiPos, [], 0, "Form"];
+        _unit = _missionGroup createUnit ["i_soldier_universal_f", _missionPosition, [], 0, "Form"];
         _loadout = _availableLoadouts select (floor (random (count _availableLoadouts)));
         [_unit, missionConfigFile >> "CfgRespawnInventory" >> _loadout] call BIS_fnc_loadInventory;
     };
 
     _missionGroup setBehaviour "SAFE";
     _missionGroup setCombatMode "RED";
-    _missionWp = _missionGroup addWaypoint [_aiPos, 0];
+    _missionWp = _missionGroup addWaypoint [_missionPosition, 0];
     _missionWp setWaypointType "HOLD";
     _missionWp setWaypointFormation "WEDGE";
 
@@ -64,14 +63,18 @@ if (isServer) then {
 
     if (_success) then
     {
-        // unlock base, ammobox and remove indie respawn option
-        ["remove", "outpost", _missionPosition, [[west,"completed"],[east,"completed"],[resistance,"failed"]]] call fnc_missionNotifier;
+        // unlock base objects, ammobox and remove indie respawn option
+        [_furnitureObj] call fnc_unlockObjects;
+        [_ammoObj, true] call fnc_unlockObjects;
+        ["remove", "outpost", _missionPosition, [[west,"completed"],[east,"completed"],[resistance,"lost"]]] call fnc_missionNotifier;
     }
     else
     {
-        // tidy up. Delete base, ammobox, and indie respawn option
-        ["remove", "outpost", _missionPosition, [[west,"failed"],[east,"failed"],[resistance,"defended"]]] call fnc_missionNotifier;
+        // unlock base objects, delete AI
+        [_furnitureObj] call fnc_unlockObjects;
+        { deleteVehicle _x } forEach (units _missionGroup);
+        ["hold", "outpost", _missionPosition, [[west,"failed"],[east,"failed"],[resistance,"defended"]]] call fnc_missionNotifier;
     };
 
-    // delete group
+    deleteGroup _missionGroup;
 };

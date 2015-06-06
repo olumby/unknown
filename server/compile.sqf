@@ -8,4 +8,5 @@ fnc_whenContested = compile preprocessFileLineNumbers "server\flags\fnc_whenCont
 
 // Functions
 fnc_createObjects = compile preprocessFileLineNumbers "server\functions\fnc_createObjects.sqf";
+fnc_unlockObjects = compile preprocessFileLineNumbers "server\functions\fnc_unlockObjects.sqf";
 fnc_missionNotifier = compile preprocessFileLineNumbers "server\functions\fnc_missionNotifier.sqf";
