@@ -39,8 +39,8 @@
                 <English>An AAF outpost has been spotted, take it out.</English>
             </Key>
             <Key ID="str_mission_outpost_defend">
-                <Original>Defend out outpost at all costs.</Original>
-                <English>Defend out outpost at all costs.</English>
+                <Original>Defend our outpost at all costs.</Original>
+                <English>Defend our outpost at all costs.</English>
             </Key>
             <Key ID="str_mission_outpost_completed">
                 <Original>The AAF outpost has been neutralized.</Original>
