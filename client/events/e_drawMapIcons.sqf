@@ -52,7 +52,7 @@ _storeIcons = _storeIcons + ([(call vehicleStores), "assets\image\vehicleStore.p
 _storeIcons = _storeIcons + ([(call serviceVehicles), "assets\image\serviceVehicle.paa"] call fnc_iconForStore);
 
 // Flags
-if(!isNil "flagInformation" && !isNil "flagPossession" ) then
+if (!isNil "flagInformation" && !isNil "flagPossession" ) then
 {
     {
         _possession = flagPossession select _forEachIndex;
@@ -62,5 +62,13 @@ if(!isNil "flagInformation" && !isNil "flagPossession" ) then
         _flagPath = format ["assets\image\flag%1.paa", _forEachIndex];
 
         _map drawIcon [(_dirPath + _flagPath), _color, getMarkerPos (_x select 0), 30, 30, 0];
-    } foreach flagInformation;
+    } forEach flagInformation;
+};
+
+// Missions
+if (!isNil "bc_activeMissions") then
+{
+    {
+        _map drawIcon ["\A3\ui_f\data\map\markers\nato\n_inf.paa", [1,1,1,1], (_x select 1), 30, 30, 0];
+    } forEach bc_activeMissions;
 };
