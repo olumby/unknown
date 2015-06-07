@@ -25,5 +25,5 @@ moneyFlagDefKill = compileFinal "100";
 moneyFlagAtkKill = compileFinal "50";
 
 // Missions
-missionMaxLength = compileFinal "120";
-missionCooldown = compileFinal "10";
+missionMaxLength = compileFinal "1200";
+missionCooldown = compileFinal "60";
