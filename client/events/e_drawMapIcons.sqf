@@ -69,6 +69,7 @@ if (!isNil "bc_activeMissions") then
 {
     {
         _filePath = "assets\image\objective.paa";
-        _map drawIcon [(_dirPath + _filePath), [1,1,1,1], (_x select 1), 24, 24, 0];
+        _text = if ((ctrlMapScale _map) < 0.08) then { localize (format ["str_mission_%1_title", (_x select 0)]) } else { "" };
+        _map drawIcon [(_dirPath + _filePath), [1,1,1,1], (_x select 1), 24, 24, 0, _text, false, 0.035, "PuristaSemiBold", "right"];
     } forEach bc_activeMissions;
 };
