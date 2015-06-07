@@ -17,8 +17,8 @@ publicVariable "bc_missionNotification";
 _bc_activeMissions = missionNamespace getVariable ["bc_activeMissions", []];
 _new_bc_activeMissions = switch (_type) do
 {
-    case "add": { _bc_activeMissions + [_name, _pos] };
-    case "remove": { _bc_activeMissions - [_name, _pos] };
+    case "add": { _bc_activeMissions + [[_name, _pos]] };
+    case "remove": { _bc_activeMissions - [[_name, _pos]] };
     default { _bc_activeMissions };
 };
 

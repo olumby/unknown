@@ -12,9 +12,9 @@ while { isServer } do
         if (diag_tickTime - (_activeOutpost select 1) > (call missionCooldown)) then
         {
             missionNamespace setVariable ["activeOutpost", [true, diag_tickTime]];
-            
+
             _outpost = _availableOutposts select (floor (random (count _availableOutposts)));
-            _availableOutposts = _availableOutposts - _outpost;
+            _availableOutposts = _availableOutposts - [_outpost];
 
             [_outpost, 6] execVM "server\missions\outpostMission.sqf";
         };
