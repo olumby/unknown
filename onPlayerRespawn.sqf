@@ -9,6 +9,8 @@ waitUntil { alive player && isNil "BIS_fnc_respawnMenuPosition_positions" };
 player enableFatigue false;
 enableSentences false;
 
+[player] call fnc_addActions;
+
 // Respawn loadouts
 if (player getVariable ["BIS_revive_incapacitated", false]) then
 {

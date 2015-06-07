@@ -35,6 +35,7 @@ disableChannels[]={0,1,2,6};
 #include "client\dialogs\helpers.hpp"
 #include "client\dialogs\vehicleStore\vehicleStore.hpp"
 #include "client\dialogs\gunStore\gunStore.hpp"
+#include "client\dialogs\cashMachine\cashMachine.hpp"
 #include "client\admin\adminMenu.hpp"
 class RscTitles
 {

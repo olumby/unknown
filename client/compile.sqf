@@ -15,6 +15,10 @@ gunStoreMainSelection = compile preprocessFileLineNumbers "client\dialogs\gunSto
 gunStoreChangeQty = compile preprocessFileLineNumbers "client\dialogs\gunStore\gunStoreChangeQty.sqf";
 buyWeapons = compile preprocessFileLineNumbers "client\dialogs\gunStore\buyWeapons.sqf";
 
+// Cash Machine
+openCashMachine = compile preprocessFileLineNumbers "client\dialogs\cashMachine\openCashMachine.sqf";
+performTransaction = compile preprocessFileLineNumbers "client\dialogs\cashMachine\performTransaction.sqf";
+
 // Admin
 openAdminMenu = compile preprocessFileLineNumbers "client\admin\openAdminMenu.sqf";
 
@@ -30,6 +34,7 @@ fnc_colorForSide = compile preprocessFileLineNumbers "client\functions\fnc_color
 fnc_adjustPlayerMoney = compile preprocessFileLineNumbers "client\functions\fnc_adjustPlayerMoney.sqf";
 fnc_rewardPlayer = compile preprocessFileLineNumbers "client\functions\fnc_rewardPlayer.sqf";
 fnc_addMapIcons = compile preprocessFileLineNumbers "client\functions\fnc_addMapIcons.sqf";
+fnc_addActions = compile preprocessFileLineNumbers "client\functions\fnc_addActions.sqf";
 
 // Events
 registerEvents = compile preprocessFileLineNumbers "client\events\registerEvents.sqf";

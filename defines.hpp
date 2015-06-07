@@ -371,3 +371,24 @@ class RscStructuredText
         size = "1";
     };
 };
+
+class RscEdit
+{
+    access = 0;
+     type = CT_EDIT;
+     style = ST_LEFT+ST_FRAME;
+     x = 0;
+     y = 0;
+     h = 0.04;
+     w = 0.2;
+     colorBackground[] = {1,1,1,0.1};
+     colorDisabled[] = {0,0,0,0};
+     colorText[] = {1,1,1,1};
+     colorSelection[] = {1,1,1,0.25};
+     font = "PuristaMedium";
+     sizeEx = 0.04;
+     autocomplete = "";
+     text = "";
+     size = 0.2;
+     shadow = 0;
+};
