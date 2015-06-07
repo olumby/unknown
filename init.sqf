@@ -3,6 +3,7 @@
 [] execVM "map\vehicleStores.sqf";
 [] execVM "map\gunStores.sqf";
 [] execVM "map\serviceVehicles.sqf";
+[] execVM "map\cashMachines.sqf";
 [] execVM "map\flags.sqf";
 
 // Third Party Stuff

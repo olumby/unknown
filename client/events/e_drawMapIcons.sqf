@@ -12,7 +12,6 @@ _uavUnits = allUnitsUAV;
         if ((crew (vehicle _x) select 0) == _x) then
         {
             _color = call playerColor;
-
             _icon = getText (configFile >> "CfgVehicles" >> typeOf (vehicle _x) >> "icon");
             if (_icon == "") then { _icon == "iconMan" };
 
@@ -30,27 +29,17 @@ _uavUnits = allUnitsUAV;
         };
     };
 } forEach allUnits;
-
-// Directory path for custom icons
-_missionStr = (str missionConfigFile);
-_dirPath = _missionStr select [0, (count _missionStr) - 15];
-
-// Stores
-fnc_iconForStore =
+// Static items
+[_map, (call gunStores), true, "assets\image\gunStore.paa"] call fnc_addMapIcons;
+[_map, (call vehicleStores), true, "assets\image\vehicleStore.paa"] call fnc_addMapIcons;
+[_map, (call serviceVehicles), true, "assets\image\serviceVehicle.paa"] call fnc_addMapIcons;
+if ((ctrlMapScale _map) < 0.15) then
 {
-    _array = _this select 0;
-    _image = _this select 1;
-    {
-        _marker = format ["%1_label", _x];
-        _pos = getMarkerPos _marker;
-
-        _map drawIcon [(_dirPath + _image), [1,1,1,1], _pos, 30, 30, 0];
-    } forEach _array;
+    [_map, (call cashMachines), false, "assets\image\cashMachine.paa", 18] call fnc_addMapIcons;
 };
 
-_storeIcons = ([(call gunStores), "assets\image\gunStore.paa"] call fnc_iconForStore);
-_storeIcons = _storeIcons + ([(call vehicleStores), "assets\image\vehicleStore.paa"] call fnc_iconForStore);
-_storeIcons = _storeIcons + ([(call serviceVehicles), "assets\image\serviceVehicle.paa"] call fnc_iconForStore);
+// Directory path for custom icons
+_dirPath = (str missionConfigFile) select [0, (count (str missionConfigFile)) - 15];
 
 // Flags
 if (!isNil "flagInformation" && !isNil "flagPossession" ) then
@@ -59,7 +48,6 @@ if (!isNil "flagInformation" && !isNil "flagPossession" ) then
         _possession = flagPossession select _forEachIndex;
         _color = [_possession select 3] call fnc_colorForSide;
         _flagPath = format ["assets\image\flag%1.paa", _forEachIndex];
-
         _map drawIcon [(_dirPath + _flagPath), _color, getMarkerPos (_x select 0), 30, 30, 0];
     } forEach flagInformation;
 };

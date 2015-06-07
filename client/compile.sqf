@@ -29,6 +29,7 @@ fnc_haloJump = compile preprocessFileLineNumbers "client\functions\fnc_haloJump.
 fnc_colorForSide = compile preprocessFileLineNumbers "client\functions\fnc_colorForSide.sqf";
 fnc_adjustPlayerMoney = compile preprocessFileLineNumbers "client\functions\fnc_adjustPlayerMoney.sqf";
 fnc_rewardPlayer = compile preprocessFileLineNumbers "client\functions\fnc_rewardPlayer.sqf";
+fnc_addMapIcons = compile preprocessFileLineNumbers "client\functions\fnc_addMapIcons.sqf";
 
 // Events
 registerEvents = compile preprocessFileLineNumbers "client\events\registerEvents.sqf";
