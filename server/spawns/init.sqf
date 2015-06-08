@@ -4,19 +4,13 @@
 
 while { isServer } do
 {
-    _curPositions = missionNamespace getVariable ["activeSpawnPositions", []];
-
-    // Remove current Spawns
-    {
-        _x call BIS_fnc_removeRespawnPosition;
-    } forEach _curPositions;
-
     _newSpawnPoints = [];
 
     // Towns
     _availableMarkers = [];
     {
         _marker = _x select 0;
+        _name = _x select 1;
         _pos = getMarkerPos (_marker);
         _units = nearestObjects [_pos, ["Man"], 200];
 
@@ -27,9 +21,9 @@ while { isServer } do
         switch (true) do
         {
             case ((_numWest + _numEast + _numResistance) == 0): {};
-            case (_numWest > _numEast && _numWest > _numResistance): { _newSpawnPoints pushBack [west, _marker] };
-            case (_numEast > _numWest && _numEast > _numResistance): { _newSpawnPoints pushBack [east, _marker] };
-            case (_numResistance > _numEast && _numResistance > _numWest): { _newSpawnPoints pushBack [resistance, _marker] };
+            case (_numWest > _numEast && _numWest > _numResistance): { _newSpawnPoints pushBack [west, _marker, _name, "town"] };
+            case (_numEast > _numWest && _numEast > _numResistance): { _newSpawnPoints pushBack [east, _marker, _name, "town"] };
+            case (_numResistance > _numEast && _numResistance > _numWest): { _newSpawnPoints pushBack [resistance, _marker, _name, "town"] };
         };
     } forEach (call spawnLocations);
 
@@ -39,27 +33,19 @@ while { isServer } do
         {
             switch (side _x) do
             {
-                case west: { _newSpawnPoints pushBack [west, vehicle _x] };
-                case east: { _newSpawnPoints pushBack [east, vehicle _x] };
-                case resistance: { _newSpawnPoints pushBack [resistance, vehicle _x] };
+                case west: { _newSpawnPoints pushBack [west, vehicle _x, name _x, "heli"] };
+                case east: { _newSpawnPoints pushBack [east, vehicle _x, name _x, "heli"] };
+                case resistance: { _newSpawnPoints pushBack [resistance, vehicle _x, name _x, "heli"] };
             };
         };
     } forEach allUnits;
 
-    // Add spawns
-    _newPositions = [];
-    {
-        _newPosition = _x call BIS_fnc_addRespawnPosition;
-        _newPositions pushBack _newPosition
-    } forEach _newSpawnPoints;
-
     // Debug spawn locations
-    _haloJump = [missionNamespace, [9418,20238,1000], "HALO Jump"] call BIS_fnc_addRespawnPosition;
-    _newPositions pushBack _haloJump;
-    _groundSpawn = [missionNamespace, [8048,22640,0], "Ground Spawn"] call BIS_fnc_addRespawnPosition;
-    _newPositions pushBack _groundSpawn;
+    _newSpawnPoints pushBack [civilian, [9418,20238,1000], "Example HALO Jump", "halo"];
+    _newSpawnPoints pushBack [civilian, "spawn_001", "Example Town Spawn", "town"];
 
-    missionNamespace setVariable ["activeSpawnPositions", _newPositions];
+    missionNamespace setVariable ["activeSpawnPoints", _newSpawnPoints];
+    publicVariable "activeSpawnPoints";
 
     sleep 3;
 };
