@@ -1,5 +1,5 @@
 respawn = "BASE";
-respawnTemplates[] = {"Revive", "MenuPosition"};
+respawnTemplates[] = {"CmdRespawn"};
 respawnDelay = 5;
 respawnOnStart = 1;
 respawnDialog = 0;
@@ -33,6 +33,7 @@ disableChannels[]={0,1,2,6};
 // Dialogs
 #include "defines.hpp"
 #include "client\dialogs\helpers.hpp"
+#include "client\respawn\dialog\respawnMenu.hpp"
 #include "client\dialogs\vehicleStore\vehicleStore.hpp"
 #include "client\dialogs\gunStore\gunStore.hpp"
 #include "client\dialogs\cashMachine\cashMachine.hpp"
@@ -60,6 +61,16 @@ class CfgRespawnInventory
 class CfgNotifications
 {
     #include "cfgNotifications.hpp"
+};
+
+// Respawn Templates
+class CfgRespawnTemplates
+{
+    class CmdRespawn
+    {
+        onPlayerKilled = "client\respawn\onPlayerKilled.sqf";
+        onPlayerRespawn = "client\respawn\onPlayerRespawn.sqf";
+    };
 };
 
 // Third Party Stuff
