@@ -426,7 +426,7 @@ class RscMapControl
 
     stickX[] = {0.2, {"Gamma", 1, 1.5}};
     stickY[] = {0.2, {"Gamma", 1, 1.5}};
-    moveOnEdges = 1;
+    moveOnEdges = 0;
 
     x = 0;
     y = 0;

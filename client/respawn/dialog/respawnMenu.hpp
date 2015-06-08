@@ -85,18 +85,39 @@ class CmdRespawnMenu
 
         class mapDisplay: RscMapControl
         {
-            idc = -1;
+            idc = respawn_map;
 
-            #define mapDisplayW (screenW * 0.6) - (edgeOffsetX * 0.75)
-            #define mapDisplayH (screenH - edgeOffsetY)
-            #define mapDisplayX (screenX + (screenW * 0.4) + (edgeOffsetX * 0.25))
-            #define mapDisplayY (screenY + (edgeOffsetY * 0.5))
+            #define mapDisplayW (screenW * 0.6)
+            #define mapDisplayH screenH
+            #define mapDisplayX (screenX + (screenW * 0.4))
+            #define mapDisplayY screenY
 
             x = mapDisplayX;
             y = mapDisplayY;
             w = mapDisplayW;
             h = mapDisplayH;
         };
+        class respawnList: RscListNBox
+        {
+            idc = respawn_list;
+            columns[] = {0.01, 0.20, 0.99};
+            drawSideArrows = false;
+            idcLeft = -1;
+            idcRight = -1;
+            rowHeight = 0.06;
+            onLBSelChanged = "";
+
+            #define respawnListW (screenW * 0.4)
+            #define respawnListH screenH
+            #define respawnListY screenY
+            #define respawnListX screenX
+
+            x = respawnListX;
+            y = respawnListY;
+            w = respawnListW;
+            h = respawnListH;
+        };
+
         class closeButton: RscButton
         {
             idc = -1;

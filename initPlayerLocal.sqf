@@ -4,6 +4,8 @@
 
 disableSerialization;
 
+cutText ["","black out",0.01];
+
 waitUntil { !isNull player; time > 0.1 };
 
 enableRadio false;
