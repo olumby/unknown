@@ -23,10 +23,17 @@ _respawnButton = _display displayCtrl respawn_button;
 
 _respawnList ctrlAddEventHandler ["LBSelChanged",
 {
-    diag_log (activeSpawnPoints select (_this select 1));
-    // _ctrlMap ctrlmapanimadd [_commitTime,(_mapScaleW max _mapScaleH) * 2,[_posX,_posY]];
-    // ctrlmapanimcommit _ctrlMap;
+    #include "dialog\respawnMenu_defines.hpp"
+    disableSerialization;
 
+    _display = uiNamespace getVariable "CmdRespawnMenu";
+    _respawnMap = _display displayCtrl respawn_map;
+
+    _spawn = activeSpawnPoints select (_this select 1);
+    player setVariable ["playerSelectedSpawn", _spawn];
+
+    _respawnMap ctrlMapAnimAdd [0.5, 0.1, (_spawn select 1) call BIS_fnc_position];
+    ctrlMapAnimCommit _respawnMap;
 }];
 
 waitUntil { !isNil "activeSpawnPoints" };
