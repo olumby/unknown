@@ -100,7 +100,7 @@ class CmdRespawnMenu
         class respawnList: RscListNBox
         {
             idc = respawn_list;
-            columns[] = {0.01, 0.20, 0.99};
+            columns[] = {0, 0.12};
             drawSideArrows = false;
             idcLeft = -1;
             idcRight = -1;
@@ -120,7 +120,7 @@ class CmdRespawnMenu
 
         class closeButton: RscButton
         {
-            idc = -1;
+            idc = respawn_button;
             text = "RESPAWN";
             onButtonClick = "closeDialog 0;";
 

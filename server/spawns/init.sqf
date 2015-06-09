@@ -40,8 +40,11 @@ while { isServer } do
         };
     } forEach allUnits;
 
+    // Spawn beacons
+    // bis_fnc_locationdescription
+
     // Debug spawn locations
-    _newSpawnPoints pushBack [civilian, [9418,20238,1000], "Example HALO Jump", "halo"];
+    //_newSpawnPoints pushBack [civilian, [9418,20238,1000], "Example HALO Jump", "halo"];
     _newSpawnPoints pushBack [civilian, "spawn_001", "Example Town Spawn", "town"];
 
     missionNamespace setVariable ["activeSpawnPoints", _newSpawnPoints];
